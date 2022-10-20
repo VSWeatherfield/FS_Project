@@ -1,0 +1,96 @@
+.custom-header-links {
+  display: inline-flex;
+  margin: 0;
+}
+
+.headerLink {
+  list-style: none;
+  display: flex;
+  margin-right: 30px;
+  color: inherit;
+  outline: none;
+  color: inherit;
+}
+
+.lastHeaderLink {
+  list-style: none;
+  display: flex;
+  color: inherit;
+  outline: none;
+  color: inherit;
+  margin-right: 10px;
+}
+
+.custom-header-links .headerLink .lastHeaderLink a {
+  padding: 6px 10px;
+  padding-top: 6px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  color: var(--header_primary);
+  font-size: var(--font-up-1);
+}
+
+a {
+  color: var(--tertiary);
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  cursor: pointer;
+}
+
+.d-header .header-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2em;
+}
+
+.login-button, .sign-up-button {
+  padding: 4 px 10px;
+}
+
+.d-header .login-button {
+  margin-left: 7px;
+}
+
+.btn-small {
+  font-size: var(--font-down-1);
+  min-height: 20px;
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+  font-size: var(--font-0);
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.5em 0.65em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-weight: normal;
+  color: var(rgb(48, 150, 201));
+  background: var(rgb(100, 239, 90));
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.custom-header-links {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.svg-icon, .svg-icon-title {
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+  display: inline-flex;
+  position: relative;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+  overflow: visible;
+}
