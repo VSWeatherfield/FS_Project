@@ -1,28 +1,30 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 import './navbar.css'
 
 const Navbar = () => {
   return (
-    <div className='wrap'>
+    <div className='panel'>
       <ul class="custom-header-links">
         <li class="headerLink">
-          <a title="Olympiads" href="/olympiads">Olympiads</a>
+          <Link title="Olympiads" to="/olympiads">Olympiads</Link>
         </li>
         <li class="headerLink">
-          <a title="Scoreboard" href="/scoreboard">Scoreboard</a>
+          <Link title="Scoreboard" to="/scoreboard">Scoreboard</Link>
         </li>
-        <li class="lastHeaderLink">
-          <a title="Profile" href="/profile">Profile</a>
+        <li class="headerLink">
+          <Link title="Profile" to="/profile">Profile</Link>
         </li>
       </ul>
 
-      <button class="widget-button btn btn-primary btn-small sign-up-button btn-text">
+      <button class="sign-up-button btn btn-primary btn-small">
         <span class="d-button-label">
           Регистрация
         </span>
       </button>
 
-      <button class="widget-button btn btn-primary btn-small login-button btn-icon-text">
+      <button class="login-button btn btn-primary btn-small">
         <span class="d-button-label">
           Вход
         </span>

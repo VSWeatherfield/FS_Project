@@ -6,6 +6,83 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+ul, ol, dd {
+    margin: 1em 0 1em 1.25em;
+    padding: 0;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  cursor: pointer;
+}
+
+.btn-small {
+  font-size: 0.8706em;
+  min-height: 20px;
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+  font-size: var(--font-0);
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.5em 0.65em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-weight: normal;
+  color: #fff;
+  background: #08c;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+table th {
+  font-weight: normal;
+  color: var(--primary-medium);
+  text-align: left;
+  padding: 0.5em;
+}
+
+td, th {
+  padding: 0;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

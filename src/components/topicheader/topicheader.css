@@ -1,0 +1,55 @@
+.contents {
+    position: relative;
+}
+
+ .topic-list-data:first-of-type {
+    padding-left: 10px;
+}
+
+ .topic-list-data.posters {
+    height: 29px;
+}
+
+ .topic-list-data {
+    padding: 10px;
+    font-size: 1em;
+}
+
+ .posters {
+    width: 30px;
+    text-align: center;
+}
+
+ .topic-list-data {
+    line-height: 1.4;
+    text-align: left;
+    vertical-align: middle;
+}
+
+ .posts {
+    width: 50px;
+}
+
+ .num {
+    text-align: center;
+}
+
+.sortable {
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+ .views {
+    width: 65px;
+}
+
+ .topic-list-data:last-of-type {
+    padding-right: 10px;
+}
+
+ .activity {
+    width: 60px;
+}
