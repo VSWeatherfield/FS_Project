@@ -1,30 +1,29 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Navbar } from '../../components'
-import logo from '../../images/Capture.png'
+import { Navbar } from "../../components";
+import logo from "../../images/Capture.png";
 
-import './header.css'
+import "./header.css";
 
 const Header = () => {
   return (
     <header className="d-header">
-      <div className='wrap'>
-        <Link to="/" data-auto-route="true" className='menuref'>
-        </Link>
+      <div className="wrap">
+        <Link to="/" data-auto-route="true" className="menuref"></Link>
 
-        <span class="title">
+        <span className="title">
           <Link to="/" data-auto-route="true">
-            <img src={logo} alt="Logo" id='site-logo'/>
+            <img src={logo} alt="Logo" id="site-logo" />
           </Link>
         </span>
 
-        <span className='d-navbar'>
+        <span className="d-navbar">
           <Navbar />
         </span>
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;

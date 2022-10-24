@@ -28,7 +28,8 @@
   font-size: 1.1487em;
 }
 
-.panel .login-button, .panel .sign-up-button {
+.panel .login-button,
+.panel .sign-up-button {
   padding: 6px 10px;
 }
 

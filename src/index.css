@@ -1,15 +1,16 @@
 body {
-    margin: 0;
-    font-family: 'RobotoRegular', 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  margin: 0;
+  font-family: "RobotoRegular", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-ul, ol, dd {
-    margin: 1em 0 1em 1.25em;
-    padding: 0;
+ul,
+ol,
+dd {
+  margin: 1em 0 1em 1.25em;
+  padding: 0;
 }
 
 ul {
@@ -72,7 +73,8 @@ table th {
   padding: 0.5em;
 }
 
-td, th {
+td,
+th {
   padding: 0;
 }
 
@@ -83,45 +85,42 @@ th {
   text-align: -internal-center;
 }
 
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  
-  @font-face {
-    font-family: 'RobotoRegular';
-    src: url('./fonts/Roboto-Regular.ttf');
-  }
-  
-  @font-face {
-    font-family: 'RobotoThin';
-    src: url('./fonts/Roboto-Thin.ttf');
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 
-  @font-face {
-    font-family: 'GaramnodSemiBoldItalic';
-    src: url('./fonts/CormorantGaramond-SemiBoldItalic.ttf');
-  }
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("./fonts/Roboto-Regular.ttf");
+}
 
-  @font-face {
-    font-family: 'RobotoSemiBoldItalic';
-    src: url('./fonts/Roboto-MediumItalic.ttf');
-  }
+@font-face {
+  font-family: "RobotoThin";
+  src: url("./fonts/Roboto-Thin.ttf");
+}
 
-  @font-face {
-    font-family: 'RobotoBoldItalic';
-    src: url('./fonts/Roboto-BoldItalic.ttf');
-  }
+@font-face {
+  font-family: "GaramnodSemiBoldItalic";
+  src: url("./fonts/CormorantGaramond-SemiBoldItalic.ttf");
+}
 
-  @font-face {
-    font-family: 'GaramnodBoldItalic';
-    src: url('./fonts/CormorantGaramond-BoldItalic.ttf');
-  }
+@font-face {
+  font-family: "RobotoSemiBoldItalic";
+  src: url("./fonts/Roboto-MediumItalic.ttf");
+}
 
-  @font-face {
-    font-family: 'GaramnodBold';
-    src: url('./fonts/CormorantGaramond-Bold.ttf');
-  }
+@font-face {
+  font-family: "RobotoBoldItalic";
+  src: url("./fonts/Roboto-BoldItalic.ttf");
+}
 
+@font-face {
+  font-family: "GaramnodBoldItalic";
+  src: url("./fonts/CormorantGaramond-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "GaramnodBold";
+  src: url("./fonts/CormorantGaramond-Bold.ttf");
+}
