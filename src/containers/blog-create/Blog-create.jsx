@@ -4,6 +4,24 @@ import { Link } from "react-router-dom";
 import "./blog-create.css";
 
 const BlogCreate = () => {
+  const onCreateBlog = (event) => {
+    const inputs = document.querySelectorAll("input");
+
+    event.preventDefault();
+    const blog = {};
+    inputs.forEach((input) => {
+      blog[input.name] = input.value;
+    });
+
+    fetch("http://localhost:5000/blogs", {
+      method: "POST",
+      body: JSON.stringify(blog),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  };
+
   return (
     <div
       id="reply-control"
@@ -52,6 +70,7 @@ const BlogCreate = () => {
                         maxLength="255"
                         autoComplete="off"
                         placeholder="Название: суть темы коротким предложением"
+                        name="title"
                         id="reply-title"
                         className="ember-text-field ember-view"
                       ></input>
@@ -60,13 +79,14 @@ const BlogCreate = () => {
                 </div>
 
                 <div className="d-editor-textarea-wrapper">
-                  <textarea
+                  <input
                     aria-label='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
                     autoComplete="off"
                     placeholder='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
+                    name="description"
                     id="ember472"
                     className="d-editor-input ember-text-area ember-view"
-                  ></textarea>
+                  ></input>
                 </div>
               </div>
             </div>
@@ -85,6 +105,7 @@ const BlogCreate = () => {
               id="ember486"
               className="btn btn-icon-text btn-primary create ember-view"
               type="button"
+              onClick={onCreateBlog}
             >
               <span className="d-button-label">Создать тему</span>
             </button>

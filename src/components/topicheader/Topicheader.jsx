@@ -1,7 +1,7 @@
 import React from "react";
 import "./topicheader.css";
 
-const Topiclist = () => {
+const Topicheader = () => {
   return (
     <tr>
       <th
@@ -51,4 +51,4 @@ const Topiclist = () => {
   );
 };
 
-export default Topiclist;
+export default Topicheader;

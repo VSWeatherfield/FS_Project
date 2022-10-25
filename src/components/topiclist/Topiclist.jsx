@@ -1,20 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./topixlist.css";
 
-const Topiclist = () => {
+const Topiclist = (props) => {
+  const { id, title, description } = props;
+
   return (
     <tr className="topic-list-item category-informatics unseen-topic ember-view">
       <td className="main-link clearfix topic-list-data" colSpan="1">
         <span className="link-top-line">
-          <a
-            href="/{id}"
+          <Link
+            to={`/blog/${id}`}
             role="heading"
             aria-level="2"
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
           >
-            Вкошп 2020-2021
-          </a>
+            {title}
+          </Link>
         </span>
       </td>
 

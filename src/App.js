@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Footer, Header, BlogCreate } from "./containers";
-import { Main, Forum, Scoreboard, Profile, Olympiads, Blog } from "./pages";
+import { Main, Scoreboard, Profile, Olympiads, Blog } from "./pages";
 
 import "./App.css";
 
@@ -13,9 +13,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />}></Route>
         <Route path="/blog-create" element={<BlogCreate />}></Route>
-        <Route path="/Olympiads" element={<Olympiads />}></Route>
-        <Route path="/Scoreboard" element={<Scoreboard />}></Route>
-        <Route path="/Profile" element={<Profile />}></Route>
+        <Route path="/olympiads" element={<Olympiads />}></Route>
+        <Route path="/scoreboard" element={<Scoreboard />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
         <Route path="/blog/:id" element={<Blog />}></Route>
       </Routes>
       <Footer />

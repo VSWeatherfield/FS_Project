@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import "./forum.css";
 import { Topicheader, Topiclist } from "../../components";
 
-const Forum = () => {
+const Forum = (props) => {
+  const { blogs } = props;
+
   return (
     <div className="d-forum">
       <div className="wrap">
@@ -38,7 +40,7 @@ const Forum = () => {
                 <Topicheader />
               </thead>
 
-              <tbody className="topic-list-body"></tbody>
+              <tbody className="topic-list-body"> {blogs} </tbody>
             </table>
           </span>
         </div>

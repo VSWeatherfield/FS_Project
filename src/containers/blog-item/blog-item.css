@@ -1,0 +1,16 @@
+.main-outlet-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.main-outlet-wrapper .wrap {
+  box-sizing: border-box;
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+  position: flex;
+  height: 500px;
+}
