@@ -1,0 +1,17 @@
+.topic-list-main-link a.title,
+.topic-list .main-link a.title,
+.latest-topic-list-item .main-link a.title {
+  padding: 15px 0;
+  word-break: break-word;
+  color: #222;
+}
+
+.topic-list td {
+  color: #919191;
+  font-size: 1em;
+}
+
+.topic-list .relative-date {
+  color: #919191;
+  font-size: 1em;
+}

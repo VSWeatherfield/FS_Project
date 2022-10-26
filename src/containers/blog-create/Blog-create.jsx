@@ -1,26 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { ajaxService } from "../../services/ajaxservice";
 
 import "./blog-create.css";
 
-const BlogCreate = () => {
+const BlogCreate = (props) => {
+  const { isModalOpen, onClose } = props;
+
+  const [title, setTitle] = useState("");
+  const [description, setDescirption] = useState("");
+  const [titleError, setTitleError] = useState("");
+
   const onCreateBlog = (event) => {
-    const inputs = document.querySelectorAll("input");
-
     event.preventDefault();
-    const blog = {};
-    inputs.forEach((input) => {
-      blog[input.name] = input.value;
-    });
 
-    fetch("http://localhost:5000/blogs", {
+    ajaxService("/blogs", {
       method: "POST",
-      body: JSON.stringify(blog),
+      body: JSON.stringify({ title, description }),
       headers: {
         "Content-Type": "application/json",
       },
     });
+
+    onClose();
   };
+
+  const handleChangeTitle = (event) => {
+    if (event.target.value.length <= 257) {
+      setTitle(event.target.value);
+      setTitleError("");
+    } else {
+      setTitleError("Название должно быть меньше 257 символов");
+    }
+  };
+
+  const handleChangeDescription = (event) => {
+    setDescirption(event.target.value);
+  };
+
+  if (!isModalOpen) {
+    return null;
+  }
 
   return (
     <div
@@ -73,20 +92,25 @@ const BlogCreate = () => {
                         name="title"
                         id="reply-title"
                         className="ember-text-field ember-view"
+                        value={title}
+                        onChange={handleChangeTitle}
                       ></input>
+                      <div className="title-form-error">{titleError}</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="d-editor-textarea-wrapper">
-                  <input
+                  <textarea
                     aria-label='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
                     autoComplete="off"
                     placeholder='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
                     name="description"
                     id="ember472"
                     className="d-editor-input ember-text-area ember-view"
-                  ></input>
+                    value={description}
+                    onChange={handleChangeDescription}
+                  ></textarea>
                 </div>
               </div>
             </div>
@@ -110,14 +134,12 @@ const BlogCreate = () => {
               <span className="d-button-label">Создать тему</span>
             </button>
 
-            <a
-              href=""
-              className="cancel"
-              data-ember-action=""
-              data-ember-action-487="487"
+            <button
+              className="cancel btn btn-icon-text btn-primary create ember-view"
+              onClick={onClose}
             >
               Закрыть
-            </a>
+            </button>
           </div>
         </div>
       </div>

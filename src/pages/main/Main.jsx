@@ -1,31 +1,39 @@
 import { createContext, createElement, useEffect, useState } from "react";
 
 import { ajaxService } from "../../services/ajaxservice";
-import { Topiclist, Topicheader } from "../../components";
+import { Topiclist } from "../../components";
+import { BlogCreate } from "../../containers";
 import Forum from "../forum/Forum";
 
 export function Main() {
-  const [blogs, setBlogs] = useState(null);
+  const [blogs, setBlogs] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     ajaxService("/blogs").then((data) => {
-      const blogs = [];
+      setBlogs(data);
+    });
+  });
 
-      data.forEach((blog) => {
-        const blogElement = (
+  return (
+    <div>
+      <BlogCreate
+        isModalOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+      <Forum
+        blogs={blogs.map((blog) => (
           <Topiclist
+            key={blog.id}
             id={blog.id}
             title={blog.title}
             description={blog.description}
           />
-        );
-        blogs.push(blogElement);
-      });
-      setBlogs(blogs);
-    });
-  });
-
-  return <Forum blogs={blogs} />;
+        ))}
+        openopen={() => setIsModalOpen(true)}
+      />
+    </div>
+  );
 }
 
 export default Main;

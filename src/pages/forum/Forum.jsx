@@ -5,7 +5,13 @@ import "./forum.css";
 import { Topicheader, Topiclist } from "../../components";
 
 const Forum = (props) => {
-  const { blogs } = props;
+  const { blogs, openopen } = props;
+
+  const handleEditClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    openopen();
+  };
 
   return (
     <div className="d-forum">
@@ -20,15 +26,17 @@ const Forum = (props) => {
             </button>
           </div>
           <div className="rightButtons">
-            <button className="new-post-button btn btn-primary btn-small">
+            <button
+              className="new-post-button btn btn-primary btn-small"
+              onClick={handleEditClick}
+            >
               <span className="d-button-label">
-                <Link
+                {/*<Link
                   to="/blog-create"
                   data-auto-route="true"
                   className="new-post-link"
-                >
-                  Создать тему
-                </Link>
+  */}
+                Создать тему
               </span>
             </button>
           </div>

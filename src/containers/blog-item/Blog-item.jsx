@@ -7,8 +7,8 @@ const BlogItem = (props) => {
   const { id, title, description } = props;
 
   return (
-    <div class="main-outlet-wrapper">
-      <div class="wrap">
+    <div className="main-outlet-wrapper">
+      <div className="wrap">
         <h1>{title}</h1>
         <p>{description}</p>
       </div>

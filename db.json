@@ -53,16 +53,6 @@
       "description": "Я люблю Голландию"
     },
     {
-      "title": "f;sdajfas",
-      "description": "das;fjdasfj",
-      "id": 8
-    },
-    {
-      "title": "Неужели это и правда работает?",
-      "description": "Только не Голландия",
-      "id": 9
-    },
-    {
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
       "id": 10
@@ -71,6 +61,21 @@
       "title": "Точно точно работаешь?",
       "description": "да!",
       "id": 11
+    },
+    {
+      "title": "please please work",
+      "description": "I love you, I do",
+      "id": 14
+    },
+    {
+      "title": "А так можно было?",
+      "description": "прикинь, да",
+      "id": 16
+    },
+    {
+      "title": "if you work, then i'm i love with you",
+      "description": "I love you",
+      "id": 17
     }
   ]
 }
