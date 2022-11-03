@@ -1,13 +1,15 @@
-import { createContext, createElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { ajaxService } from "../../services/ajaxservice";
-import { Topiclist } from "../../components";
+import { EditBlog, Topiclist } from "../../components";
 import { BlogCreate } from "../../containers";
-import Forum from "../forum/Forum";
+import { Forum } from "../../pages";
 
 export function Main() {
   const [blogs, setBlogs] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [editBlogId, setEditBlogId] = useState(null);
 
   useEffect(() => {
     ajaxService("/blogs").then((data) => {
@@ -18,8 +20,14 @@ export function Main() {
   return (
     <div>
       <BlogCreate
-        isModalOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isCreateModalOpen={isCreateModalOpen}
+        onClose={() => setIsCreateModalOpen(false)}
+      />
+
+      <EditBlog
+        isEditModalOpen={isEditModalOpen}
+        onClose={() => setIsEditModalOpen(false)}
+        blogId={editBlogId}
       />
       <Forum
         blogs={blogs.map((blog) => (
@@ -28,9 +36,21 @@ export function Main() {
             id={blog.id}
             title={blog.title}
             description={blog.description}
+            views={blog.views}
+            answers={blog.answers}
+            openopen={({ blogId }) => {
+              setIsCreateModalOpen(false);
+              setIsEditModalOpen(true);
+              setEditBlogId(blogId);
+            }}
           />
         ))}
-        openopen={() => setIsModalOpen(true)}
+        openopen={
+          () => {
+            setIsEditModalOpen(false);
+            setIsCreateModalOpen(true);
+          }
+        }
       />
     </div>
   );

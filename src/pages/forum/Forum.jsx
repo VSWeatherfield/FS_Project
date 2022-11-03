@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Topicheader, Topiclist } from "../../components";
 
 import "./forum.css";
-import { Topicheader, Topiclist } from "../../components";
 
 const Forum = (props) => {
   const { blogs, openopen } = props;
 
-  const handleEditClick = (event) => {
+  const handleNewClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
+
     openopen();
   };
 
@@ -28,16 +28,9 @@ const Forum = (props) => {
           <div className="rightButtons">
             <button
               className="new-post-button btn btn-primary btn-small"
-              onClick={handleEditClick}
+              onClick={handleNewClick}
             >
-              <span className="d-button-label">
-                {/*<Link
-                  to="/blog-create"
-                  data-auto-route="true"
-                  className="new-post-link"
-  */}
-                Создать тему
-              </span>
+              <span className="d-button-label">Создать тему</span>
             </button>
           </div>
         </div>

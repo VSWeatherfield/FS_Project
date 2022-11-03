@@ -1,20 +1,22 @@
 import { ajaxService } from "../../services/ajaxservice";
 import { BlogForm } from "../../components";
 
-import "./blog-create.css";
+import "./editBlog.css";
 
-const BlogCreate = (props) => {
+const EditBlog = (props) => {
+  const { blogId } = props;
+
   return (
     <BlogForm
-      isModalOpen={props.isCreateModalOpen}
+      isModalOpen={props.isEditModalOpen}
       onClose={props.onClose}
-      submitTitle="Создать тему"
+      submitTitle="Сохранить тему"
       onSubmitForm={({ title, description }) => {
         const views = 0;
         const answers = 0;
 
-        ajaxService("/blogs", {
-          method: "POST",
+        ajaxService(`/blogs/${blogId}`, {
+          method: "PUT",
           body: JSON.stringify({ title, description, views, answers }),
           headers: {
             "Content-Type": "application/json",
@@ -25,4 +27,4 @@ const BlogCreate = (props) => {
   );
 };
 
-export default BlogCreate;
+export default EditBlog;
