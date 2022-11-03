@@ -9,7 +9,7 @@ export function Main() {
   const [blogs, setBlogs] = useState([]);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-  const [editBlogId, setEditBlogId] = useState(null);
+  const [editBlog, setEditBlog] = useState(null);
 
   useEffect(() => {
     ajaxService("/blogs").then((data) => {
@@ -24,11 +24,13 @@ export function Main() {
         onClose={() => setIsCreateModalOpen(false)}
       />
 
-      <EditBlog
+      {editBlog && <EditBlog
         isEditModalOpen={isEditModalOpen}
         onClose={() => setIsEditModalOpen(false)}
-        blogId={editBlogId}
-      />
+        blogId={editBlog.id}
+        defaultTitle={editBlog.title}
+        defaultDescription={editBlog.description}
+      />}
       <Forum
         blogs={blogs.map((blog) => (
           <Topiclist
@@ -38,10 +40,10 @@ export function Main() {
             description={blog.description}
             views={blog.views}
             answers={blog.answers}
-            openopen={({ blogId }) => {
+            openopen={() => {
               setIsCreateModalOpen(false);
               setIsEditModalOpen(true);
-              setEditBlogId(blogId);
+              setEditBlog(blog);
             }}
           />
         ))}

@@ -1,3 +1,4 @@
+import { ajaxService } from "../../services/ajaxservice";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const Topiclist = (props) => {
     event.stopPropagation();
     event.preventDefault();
 
-    openopen({ blogId: id });
+    openopen();
   };
 
   return (

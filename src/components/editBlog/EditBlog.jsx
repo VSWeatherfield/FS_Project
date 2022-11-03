@@ -4,13 +4,15 @@ import { BlogForm } from "../../components";
 import "./editBlog.css";
 
 const EditBlog = (props) => {
-  const { blogId } = props;
+  const { blogId, defaultTitle, defaultDescription } = props;
 
   return (
     <BlogForm
       isModalOpen={props.isEditModalOpen}
       onClose={props.onClose}
       submitTitle="Сохранить тему"
+      defaultTitle={defaultTitle}
+      defaultDescription={defaultDescription}
       onSubmitForm={({ title, description }) => {
         const views = 0;
         const answers = 0;
@@ -22,7 +24,9 @@ const EditBlog = (props) => {
             "Content-Type": "application/json",
           },
         });
-      }}
+      }
+    
+    }
     />
   );
 };
