@@ -3,7 +3,14 @@ import { useState } from "react";
 import "./blogForm.css";
 
 const BlogForm = (props) => {
-  const { isModalOpen, onClose, submitTitle, onSubmitForm, defaultTitle, defaultDescription } = props;
+  const {
+    isModalOpen,
+    onClose,
+    submitTitle,
+    onSubmitForm,
+    defaultTitle,
+    defaultDescription,
+  } = props;
 
   const [title, setTitle] = useState(defaultTitle);
   const [description, setDescirption] = useState(defaultDescription);

@@ -3,72 +3,72 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 0,
+      "views": 14,
       "answers": 0,
       "id": 1
     },
     {
       "title": "uiuiu",
       "description": "qqqq",
-      "views": 0,
+      "views": 2,
       "answers": 0,
       "id": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 0,
+      "views": 1,
       "answers": 0,
       "id": 3
     },
     {
-      "id": 4,
-      "title": "Свойство центроида треугольника",
+      "title": "Свойство центроида треугольникффф",
       "description": "Я люблю Голландию",
-      "views": 0,
-      "answers": 0
+      "views": 1,
+      "answers": 0,
+      "id": 4
     },
     {
-      "id": 5,
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 0,
-      "answers": 0
+      "views": 5,
+      "answers": 0,
+      "id": 5
     },
     {
-      "id": 6,
       "title": "Интегралы (basic int. form)",
-      "description": "Я люблю Голландию",
-      "views": 0,
-      "answers": 0
+      "description": "Я люблю Голланди..",
+      "views": 1,
+      "answers": 0,
+      "id": 6
     },
     {
-      "id": 7,
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 0,
-      "answers": 0
+      "views": 1,
+      "answers": 0,
+      "id": 7
     },
     {
-      "id": 10,
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
-      "views": 0,
-      "answers": 0
+      "views": 2,
+      "answers": 0,
+      "id": 10
     },
     {
       "title": "Точно точно работаешь?",
       "description": "да!",
-      "id": 11,
-      "views": 0,
-      "answers": 0
+      "views": 1,
+      "answers": 0,
+      "id": 11
     },
     {
       "title": "please please work",
-      "description": "I love you, I do",
-      "id": 14,
-      "views": 0,
-      "answers": 0
+      "description": "I love you, I really do",
+      "views": 2,
+      "answers": 1,
+      "id": 14
     },
     {
       "title": "А так можно было?",
@@ -80,9 +80,9 @@
     {
       "title": "if you work, then i'm i love with you",
       "description": "I love you",
-      "id": 17,
-      "views": 0,
-      "answers": 0
+      "views": 1,
+      "answers": 0,
+      "id": 17
     },
     {
       "title": "Holland Holland Holland",
@@ -104,111 +104,6 @@
       "id": 20,
       "views": 0,
       "answers": 0
-    },
-    {
-      "title": "dafljdfs",
-      "description": "asd;fdf; j",
-      "views": 0,
-      "answers": 0,
-      "id": 21
-    },
-    {
-      "title": "df;asjfs",
-      "description": "das;flvd",
-      "views": 0,
-      "answers": 0,
-      "id": 22
-    },
-    {
-      "title": "da",
-      "description": "asdfadf",
-      "views": 0,
-      "answers": 0,
-      "id": 23
-    },
-    {
-      "title": "ууу",
-      "description": "ыыыы",
-      "views": 0,
-      "answers": 0,
-      "id": 24
-    },
-    {
-      "title": "111111",
-      "description": "ура ура ура",
-      "views": 0,
-      "answers": 0,
-      "id": 25
-    },
-    {
-      "title": "da;fjasfj",
-      "description": "das;fhvcdgfaf",
-      "views": 0,
-      "answers": 0,
-      "id": 26
-    },
-    {
-      "title": "aaa",
-      "description": "bbbb",
-      "views": 0,
-      "answers": 0,
-      "id": 27
-    },
-    {
-      "title": "rrrr",
-      "description": "aoaoao",
-      "views": 0,
-      "answers": 0,
-      "id": 28
-    },
-    {
-      "title": "qqq1111",
-      "description": "qqq111",
-      "views": 0,
-      "answers": 0,
-      "id": 29
-    },
-    {
-      "title": "aaa",
-      "description": "bbbb",
-      "views": 0,
-      "answers": 0,
-      "id": 30
-    },
-    {
-      "title": "aoaoa",
-      "description": "yayaya",
-      "views": 0,
-      "answers": 0,
-      "id": 31
-    },
-    {
-      "title": "apap",
-      "description": "tyty",
-      "views": 0,
-      "answers": 0,
-      "id": 32
-    },
-    {
-      "title": "1",
-      "description": "2",
-      "views": 0,
-      "answers": 0,
-      "id": 33
-    },
-    {
-      "title": "qq",
-      "description": "aa",
-      "views": 0,
-      "answers": 0,
-      "id": 34
-    },
-    {
-      "title": "22222",
-      "description": "666666",
-      "views": 0,
-      "answers": 0,
-      "id": 35
     }
   ]
 }

@@ -24,10 +24,26 @@ const Topiclist = (props) => {
             aria-level="2"
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
+            onClick={() => {
+              console.log("aooa");
+              const views = props.views + 1;
+
+              ajaxService(`/blogs/${id}`, {
+                method: "PUT",
+                body: JSON.stringify({ title, description, views, answers }),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+            }}
           >
             {title}
           </Link>
-          <button onClick={handleEditClick}>редактировать</button>
+
+          <button class="edit_spec_button"
+                  onClick={handleEditClick}
+          >ред.</button>
+          
         </span>
       </td>
 

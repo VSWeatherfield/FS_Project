@@ -24,13 +24,18 @@ export function Main() {
         onClose={() => setIsCreateModalOpen(false)}
       />
 
-      {editBlog && <EditBlog
-        isEditModalOpen={isEditModalOpen}
-        onClose={() => setIsEditModalOpen(false)}
-        blogId={editBlog.id}
-        defaultTitle={editBlog.title}
-        defaultDescription={editBlog.description}
-      />}
+      {editBlog && (
+        <EditBlog
+          isEditModalOpen={isEditModalOpen}
+          onClose={() => setIsEditModalOpen(false)}
+          exviews={editBlog.views}
+          exanswers={editBlog.answers}
+          blogId={editBlog.id}
+          defaultTitle={editBlog.title}
+          defaultDescription={editBlog.description}
+        />
+      )}
+
       <Forum
         blogs={blogs.map((blog) => (
           <Topiclist
@@ -47,12 +52,10 @@ export function Main() {
             }}
           />
         ))}
-        openopen={
-          () => {
-            setIsEditModalOpen(false);
-            setIsCreateModalOpen(true);
-          }
-        }
+        openopen={() => {
+          setIsEditModalOpen(false);
+          setIsCreateModalOpen(true);
+        }}
       />
     </div>
   );

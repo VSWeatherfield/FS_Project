@@ -1,5 +1,5 @@
 import React from "react";
-import { Topicheader, Topiclist } from "../../components";
+import { Topicheader } from "../../components";
 
 import "./forum.css";
 

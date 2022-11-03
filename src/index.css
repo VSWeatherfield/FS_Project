@@ -28,8 +28,31 @@ li {
   text-align: -webkit-match-parent;
 }
 
+
+.items-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
 a {
-  color: #08c;
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration: none;
   text-decoration: none;
   text-decoration-line: none;
   text-decoration-thickness: initial;

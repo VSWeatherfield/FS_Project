@@ -4,7 +4,8 @@ import { BlogForm } from "../../components";
 import "./editBlog.css";
 
 const EditBlog = (props) => {
-  const { blogId, defaultTitle, defaultDescription } = props;
+  const { blogId, defaultTitle, defaultDescription, exviews, exanswers } =
+    props;
 
   return (
     <BlogForm
@@ -14,8 +15,8 @@ const EditBlog = (props) => {
       defaultTitle={defaultTitle}
       defaultDescription={defaultDescription}
       onSubmitForm={({ title, description }) => {
-        const views = 0;
-        const answers = 0;
+        const views = exviews + 1;
+        const answers = exanswers + 1;
 
         ajaxService(`/blogs/${blogId}`, {
           method: "PUT",
@@ -24,9 +25,7 @@ const EditBlog = (props) => {
             "Content-Type": "application/json",
           },
         });
-      }
-    
-    }
+      }}
     />
   );
 };
