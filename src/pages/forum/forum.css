@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   background: #fff;
   margin-top: 70px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .d-forum .wrap {
@@ -132,4 +132,39 @@ tr {
 
 .topic-list .num {
   text-align: center;
+}
+
+.svg-icon,
+.svg-icon-title {
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+  display: inline-flex;
+  position: relative;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.btn .d-icon {
+  color: #646464;
+  margin-right: 0.45em;
+  transition: color 0.25s;
+}
+
+.navigation-controls > * {
+  white-space: nowrap;
+}
+
+.more-topics {
+  margin-top: 1em;
+}
+
+.btn[href] {
+  color: #222;
+}
+
+.pull-right {
+  float: right;
 }

@@ -18,13 +18,13 @@ export function Olympiads() {
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-      <BoxForm olympName="ГЖО" olympId="gzho" />
-      <BoxForm olympName="Республиканская" olympId="respa" />
-      <BoxForm olympName="IMO" olympId="imo" />
-      <BoxForm olympName="Туймаада" olympId="tyimada" />
-      <BoxForm olympName="Азиатско-Тихоокеанская" olympId="apmo" />
-      <BoxForm olympName="Балканская" olympId="bmo" />
-      <BoxForm olympName="EGMO" olympId="egmo" />
+        <BoxForm olympName="ГЖО" olympId="gzho" />
+        <BoxForm olympName="Республиканская" olympId="respa" />
+        <BoxForm olympName="IMO" olympId="imo" />
+        <BoxForm olympName="Туймаада" olympId="tyimada" />
+        <BoxForm olympName="Азиатско-Тихоокеанская" olympId="apmo" />
+        <BoxForm olympName="Балканская" olympId="bmo" />
+        <BoxForm olympName="EGMO" olympId="egmo" />
       </div>
     </div>
   );

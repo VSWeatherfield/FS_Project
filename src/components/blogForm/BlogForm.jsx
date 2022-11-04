@@ -55,22 +55,6 @@ const BlogForm = (props) => {
         <div className="reply-to">
           <div className="reply-details">
             <div id="ember436" className="composer-action-title ember-view">
-              <details
-                id="ember437"
-                className="select-kit single-select dropdown-select-box composer-actions ember-view"
-              >
-                <summary
-                  aria-label="Выберите значение для фильтра"
-                  name="Выберите значение для фильтра"
-                  data-name=""
-                  role="listbox"
-                  id="ember437-header"
-                  className="select-kit-header single-select-header dropdown-select-box-header btn no-text btn-icon ember-view"
-                >
-                  <div className="select-kit-header-wrapper"></div>
-                </summary>
-              </details>
-
               <span className="action-title">Создать новую тему</span>
             </div>
           </div>

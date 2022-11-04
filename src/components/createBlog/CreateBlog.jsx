@@ -1,9 +1,9 @@
 import { ajaxService } from "../../services/ajaxservice";
-import { BlogForm } from "../../components";
+import { BlogForm } from "..";
 
-import "./blog-create.css";
+import "./createBlog.css";
 
-const BlogCreate = (props) => {
+const CreateBlog = (props) => {
   return (
     <BlogForm
       isModalOpen={props.isCreateModalOpen}
@@ -25,4 +25,4 @@ const BlogCreate = (props) => {
   );
 };
 
-export default BlogCreate;
+export default CreateBlog;

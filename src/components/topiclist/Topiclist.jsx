@@ -40,10 +40,9 @@ const Topiclist = (props) => {
             {title}
           </Link>
 
-          <button class="edit_spec_button"
-                  onClick={handleEditClick}
-          >ред.</button>
-          
+          <button class="edit_spec_button" onClick={handleEditClick}>
+            ред.
+          </button>
         </span>
       </td>
 

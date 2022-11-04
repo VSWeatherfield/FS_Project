@@ -1,6 +1,6 @@
-import React from "react";
 import { Topicheader } from "../../components";
 
+import plus_img from "../../images/plus.png";
 import "./forum.css";
 
 const Forum = (props) => {
@@ -30,6 +30,9 @@ const Forum = (props) => {
               className="new-post-button btn btn-primary btn-small"
               onClick={handleNewClick}
             >
+              <span class="fa d-icon d-icon-plus svg-icon svg-string">
+                <img src={plus_img} alt="plus" />
+              </span>
               <span className="d-button-label">Создать тему</span>
             </button>
           </div>
@@ -44,6 +47,12 @@ const Forum = (props) => {
               <tbody className="topic-list-body"> {blogs} </tbody>
             </table>
           </span>
+        </div>
+
+        <div class="more-topics">
+          <a href="/olympiads" class="btn btn-default pull-right">
+            Больше
+          </a>
         </div>
       </div>
     </div>

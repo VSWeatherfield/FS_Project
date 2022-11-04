@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { ajaxService } from "../../services/ajaxservice";
-import { EditBlog, Topiclist } from "../../components";
-import { BlogCreate } from "../../containers";
+import { CreateBlog, EditBlog, Topiclist } from "../../components";
 import { Forum } from "../../pages";
 
 export function Main() {
@@ -18,8 +17,8 @@ export function Main() {
   });
 
   return (
-    <div>
-      <BlogCreate
+    <>
+      <CreateBlog
         isCreateModalOpen={isCreateModalOpen}
         onClose={() => setIsCreateModalOpen(false)}
       />
@@ -57,7 +56,7 @@ export function Main() {
           setIsCreateModalOpen(true);
         }}
       />
-    </div>
+    </>
   );
 }
 
