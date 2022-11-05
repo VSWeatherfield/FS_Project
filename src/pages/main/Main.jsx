@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import { CreateBlog, EditBlog, Topiclist } from "../../components";
 import { Forum, useBlogs } from "../../pages";
+import { increasePage } from "../../slices/blogs";
 
 export function Main() {
-
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [editBlog, setEditBlog] = useState(null);
+  const blogs = useSelector((state) => state.blogs.blogs);
+  const dispatch = useDispatch();
 
-  const { page, setPage, blogs } = useBlogs();
+  useBlogs();
 
   return (
     <>
@@ -50,10 +53,16 @@ export function Main() {
           setIsEditModalOpen(false);
           setIsCreateModalOpen(true);
         }}
-
-        page={page}
-        setPage={setPage}
       />
+
+      <div className="more-topics">
+        <button
+          className="btn btn-default pull-right"
+          onClick={() => dispatch(increasePage())}
+        >
+          Больше
+        </button>
+      </div>
     </>
   );
 }

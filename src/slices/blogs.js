@@ -26,4 +26,5 @@ const blogsSlice = createSlice({
 });
 
 export const blogsReducer = blogsSlice.reducer;
-export const { setPage, setBlogs, setBlogsMore } = blogsSlice.actions;
+export const { setPage, setBlogs, setBlogsMore, increasePage } =
+  blogsSlice.actions;

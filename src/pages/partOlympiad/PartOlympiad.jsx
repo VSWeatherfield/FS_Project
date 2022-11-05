@@ -15,7 +15,9 @@ export function PartOlympiad() {
   }, []);
 
   return (
-    <div> {/*
+    <div>
+      {" "}
+      {/*
       {olympiad ? (
         {olympiad.map((ol) => (
           <BoxForm
@@ -25,7 +27,7 @@ export function PartOlympiad() {
           />
         ))}
         ) : ( */}
-        <Loader />
+      <Loader />
       {/*)}  */}
     </div>
   );

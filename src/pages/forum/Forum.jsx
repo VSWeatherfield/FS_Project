@@ -48,14 +48,6 @@ const Forum = (props) => {
             </table>
           </span>
         </div>
-
-        
-
-        <div className="more-topics">
-          <button className="btn btn-default pull-right" onClick={() => setPage((page) => page + 1)}>
-            Больше
-          </button>
-        </div>
       </div>
     </div>
   );
