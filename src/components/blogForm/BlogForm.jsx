@@ -4,7 +4,6 @@ import "./blogForm.css";
 
 const BlogForm = (props) => {
   const {
-    isModalOpen,
     onClose,
     submitTitle,
     onSubmitForm,
@@ -18,9 +17,9 @@ const BlogForm = (props) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-
     onSubmitForm({ title, description });
     onClose();
+    //dispatch(closeModal());
   };
 
   const handleChangeTitle = (event) => {
@@ -35,10 +34,6 @@ const BlogForm = (props) => {
   const handleChangeDescription = (event) => {
     setDescirption(event.target.value);
   };
-
-  if (!isModalOpen) {
-    return null;
-  }
 
   return (
     <div

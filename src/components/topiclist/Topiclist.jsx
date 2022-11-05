@@ -1,24 +1,24 @@
 import Latex from "react-latex";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import { ajaxService } from "../../services/ajaxservice";
+import { openModal } from "../../slices/modal";
 
 import "./topixlist.css";
 
 const Topiclist = (props) => {
-  const { id, openopen } = props;
-
-  const blog = useSelector((state) =>
-    state.blogs.blogs.find((blog) => blog.id === id)
-  );
-
+  const dispatch = useDispatch();
+  const { id } = props;
+  const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, description, views, answers } = blog;
+
   const handleEditClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
-    openopen();
+    dispatch(openModal({ data: id, name: "edit" }));
   };
 
   return (

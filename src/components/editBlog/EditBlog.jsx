@@ -7,15 +7,11 @@ import "./editBlog.css";
 
 const EditBlog = (props) => {
   const { id } = props;
-
-  const blog = useSelector((state) =>
-    state.blogs.blogs.find((blog) => blog.id === id)
-  );
+  const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, description } = blog;
 
   return (
     <BlogForm
-      isModalOpen={props.isEditModalOpen}
       onClose={props.onClose}
       submitTitle="Сохранить тему"
       defaultTitle={title}

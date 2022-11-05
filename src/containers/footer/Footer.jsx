@@ -133,9 +133,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="third-box">
-            
-          </div>
+          <div className="third-box"></div>
         </div>
       </div>
     </footer>

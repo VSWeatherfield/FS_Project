@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 //import { schema, normalize } from 'normalizr';
 
 const initialState = {
-  blogs: [],
   blogIds: [],
   blogObj: {},
   page: 1,
@@ -12,14 +11,14 @@ function prettifyBlogs(blogs) {
   const blogIds = [];
   const blogObj = [];
   for (let blog of blogs) {
-    blogIds.push(blog.it);
+    blogIds.push(blog.id);
     blogObj[blog.id] = blog;
   }
 
   return {
     blogIds,
-    blogObj
-  }
+    blogObj,
+  };
 }
 
 const blogsSlice = createSlice({
@@ -35,14 +34,12 @@ const blogsSlice = createSlice({
     setBlogs: (state, action) => {
       const { blogIds, blogObj } = prettifyBlogs(action.payload);
 
-      state.blogs = action.payload;
       state.blogIds = blogIds;
       state.blogObj = { ...state.blogObj, ...blogObj };
     },
     setBlogsMore: (state, action) => {
       const { blogIds, blogObj } = prettifyBlogs(action.payload);
 
-      state.blogs = [...state.blogs, ...action.payload];
       state.blogIds = [...state.blogIds, ...blogIds];
       state.blogObj = { ...state.blogObj, ...blogObj };
     },

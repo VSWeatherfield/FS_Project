@@ -11,8 +11,8 @@ export function Blog() {
   const dispatch = useDispatch();
   const params = useParams();
   const [blog, setBlog] = useState(null);
-  const initialBlog = useSelector((state) =>
-    state.blogs.blogs.find((blog) => blog.id === Number(params.id))
+  const initialBlog = useSelector(
+    (state) => state.blogs.blogObj[Number(params.id)]
   );
 
   useEffect(() => {

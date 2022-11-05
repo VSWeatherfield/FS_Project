@@ -3,42 +3,42 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 21,
+      "views": 23,
       "answers": 0,
       "id": 1
     },
     {
       "title": "Maman Maman",
       "description": "Le vent se leve! Il faut tenter de vivre!",
-      "views": 7,
+      "views": 11,
       "answers": 3,
       "id": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 3,
+      "views": 4,
       "answers": 0,
       "id": 3
     },
     {
       "title": "Свойство центроида треугольникоффф",
-      "description": "Я люблю Голландию",
-      "views": 3,
-      "answers": 1,
+      "description": "Хым, что-то про треугольники а не голландию",
+      "views": 5,
+      "answers": 2,
       "id": 4
     },
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 6,
+      "views": 7,
       "answers": 0,
       "id": 5
     },
     {
       "title": "Интегралы (basic int. form)",
       "description": "Я люблю Голланди..",
-      "views": 1,
+      "views": 3,
       "answers": 0,
       "id": 6
     },
@@ -52,7 +52,7 @@
     {
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
-      "views": 2,
+      "views": 3,
       "answers": 0,
       "id": 10
     },
@@ -73,7 +73,7 @@
     {
       "title": "А так можно было?",
       "description": "сейчас и проверим",
-      "views": 2,
+      "views": 3,
       "answers": 1,
       "id": 16
     },
@@ -115,14 +115,14 @@
     {
       "title": "Nice problem",
       "description": "$f(x)$ polynomial , find $f(x)$ given $2f(x)+2x^{2}=f(x^{2}-2x+4)+8x+5$",
-      "views": 2,
+      "views": 3,
       "answers": 0,
       "id": 22
     },
     {
       "title": "Inequalities",
       "description": "Let $a, b, c>0$. Prove that$$ \\\\ \\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{a^2+b^2} {c^2} \\geq2+3\\sqrt[3]{2} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{2(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{4} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{k(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{2k} \\\\ $$Where $k\\in N^+.$",
-      "views": 3,
+      "views": 4,
       "answers": 0,
       "id": 23
     },
@@ -143,15 +143,30 @@
     {
       "title": "Findint the inverse of $(A+BC^{T})$",
       "description": "Let $n$ and $p$ be positive integers and let ${\\bf F}$ be a field. Let $A\\in M_{n\\times n}({\\bf F})$ and let $B,C\\in M_{n\\times p}({\\bf F})$ be matrices satisfying the condition that $A$ and $(I+C^{\\top}A^{-1}B)$ are nonsingular. Show that $A+BC^{\\top}$ is nonsingular, and that\\[ (A+BC^{\\top})^{-1}=A^{-1}-A^{-1}B(I+C^{\\top}A^{-1}B)^{-1}C^{\\top}A^{-1}.\\]",
-      "views": 8,
+      "views": 9,
       "answers": 0,
       "id": 26
     },
     {
+      "title": "some theme indeed",
       "description": "😍",
+      "views": 1,
+      "answers": 1,
+      "id": 27
+    },
+    {
+      "title": "do u think amc10 this year will be hard",
+      "description": "do u guys think amc10 this year will be hard? Approximate cutoff, maybe? answer in the comments, like this:\nformat:\nvery easy/easy/ok/hard/very hard\nenter cutoff expectation here",
       "views": 0,
       "answers": 0,
-      "id": 27
+      "id": 28
+    },
+    {
+      "title": "шалалала",
+      "description": "лала",
+      "views": 1,
+      "answers": 0,
+      "id": 29
     }
   ],
   "olympiads": [

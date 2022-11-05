@@ -6,7 +6,6 @@ import "./createBlog.css";
 const CreateBlog = (props) => {
   return (
     <BlogForm
-      isModalOpen={props.isCreateModalOpen}
       onClose={props.onClose}
       submitTitle="Создать тему"
       onSubmitForm={({ title, description }) => {

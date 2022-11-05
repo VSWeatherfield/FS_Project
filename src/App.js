@@ -13,6 +13,8 @@ import {
   PartOlympiad,
 } from "./pages";
 
+import { ModalContainer } from "./components/modalContainer/modalContainer";
+
 import "./App.css";
 
 var latex = require("react-latex");
@@ -22,6 +24,7 @@ const App = () => {
     <Provider store={store}>
       <BrowserRouter>
         <Header />
+        <ModalContainer />
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/olympiads" element={<Olympiads />}></Route>
