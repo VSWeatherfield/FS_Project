@@ -55,14 +55,7 @@ export function Main() {
         }}
       />
 
-      <div className="more-topics">
-        <button
-          className="btn btn-default pull-right"
-          onClick={() => dispatch(increasePage())}
-        >
-          Больше
-        </button>
-      </div>
+
     </>
   );
 }

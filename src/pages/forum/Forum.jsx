@@ -1,10 +1,15 @@
+import { useSelector, useDispatch } from "react-redux";
+
 import { Topicheader } from "../../components";
+import { increasePage } from "../../slices/blogs";
 
 import plus_img from "../../images/plus.png";
 import "./forum.css";
 
 const Forum = (props) => {
-  const { blogs, openopen, page, setPage } = props;
+  //const notThatBlogs = useSelector((state) => state.blogs.blogs);
+  const dispatch = useDispatch();
+  const { blogs, openopen } = props;
 
   const handleNewClick = (event) => {
     event.stopPropagation();
@@ -48,6 +53,16 @@ const Forum = (props) => {
             </table>
           </span>
         </div>
+
+        <div className="more-topics">
+        <button
+          className="btn btn-default pull-right"
+          onClick={() => dispatch(increasePage())}
+        >
+          Больше
+        </button>
+      </div>
+        
       </div>
     </div>
   );
