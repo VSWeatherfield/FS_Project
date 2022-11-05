@@ -1,24 +1,30 @@
+import { useSelector } from "react-redux";
+
 import { ajaxService } from "../../services/ajaxservice";
 import { BlogForm } from "../../components";
 
 import "./editBlog.css";
 
 const EditBlog = (props) => {
-  const { blogId, defaultTitle, defaultDescription, exviews, exanswers } =
-    props;
+  const { id } = props;
+
+  const blog = useSelector((state) =>
+    state.blogs.blogs.find((blog) => blog.id === id)
+  );
+  const { title, description } = blog;
 
   return (
     <BlogForm
       isModalOpen={props.isEditModalOpen}
       onClose={props.onClose}
       submitTitle="Сохранить тему"
-      defaultTitle={defaultTitle}
-      defaultDescription={defaultDescription}
+      defaultTitle={title}
+      defaultDescription={description}
       onSubmitForm={({ title, description }) => {
-        const views = exviews + 1;
-        const answers = exanswers + 1;
+        const views = blog.views + 1;
+        const answers = blog.answers + 1;
 
-        ajaxService(`/blogs/${blogId}`, {
+        ajaxService(`/blogs/${id}`, {
           method: "PUT",
           body: JSON.stringify({ title, description, views, answers }),
           headers: {

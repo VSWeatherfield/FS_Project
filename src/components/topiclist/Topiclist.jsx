@@ -1,13 +1,19 @@
-import { ajaxService } from "../../services/ajaxservice";
-import React, { useState } from "react";
+import Latex from "react-latex";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+import { ajaxService } from "../../services/ajaxservice";
+
 import "./topixlist.css";
-import Latex from "react-latex";
 
 const Topiclist = (props) => {
-  const { id, title, description, views, answers, openopen } = props;
+  const { id, openopen } = props;
 
+  const blog = useSelector((state) =>
+    state.blogs.blogs.find((blog) => blog.id === id)
+  );
+
+  const { title, description, views, answers } = blog;
   const handleEditClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
@@ -26,8 +32,7 @@ const Topiclist = (props) => {
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
             onClick={() => {
-              console.log("aooa");
-              const views = props.views + 1;
+              const views = blog.views + 1;
 
               ajaxService(`/blogs/${id}`, {
                 method: "PUT",

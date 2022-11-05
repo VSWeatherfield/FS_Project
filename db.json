@@ -3,21 +3,21 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 19,
+      "views": 21,
       "answers": 0,
       "id": 1
     },
     {
-      "title": "uiuiu",
-      "description": "qqqq",
-      "views": 4,
-      "answers": 0,
+      "title": "Maman Maman",
+      "description": "Le vent se leve! Il faut tenter de vivre!",
+      "views": 7,
+      "answers": 3,
       "id": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 2,
+      "views": 3,
       "answers": 0,
       "id": 3
     },
@@ -31,7 +31,7 @@
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 5,
+      "views": 6,
       "answers": 0,
       "id": 5
     },
@@ -93,10 +93,10 @@
     },
     {
       "title": "If you're out on the road",
-      "description": "Feeling lonely, and so cold",
-      "id": 19,
-      "views": 0,
-      "answers": 0
+      "description": "Feeling lonely, and so colddafdf",
+      "views": 2,
+      "answers": 1,
+      "id": 19
     },
     {
       "title": "Business business business, is this working?",
@@ -143,9 +143,15 @@
     {
       "title": "Findint the inverse of $(A+BC^{T})$",
       "description": "Let $n$ and $p$ be positive integers and let ${\\bf F}$ be a field. Let $A\\in M_{n\\times n}({\\bf F})$ and let $B,C\\in M_{n\\times p}({\\bf F})$ be matrices satisfying the condition that $A$ and $(I+C^{\\top}A^{-1}B)$ are nonsingular. Show that $A+BC^{\\top}$ is nonsingular, and that\\[ (A+BC^{\\top})^{-1}=A^{-1}-A^{-1}B(I+C^{\\top}A^{-1}B)^{-1}C^{\\top}A^{-1}.\\]",
-      "views": 6,
+      "views": 8,
       "answers": 0,
       "id": 26
+    },
+    {
+      "description": "😍",
+      "views": 0,
+      "answers": 0,
+      "id": 27
     }
   ],
   "olympiads": [

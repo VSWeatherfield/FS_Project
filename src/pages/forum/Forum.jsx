@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { Topicheader } from "../../components";
 import { increasePage } from "../../slices/blogs";
@@ -55,14 +55,13 @@ const Forum = (props) => {
         </div>
 
         <div className="more-topics">
-        <button
-          className="btn btn-default pull-right"
-          onClick={() => dispatch(increasePage())}
-        >
-          Больше
-        </button>
-      </div>
-        
+          <button
+            className="btn btn-default pull-right"
+            onClick={() => dispatch(increasePage())}
+          >
+            Больше
+          </button>
+        </div>
       </div>
     </div>
   );
