@@ -4,7 +4,7 @@ import plus_img from "../../images/plus.png";
 import "./forum.css";
 
 const Forum = (props) => {
-  const { blogs, openopen } = props;
+  const { blogs, openopen, page, setPage } = props;
 
   const handleNewClick = (event) => {
     event.stopPropagation();
@@ -30,7 +30,7 @@ const Forum = (props) => {
               className="new-post-button btn btn-primary btn-small"
               onClick={handleNewClick}
             >
-              <span class="fa d-icon d-icon-plus svg-icon svg-string">
+              <span className="fa d-icon d-icon-plus svg-icon svg-string">
                 <img src={plus_img} alt="plus" />
               </span>
               <span className="d-button-label">Создать тему</span>
@@ -49,10 +49,12 @@ const Forum = (props) => {
           </span>
         </div>
 
-        <div class="more-topics">
-          <a href="/olympiads" class="btn btn-default pull-right">
+        
+
+        <div className="more-topics">
+          <button className="btn btn-default pull-right" onClick={() => setPage((page) => page + 1)}>
             Больше
-          </a>
+          </button>
         </div>
       </div>
     </div>

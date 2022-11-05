@@ -7,4 +7,6 @@ export { default as BlogForm } from "./blogForm/BlogForm";
 export { default as EditBlog } from "./editBlog/EditBlog";
 export { default as CreateBlog } from "./createBlog/CreateBlog";
 
+export { default as Loader } from "./loader/Loader";
+
 export { default as BoxForm } from "./olympBoxForm/BoxForm";

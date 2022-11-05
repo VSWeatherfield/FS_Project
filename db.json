@@ -3,7 +3,7 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 15,
+      "views": 19,
       "answers": 0,
       "id": 1
     },
@@ -17,15 +17,15 @@
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 1,
+      "views": 2,
       "answers": 0,
       "id": 3
     },
     {
-      "title": "Свойство центроида треугольникффф",
+      "title": "Свойство центроида треугольникоффф",
       "description": "Я люблю Голландию",
-      "views": 1,
-      "answers": 0,
+      "views": 3,
+      "answers": 1,
       "id": 4
     },
     {
@@ -45,7 +45,7 @@
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 1,
+      "views": 2,
       "answers": 0,
       "id": 7
     },
@@ -59,7 +59,7 @@
     {
       "title": "Точно точно работаешь?",
       "description": "да!",
-      "views": 1,
+      "views": 2,
       "answers": 0,
       "id": 11
     },
@@ -107,38 +107,232 @@
     },
     {
       "title": "Примеры не ассоциативных операций",
-      "description": "Товарищи старшие математики, знает ли кто примеры не ассоциативных операций?\n\nНу т.е. чтобы (A\\cdot B)\\cdot C \\neq A\\cdot (B \\cdot C)(A⋅B)⋅C\n\n=A⋅(B⋅C) при неком определении операции \\cdot⋅ и некой форме A,B,CA,B,C?",
-      "views": 1,
+      "description": "Товарищи старшие математики, знает ли кто примеры не ассоциативных операций?\n\nНу т.е. чтобы $$(A\\cdot B)\\cdot C \\neq A\\cdot (B \\cdot C)(A⋅B)⋅C\n=A⋅(B⋅C)$$ при неком определении операции $$\\cdot$$⋅ и некой форме $$A,B,CA,B,C$$?",
+      "views": 2,
       "answers": 0,
       "id": 21
     },
     {
       "title": "Nice problem",
       "description": "$f(x)$ polynomial , find $f(x)$ given $2f(x)+2x^{2}=f(x^{2}-2x+4)+8x+5$",
-      "views": 0,
+      "views": 1,
       "answers": 0,
       "id": 22
     },
     {
       "title": "Inequalities",
-      "description": "Let $a, b, c>0$. Prove that\n$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{a^2+b^2} {c^2} \\geq2+3\\sqrt[3]{2}$$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{2(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{4}$$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{k(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{2k}$$Where $k\\in N^+.$",
-      "views": 1,
+      "description": "Let $a, b, c>0$. Prove that$$ \\\\ \\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{a^2+b^2} {c^2} \\geq2+3\\sqrt[3]{2} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{2(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{4} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{k(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{2k} \\\\ $$Where $k\\in N^+.$",
+      "views": 3,
       "answers": 0,
       "id": 23
     },
     {
       "title": "I really need some recommendation for functional equation books.",
       "description": "Are there good books have free pdf which excellent for practicing functional equation from $\\mathbb{R+} \\rightarrow \\mathbb{R+}$?",
-      "views": 0,
+      "views": 1,
       "answers": 0,
       "id": 24
     },
     {
       "title": "Combinatorics HALP!!",
       "description": "A group of 50 people of different ages sit around a big round table. We call any pair consisting\nof two people $A$ and $B$ a newbie pair, if $A$ and $B$ are not sitting next to each another, and on at\nleast one of the arcs connecting $A$ and $B$ around the table edge all people are older than $A$ and $B$.\nDetermine the minimal number of newbie pairs.",
-      "views": 0,
+      "views": 5,
       "answers": 0,
       "id": 25
+    },
+    {
+      "title": "Findint the inverse of $(A+BC^{T})$",
+      "description": "Let $n$ and $p$ be positive integers and let ${\\bf F}$ be a field. Let $A\\in M_{n\\times n}({\\bf F})$ and let $B,C\\in M_{n\\times p}({\\bf F})$ be matrices satisfying the condition that $A$ and $(I+C^{\\top}A^{-1}B)$ are nonsingular. Show that $A+BC^{\\top}$ is nonsingular, and that\\[ (A+BC^{\\top})^{-1}=A^{-1}-A^{-1}B(I+C^{\\top}A^{-1}B)^{-1}C^{\\top}A^{-1}.\\]",
+      "views": 6,
+      "answers": 0,
+      "id": 26
+    }
+  ],
+  "olympiads": [
+    {
+      "id": 1,
+      "name": "IMO",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        },
+        {
+          "2021": [
+            {
+              "No 1": "ao"
+            },
+            {
+              "No 2": "bo"
+            },
+            {
+              "No 3": "co"
+            }
+          ]
+        },
+        {
+          "2019": [
+            {
+              "No 1": "aoao"
+            },
+            {
+              "No 2": "bobo"
+            },
+            {
+              "No 3": "coco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Республиканская",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        },
+        {
+          "2021": [
+            {
+              "No 1": "ao"
+            },
+            {
+              "No 2": "bo"
+            },
+            {
+              "No 3": "co"
+            }
+          ]
+        },
+        {
+          "2019": [
+            {
+              "No 1": "aoao"
+            },
+            {
+              "No 2": "bobo"
+            },
+            {
+              "No 3": "coco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "МЖО",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Туймаада",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Азиатско-Тихоокеанская",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Балканская",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "EGMO",
+      "years": [
+        {
+          "2022": [
+            {
+              "No 1": "aoaoaoa"
+            },
+            {
+              "No 2": "bobobobo"
+            },
+            {
+              "No 3": "cocococ"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./topixlist.css";
+import Latex from "react-latex";
 
 const Topiclist = (props) => {
   const { id, title, description, views, answers, openopen } = props;
@@ -37,10 +38,11 @@ const Topiclist = (props) => {
               });
             }}
           >
-            {title}
+            {" "}
+            <Latex>{title}</Latex>
           </Link>
 
-          <button class="edit_spec_button" onClick={handleEditClick}>
+          <button className="edit_spec_button" onClick={handleEditClick}>
             ред.
           </button>
         </span>

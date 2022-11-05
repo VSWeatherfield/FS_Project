@@ -1,8 +1,19 @@
+import { useState, useEffect } from "react";
+
+import { ajaxService } from "../../services/ajaxservice";
 import { BoxForm } from "../../components";
 
 import "./olympiads.css";
 
 export function Olympiads() {
+  const [olympiads, setOlympiads] = useState([]);
+
+  useEffect(() => {
+    ajaxService("/olympiads").then((data) => {
+      setOlympiads(data);
+    });
+  });
+
   return (
     <div className="outerOlympElem">
       <div className="olympHeader">
@@ -18,13 +29,18 @@ export function Olympiads() {
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-        <BoxForm olympName="ГЖО" olympId="gzho" />
+        {olympiads.map((olympiad) => (
+          <BoxForm id={olympiad.id} name={olympiad.name} />
+        ))}
+
+        {/*
+        <BoxForm olympName="МЖО" olympId="gzho" />
         <BoxForm olympName="Республиканская" olympId="respa" />
         <BoxForm olympName="IMO" olympId="imo" />
         <BoxForm olympName="Туймаада" olympId="tyimada" />
         <BoxForm olympName="Азиатско-Тихоокеанская" olympId="apmo" />
         <BoxForm olympName="Балканская" olympId="bmo" />
-        <BoxForm olympName="EGMO" olympId="egmo" />
+        <BoxForm olympName="EGMO" olympId="egmo" />*/}
       </div>
     </div>
   );

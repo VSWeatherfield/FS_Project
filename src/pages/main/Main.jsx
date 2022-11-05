@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { ajaxService } from "../../services/ajaxservice";
 import { CreateBlog, EditBlog, Topiclist } from "../../components";
-import { Forum } from "../../pages";
+import { Forum, useBlogs } from "../../pages";
 
 export function Main() {
-  const [blogs, setBlogs] = useState([]);
+
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [editBlog, setEditBlog] = useState(null);
 
-  useEffect(() => {
-    ajaxService("/blogs").then((data) => {
-      setBlogs(data);
-    });
-  });
+  const { page, setPage, blogs } = useBlogs();
 
   return (
     <>
@@ -55,6 +50,9 @@ export function Main() {
           setIsEditModalOpen(false);
           setIsCreateModalOpen(true);
         }}
+
+        page={page}
+        setPage={setPage}
       />
     </>
   );

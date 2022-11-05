@@ -13,6 +13,7 @@
     "react-devtools": "^4.26.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-latex": "^2.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
