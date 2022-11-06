@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-//import { schema, normalize } from 'normalizr';
+import { schema, normalize } from 'normalizr';
 
 const initialState = {
   blogIds: [],
@@ -7,19 +7,7 @@ const initialState = {
   page: 1,
 };
 
-function prettifyBlogs(blogs) {
-  const blogIds = [];
-  const blogObj = [];
-  for (let blog of blogs) {
-    blogIds.push(blog.id);
-    blogObj[blog.id] = blog;
-  }
-
-  return {
-    blogIds,
-    blogObj,
-  };
-}
+const blogSchema = new schema.Entity('blogs')
 
 const blogsSlice = createSlice({
   name: "blogs",
@@ -32,16 +20,17 @@ const blogsSlice = createSlice({
       state.page = state.page + 1;
     },
     setBlogs: (state, action) => {
-      const { blogIds, blogObj } = prettifyBlogs(action.payload);
+      const { entities, result } = normalize(action.payload, [blogSchema]);
 
-      state.blogIds = blogIds;
-      state.blogObj = { ...state.blogObj, ...blogObj };
+      state.blogIds = result;
+      state.blogObj = { ...state.blogObj, ...entities.blogs };
     },
     setBlogsMore: (state, action) => {
-      const { blogIds, blogObj } = prettifyBlogs(action.payload);
+      const { entities, result } = normalize(action.payload, [blogSchema]);
 
-      state.blogIds = [...state.blogIds, ...blogIds];
-      state.blogObj = { ...state.blogObj, ...blogObj };
+      state.blogIds = [...state.blogIds, ...result];
+      state.blogObj = { ...state.blogObj, ...entities.blogs };
+
     },
   },
 });
