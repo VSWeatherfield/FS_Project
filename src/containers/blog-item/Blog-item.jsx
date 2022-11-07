@@ -1,11 +1,9 @@
-import React from "react";
 import Latex from "react-latex";
-import { Link } from "react-router-dom";
 
 import "./blog-item.css";
 
 const BlogItem = (props) => {
-  const { id, title, description } = props;
+  const { title, description } = props;
 
   return (
     <div className="main-outlet-wrapper">

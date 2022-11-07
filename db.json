@@ -3,7 +3,7 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 24,
+      "views": 26,
       "answers": 0,
       "id": 1
     },
@@ -17,7 +17,7 @@
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 4,
+      "views": 5,
       "answers": 0,
       "id": 3
     },
@@ -38,14 +38,14 @@
     {
       "title": "Интегралы (basic int. form)",
       "description": "Я люблю Голланди..",
-      "views": 5,
+      "views": 6,
       "answers": 0,
       "id": 6
     },
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 2,
+      "views": 3,
       "answers": 0,
       "id": 7
     },
@@ -148,13 +148,6 @@
       "id": 26
     },
     {
-      "title": "some theme indeed",
-      "description": "😍",
-      "views": 1,
-      "answers": 1,
-      "id": 27
-    },
-    {
       "title": "do u think amc10 this year will be hard",
       "description": "do u guys think amc10 this year will be hard? Approximate cutoff, maybe? answer in the comments, like this:\nformat:\nvery easy/easy/ok/hard/very hard\nenter cutoff expectation here",
       "views": 0,
@@ -169,92 +162,200 @@
       "id": 29
     }
   ],
+
   "olympiads": [
     {
       "id": 1,
       "name": "IMO",
       "years": [
         {
-          "2022": [
+          "id": "1",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "The Bank of Oslo issues two types of coin: aluminum (denoted A) and bronze (denoted B). Marianne has $n$ aluminum coins and $n$ bronze coins arranged in a row in some arbitrary initial order. A chain is any subsequence of consecutive coins of the same type. Given a fixed positive integer $k \\leq 2n$, Gilberty repeatdly performs the following operation: he identifies the longest chain containing the $k^{th}$ coin from the left and moves all coins in that chain to the left end of the row. For example, if $n=4$ and $k=4$, the process starting from the ordering $AABBBABA$ would be $AABBBABA \to BBBAAABA \to AAABBBBA \to BBBBAAAA \to ...$ Find all pairs $(n,k)$ with $1 \\leq k \\leq 2n$ such that for every initial ordering, at some moment during the process, the leftmost $n$ coins will all be of the same type.",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "Let $\\mathbb{R}^+$ denote the set of positive real numbers. Find all functions $f: \\mathbb{R}^+ \to \\mathbb{R}^+$ such that for each $x \\in \\mathbb{R}^+$, there is exactly one $y \\in \\mathbb{R}^+$ satisfying$$xf(y)+yf(x) \\leq 2$$",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "Let $k$ be a positive integer and let $S$ be a finite set of odd prime numbers. Prove that there is at most one way (up to rotation and reflection) to place the elements of $S$ around the circle such that the product of any two neighbors is of the form $x^2+x+k$ for some positive integer $x$.",
+              "id": 3
+            },
+            {
+              "description": "Let $ABCDE$ be a convex pentagon such that $BC=DE$. Assume that there is a point $T$ inside $ABCDE$ with $TB=TD,TC=TE$ and $\\angle ABT = \\angle TEA$. Let line $AB$ intersect lines $CD$ and $CT$ at points $P$ and $Q$, respectively. Assume that the points $P,B,A,Q$ occur on their line in that order. Let line $AE$ intersect $CD$ and $DT$ at points $R$ and $S$, respectively. Assume that the points $R,E,A,S$ occur on their line in that order. Prove that the points $P,S,Q,R$ lie on a circle.",
+              "id": 4
+            },
+            {
+              "description": "Find all triples $(a,b,p)$ of positive integers with $p$ prime and$$a^p=b!+p$$",
+              "id": 5
+            },
+            {
+              "description": "Let $n$ be a positive integer. A Nordic square is an $n \times n$ board containing all the integers from $1$ to $n^2$ so that each cell contains exactly one number. Two different cells are considered adjacent if they share a common side. Every cell that is adjacent only to cells containing larger numbers is called a valley. An uphill path is a sequence of one or more cells such that: (i) the first cell in the sequence is a valley, (ii) each subsequent cell in the sequence is adjacent to the previous cell, and (iii) the numbers written in the cells in the sequence are in increasing order. Find, as a function of $n$, the smallest possible total number of uphill paths in a Nordic square.",
+              "id": 6
             }
           ]
         },
+
         {
-          "2021": [
+          "id": "2",
+          "name": "2021",
+          "problems": [
             {
-              "No 1": "ao"
+              "description": "Let $n \\geqslant 100$ be an integer. Ivan writes the numbers $n, n+1, \\ldots, 2 n$ each on different cards. He then shuffles these $n+1$ cards, and divides them into two piles. Prove that at least one of the piles contains two cards such that the sum of their numbers is a perfect square.",
+              "id": 1
             },
             {
-              "No 2": "bo"
+              "description": "Show that the inequality\\[\\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i-x_j|}\\leqslant \\sum_{i=1}^n \\sum_{j=1}^n \\sqrt{|x_i+x_j|}\\]holds for all real numbers $x_1,\\ldots x_n.$",
+              "id": 2
             },
             {
-              "No 3": "co"
+              "description": "Let $D$ be an interior point of the acute triangle $ABC$ with $AB > AC$ so that $\\angle DAB = \\angle CAD.$ The point $E$ on the segment $AC$ satisfies $\\angle ADE =\\angle BCD,$ the point $F$ on the segment $AB$ satisfies $\\angle FDA =\\angle DBC,$ and the point $X$ on the line $AC$ satisfies $CX = BX.$ Let $O_1$ and $O_2$ be the circumcenters of the triangles $ADC$ and $EXD,$ respectively. Prove that the lines $BC, EF,$ and $O_1O_2$ are concurrent.",
+              "id": 3
+            },
+            {
+              "description": "Let $\\Gamma$ be a circle with centre $I$, and $A B C D$ a convex quadrilateral such that each of the segments $A B, B C, C D$ and $D A$ is tangent to $\\Gamma$. Let $\\Omega$ be the circumcircle of the triangle $A I C$. The extension of $B A$ beyond $A$ meets $\\Omega$ at $X$, and the extension of $B C$ beyond $C$ meets $\\Omega$ at $Z$. The extensions of $A D$ and $C D$ beyond $D$ meet $\\Omega$ at $Y$ and $T$, respectively. Prove that\\[A D+D T+T X+X A=C D+D Y+Y Z+Z C.\\ Proposed by Dominik Burek, Poland and Tomasz Ciesla, Poland",
+              "id": 4
+            },
+            {
+              "description": "Two squirrels, Bushy and Jumpy, have collected 2021 walnuts for the winter. Jumpy numbers the walnuts from 1 through 2021, and digs 2021 little holes in a circular pattern in the ground around their favourite tree. The next morning Jumpy notices that Bushy had placed one walnut into each hole, but had paid no attention to the numbering. Unhappy, Jumpy decides to reorder the walnuts by performing a sequence of 2021 moves. In the $k$-th move, Jumpy swaps the positions of the two walnuts adjacent to walnut $k$. Prove that there exists a value of $k$ such that, on the $k$-th move, Jumpy swaps some walnuts $a$ and $b$ such that $a<k<b$.",
+              "id": 5
+            },
+            {
+              "description": "Let $m\\ge 2$ be an integer, $A$ a finite set of integers (not necessarily positive) and $B_1,B_2,...,B_m$ subsets of $A$. Suppose that, for every $k=1,2,...,m$, the sum of the elements of $B_k$ is $m^k$. Prove that $A$ contains at least $\\dfrac{m}{2}$ elements.",
+              "id": 6
             }
           ]
         },
+
         {
-          "2019": [
+          "id": "3",
+          "name": "2020",
+          "problems": [
             {
-              "No 1": "aoao"
+              "description": "Consider the convex quadrilateral $ABCD$. The point $P$ is in the interior of $ABCD$. The following ratio equalities hold: \\[\\angle PAD:\\angle PBA:\\angle DPA=1:2:3=\\angle CBP:\\angle BAP:\\angle BPC\\]Prove that the following three lines meet in a point: the internal bisectors of angles $\\angle ADP$ and $\\angle PCB$ and the perpendicular bisector of segment $AB$. Proposed by Dominik Burek, Poland",
+              "id": 1
             },
             {
-              "No 2": "bobo"
+              "description": "The real numbers $a, b, c, d$ are such that $a\\geq b\\geq c\\geq d>0$ and $a+b+c+d=1$. Prove that \\[(a+2b+3c+4d)a^ab^bc^cd^d<1\\]Proposed by Stijn Cambie, Belgium",
+              "id": 2
             },
             {
-              "No 3": "coco"
+              "description": "There are $4n$ pebbles of weights $1, 2, 3, \\dots, 4n.$ Each pebble is coloured in one of $n$ colours and there are four pebbles of each colour. Show that we can arrange the pebbles into two piles so that the following two conditions are both satisfied:The total weights of both piles are the same. Each pile contains two pebbles of each colour. Proposed by Milan Haiman, Hungary and Carl Schildkraut, USA",
+              "id": 3
+            },
+            {
+              "description": "There is an integer $n > 1$. There are $n^2$ stations on a slope of a mountain, all at different altitudes. Each of two cable car companies, $A$ and $B$, operates $k$ cable cars; each cable car provides a transfer from one of the stations to a higher one (with no intermediate stops). The $k$ cable cars of $A$ have $k$ different starting points and $k$ different finishing points, and a cable car which starts higher also finishes higher. The same conditions hold for $B$. We say that two stations are linked by a company if one can start from the lower station and reach the higher one by using one or more cars of that company (no other movements between stations are allowed). Determine the smallest positive integer $k$ for which one can guarantee that there are two stations that are linked by both companies. Proposed by Tejaswi Navilarekallu, India",
+              "id": 4
+            },
+            {
+              "description": "A deck of $n > 1$ cards is given. A positive integer is written on each card. The deck has the property that the arithmetic mean of the numbers on each pair of cards is also the geometric mean of the numbers on some collection of one or more cards. For which $n$ does it follow that the numbers on the cards are all equal? Proposed by Oleg Košik, Estonia",
+              "id": 5
+            },
+            {
+              "description": "Prove that there exists a positive constant $c$ such that the following statement is true: Consider an integer $n > 1$, and a set $\\mathcal S$ of $n$ points in the plane such that the distance between any two different points in $\\mathcal S$ is at least 1. It follows that there is a line $\\ell$ separating $\\mathcal S$ such that the distance from any point of $\\mathcal S$ to $\\ell$ is at least $cn^{-1/3}$. (A line $\\ell$ separates a set of points S if some segment joining two points in $\\mathcal S$ crosses $\\ell$.) Note. Weaker results with $cn^{-1/3}$ replaced by $cn^{-\\alpha}$ may be awarded points depending on the value of the constant $\\alpha > 1/3$. Proposed by Ting-Feng Lin and Hung-Hsun Hans Yu, Taiwan",
+              "id": 6
             }
           ]
         }
       ]
     },
+
     {
       "id": 2,
       "name": "Республиканская",
       "years": [
         {
-          "2022": [
+          "id": "4",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "Given a triangle $ABC$ draw the altitudes $AD$, $BE$, $CF$. Take points $P$ and $Q$ on $AB$ and $AC$, respectively such that $PQ \\parallel BC$. Draw the circles with diameters $BQ$ and $CP$ and let them intersect at points $R$ and $T$ where $R$ is closer to $A$ than $T$. Draw the altitudes $BN$ and $CM$ in the triangle $BCR$. Prove that $FM$, $EN$ and $AD$ are concurrent.",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "We define the function $Z(A)$ where we write the digits of $A$ in base $10$ form in reverse. (For example: $Z(521)=125$). Call a number $A$ $good$ if the first and last digits of $A$ are different, none of it's digits are $0$ and the equality:$$Z(A^2)=(Z(A))^2$$happens. Find all such good numbers greater than $10^6$.",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "Given $m\\in\\mathbb{N}$. Find all functions $f:\\mathbb{R^{+}}\rightarrow\\mathbb{R^{+}}$ such that$$f(f(x)+y)-f(x)=\\left( \frac{f(y)}{y}-1\right)x+f^m(y)$$holds for all $x,y\\in\\mathbb{R^{+}}.$ ($f^m(x) =$ $f$ applies $m$ times.)",
+              "id": 3
+            },
+            {
+              "description": "Let $P(x)$ be a polynomial with positive integer coefficients such that $deg(P)=699$. Prove that if $P(1) \\le 2022$, then there exist some consecutive coefficients such that their sum is $22$, $55$, or $77$.",
+              "id": 4
+            },
+            {
+              "description": "Given a cyclic quadrilateral $ABCD$, let it's diagonals intersect at the point $O$. Take the midpoints of $AD$ and $BC$ as $M$ and $N$ respectively. Take a point $S$ on the arc $AB$ not containing $C$ or $D$ such that$$\\angle SMA=\\angle SNB$$Prove that if the diagonals of the quadrilateral made from the lines $SM$, $SN$, $AB$, and $CD$ intersect at the point $T$, then $S$, $O$, and $T$ are collinear.",
+              "id": 5
+            },
+            {
+              "description": "Given an infinite positive integer sequence $\\{x_i\\}$ such that$$x_{n+2}=x_nx_{n+1}+1$$Prove that for any positive integer $i$ there exists a positive integer $j$ such that $x_j^j$ is divisible by $x_i^i$. Remark: Unfortunately, there was a mistake in the problem statement during the contest itself. In the last sentence, it should say 'for any positive integer $i>1$ ...'",
+              "id": 6
             }
           ]
         },
+
         {
-          "2021": [
+          "id": "5",
+          "name": "2021",
+          "problems": [
             {
-              "No 1": "ao"
+              "description": "Given $a,b,c>0$ such that $$a+b+c+\frac{1}{abc}=\frac{19}{2}$$ What is the greatest value for $a$?",
+              "id": 1
             },
             {
-              "No 2": "bo"
+              "description": "",
+              "id": 2
             },
             {
-              "No 3": "co"
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "Given acute triangle $ABC$ with circumcircle $\\Gamma$ and altitudes $AD, BE, CF$, line $AD$ cuts $\\Gamma$ again at $P$ and $PF, PE$ meet $\\Gamma$ again at $R, Q$. Let $O_1, O_2$ be the circumcenters of $\triangle BFR$ and $\triangle CEQ$ respectively. Prove that $O_{1}O_{2}$ bisects $\\overline{EF}$.",
+              "id": 4
+            },
+            {
+              "description": "Let $a$ be a positive integer. Prove that for any pair $(x,y)$ of integer solutions of equation$$x(y^2-2x^2)+x+y+a=0$$we have:$$|x| \\leqslant a+\\sqrt{2a^2+2}$$",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
             }
           ]
         },
+
         {
-          "2019": [
+          "id": "6",
+          "name": "2020",
+          "problems": [
             {
-              "No 1": "aoao"
+              "description": "Find all pairs $ (m, n) $ of natural numbers such that $ n ^ 4 \\ | \\ 2m ^ 5 - 1 $ and $ m ^ 4 \\ | \\ 2n ^ 5 + 1 $.",
+              "id": 1
             },
             {
-              "No 2": "bobo"
+              "description": "Find all functions $ f: \\mathbb {R} ^ + \to \\mathbb {R} ^ + $ such that for any $ x, y \\in \\mathbb {R} ^ + $ the following equality holds:\\[f (x) f (y) = f \\left (\frac {xy} {x f (x) + y} \right). \\]$ \\mathbb {R} ^ + $ denotes the set of positive real numbers.",
+              "id": 2
             },
             {
-              "No 3": "coco"
+              "description": "A point $ N $ is marked on the median $ CM $ of the triangle $ ABC $ so that $ MN \\cdot MC = AB ^ 2/4 $. Lines $ AN $ and $ BN $ intersect the circumcircle $ \triangle ABC $ for the second time at points $ P $ and $ Q $, respectively. $ R $ is the point of segment $ PQ $, nearest to $ Q $, such that $ \\angle NRC = \\angle BNC $. $ S $ is the point of the segment $ PQ $ closest to $ P $ such that $ \\angle NSC = \\angle ANC $. Prove that $ RN = SN $.",
+              "id": 3
+            },
+            {
+              "description": "Alice and Bob play a game on the infinite side of a checkered strip, in which the cells are numbered with consecutive integers from left to right (..., $-2$, $-1$, $0$, $1$, $2$, ...). Alice in her turn puts one cross in any free cell, and Bob in his turn puts zeros in any 2020 free cells. Alice will win if he manages to get such 4 cells marked with crosses, the corresponding cell numbers will form an arithmetic progression. Bob's goal in this game is to prevent Alice from winning. They take turns and Alice moves first. Will Alice be able to win no matter how Bob plays?",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
             }
           ]
         }
@@ -265,15 +366,94 @@
       "name": "МЖО",
       "years": [
         {
-          "2022": [
+          "id": "7",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "Non-zero polynomials $P(x)$, $Q(x)$, and $R(x)$ with real coefficients satisfy the identities $$ P(x) + Q(x) + R(x) = P(Q(x)) + Q(R(x)) + R(P(x)) = 0. $$Prove that the degrees of the three polynomials are all even.",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "A ten-level $2$-tree is drawn in the plane: a vertex $A_1$ is marked, it is connected by segments with two vertices $B_1$ and $B_2$, each of $B_1$ and $B_2$ is connected by segments with two of the four vertices $C_1, C_2, C_3, C_4$ (each $C_i$ is connected with one $B_j$ exactly); and so on, up to $512$ vertices $J_1, \\ldots, J_{512}$. Each of the vertices $J_1, \\ldots, J_{512}$ is coloured blue or golden. Consider all permutations $f$ of the vertices of this tree, such that (i) if $X$ and $Y$ are connected with a segment, then so are $f(X)$ and $f(Y)$, and (ii) if $X$ is coloured, then $f(X)$ has the same colour. Find the maximum $M$ such that there are at least $M$ permutations with these properties, regardless of the colouring.",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "In parallelogram $ABCD$ with acute angle $A$ a point $N$ is chosen on the segment $AD$, and a point $M$ on the segment $CN$ so that $AB = BM = CM$. Point $K$ is the reflection of $N$ in line $MD$. The line $MK$ meets the segment $AD$ at point $L$. Let $P$ be the common point of the circumcircles of $AMD$ and $CNK$ such that $A$ and $P$ share the same side of the line $MK$. Prove that $\\angle CPM = \\angle DPL$.",
+              "id": 3
+            },
+            {
+              "description": "In triangle $ABC$, a point $M$ is the midpoint of $AB$, and a point $I$ is the incentre. Point $A_1$ is the reflection of $A$ in $BI$, and $B_1$ is the reflection of $B$ in $AI$. Let $N$ be the midpoint of $A_1B_1$. Prove that $IN > IM$.",
+              "id": 4
+            },
+            {
+              "description": "A polynomial $f(x)$ with real coefficients of degree greater than $1$ is given. Prove that there are infinitely many positive integers which cannot be represented in the form\\[f(n+1)+f(n+2)+\\cdots+f(n+k)\\]where $n$ and $k$ are positive integers.",
+              "id": 5
+            },
+            {
+              "description": "Do there exist two bounded sequences $a_1, a_2,\\ldots$ and $b_1, b_2,\\ldots$ such that for each positive integers $n$ and $m>n$ at least one of the two inequalities $|a_m-a_n|>1/\\sqrt{n},$ and $|b_m-b_n|>1/\\sqrt{n}$ holds?",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "8",
+          "name": "2021",
+          "problems": [
+            {
+              "description": "Prove that there exists a positive integer $n$, such that the remainder of $3^n$ when divided by $2^n$ is greater than $10^{2021} $.",
+              "id": 1
+            },
+            {
+              "description": "In a convex cyclic hexagon $ABCDEF$, $BC=EF$ and $CD=AF$. Diagonals $AC$ and $BF$ intersect at point $Q,$ and diagonals $EC$ and $DF$ intersect at point $P.$ Points $R$ and $S$ are marked on the segments $DF$ and $BF$ respectively so that $FR=PD$ and $BQ=FS.$ The segments $RQ$ and $PS$ intersect at point $T.$ Prove that the line $TC$ bisects the diagonal $DB$.",
+              "id": 2
+            },
+            {
+              "description": "Let $n\\ge 2$ be an integer. Elwyn is given an $n\times n$ table filled with real numbers (each cell of the table contains exactly one number). We define a rook set as a set of $n$ cells of the table situated in $n$ distinct rows as well as in n distinct columns. Assume that, for every rook set, the sum of $n$ numbers in the cells forming the set is nonnegative. By a move, Elwyn chooses a row, a column, and a real number $a,$ and then he adds $a$ to each number in the chosen row, and subtracts $a$ from each number in the chosen column (thus, the number at the intersection of the chosen row and column does not change). Prove that Elwyn can perform a sequence of moves so that all numbers in the table become nonnegative.",
+              "id": 3
+            },
+            {
+              "description": "Let there be an incircle of triangle $ABC$, and 3 circles each inscribed between incircle and angles of $ABC$. Let $r, r_1, r_2, r_3$ be radii of these circles ($r_1, r_2, r_3 < r$). Prove that$$r_1+r_2+r_3 \\geq r$$",
+              "id": 4
+            },
+            {
+              "description": "On a party with $99$ guests, hosts Ann and Bob play a game (the hosts are not regarded as guests). There are $99$ chairs arranged in a circle; initially, all guests hang around those chairs. The hosts take turns alternately. By a turn, a host orders any standing guest to sit on an unoccupied chair $c$. If some chair adjacent to $c$ is already occupied, the same host orders one guest on such chair to stand up (if both chairs adjacent to $c$ are occupied, the host chooses exactly one of them). All orders are carried out immediately. Ann makes the first move; her goal is to fulfill, after some move of hers, that at least $k$ chairs are occupied. Determine the largest $k$ for which Ann can reach the goal, regardless of Bob's play.",
+              "id": 5
+            },
+            {
+              "description": "Let $P(x)$ be a nonconstant polynomial of degree $n$ with rational coefficients which can not be presented as a product of two nonconstant polynomials with rational coefficients. Prove that the number of polynomials $Q(x)$ of degree less than $n$ with rational coefficients such that $P(x)$ divides $P(Q(x))$ a) is finite b) does not exceed $n$.",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "9",
+          "name": "2020",
+          "problems": [
+            {
+              "description": "Given natural number n such that, for any natural $a,b$ number $2^a3^b+1$ is not divisible by $n$.Prove that $2^c+3^d$ is not divisible by $n$ for any natural $c$ and $d$",
+              "id": 1
+            },
+            {
+              "description": "Each of $2k+1$ distinct 7-element subsets of the 20 element set intersects with exactly $k$ of them. Find the maximum possible value of $k$.",
+              "id": 2
+            },
+            {
+              "description": "Given convex hexagon $ABCDEF$, inscribed in the circle. Prove that $AC*BD*DE*CE*EA*FB \\geq 27 AB * BC * CD * DE * EF * FA$",
+              "id": 3
+            },
+            {
+              "description": "In a scalene triangle $ABC$ $I$ is the incentr and $CN$ is the bisector of angle $C$. The line $CN$ meets the circumcircle of $ABC$ again at $M$. The line $l$ is parallel to $AB$ and touches the incircle of $ABC$. The point $R$ on $l$ is such. That $CI \bot IR$. The circumcircle of $MNR$ meets the line $IR$ again at S. Prpve that $AS=BS$.",
+              "id": 4
+            },
+            {
+              "description": "Let $Z$ be the set of all integers. Find all the function $f: Z->Z$ such that $f(4x+3y)=f(3x+y)+f(x+2y)$ For all integers $x,y$",
+              "id": 5
+            },
+            {
+              "description": "Some squares of a $n \times n$ tabel ($n>2$) are black, the rest are withe. In every white square we write the number of all the black squares having at least one common vertex with it. Find the maximum possible sum of all these numbers.",
+              "id": 6
             }
           ]
         }
@@ -284,15 +464,94 @@
       "name": "Туймаада",
       "years": [
         {
-          "2022": [
+          "id": "10",
+          "name": "2020",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "11",
+          "name": "2019",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "12",
+          "name": "2018",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
             }
           ]
         }
@@ -303,15 +562,82 @@
       "name": "Азиатско-Тихоокеанская",
       "years": [
         {
-          "2022": [
+          "id": "13",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "Find all pairs $(a,b)$ of positive integers such that $a^3$ is multiple of $b^2$ and $b-1$ is multiple of $a-1$.",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "Let $ABC$ be a right triangle with $\\angle B=90^{\\circ}$. Point $D$ lies on the line $CB$ such that $B$ is between $D$ and $C$. Let $E$ be the midpoint of $AD$ and let $F$ be the seconf intersection point of the circumcircle of $\triangle ACD$ and the circumcircle of $\triangle BDE$. Prove that as $D$ varies, the line $EF$ passes through a fixed point.",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "Find all positive integers $k<202$ for which there exist a positive integers $n$ such that $$\bigg {\\{}\frac{n}{202}\bigg {\\}}+\bigg {\\{}\frac{2n}{202}\bigg {\\}}+\\cdots +\bigg {\\{}\frac{kn}{202}\bigg {\\}}=\frac{k}{2}$$",
+              "id": 3
+            },
+            {
+              "description": "Let $n$ and $k$ be positive integers. Cathy is playing the following game. There are $n$ marbles and $k$ boxes, with the marbles labelled $1$ to $n$. Initially, all marbles are placed inside one box. Each turn, Cathy chooses a box and then moves the marbles with the smallest label, say $i$, to either any empty box or the box containing marble $i+1$. Cathy wins if at any point there is a box containing only marble $n$. Determine all pairs of integers $(n,k)$ such that Cathy can win this game.",
+              "id": 4
+            },
+            {
+              "description": "Let $a,b,c,d$ be real numbers such that $a^2+b^2+c^2+d^2=1$. Determine the minimum value of $(a-b)(b-c)(c-d)(d-a)$ and determine all values of $(a,b,c,d)$ such that the minimum value is achived.",
+              "id": 5
+            }
+          ]
+        },
+
+        {
+          "id": "14",
+          "name": "2021",
+          "problems": [
+            {
+              "description": "Prove that for each real number $r>2$, there are exactly two or three positive real numbers $x$ satisfying the equation $x^2=r\\lfloor x \rfloor$.",
+              "id": 1
+            },
+            {
+              "description": "For a polynomial $P$ and a positive integer $n$, define $P_n$ as the number of positive integer pairs $(a,b)$ such that $a<b \\leq n$ and $|P(a)|-|P(b)|$ is divisible by $n$. Determine all polynomial $P$ with integer coefficients such that $P_n \\leq 2021$ for all positive integers $n$.",
+              "id": 2
+            },
+            {
+              "description": "Let $ABCD$ be a cyclic convex quadrilateral and $\\Gamma$ be its circumcircle. Let $E$ be the intersection of the diagonals of $AC$ and $BD$. Let $L$ be the center of the circle tangent to sides $AB$, $BC$, and $CD$, and let $M$ be the midpoint of the arc $BC$ of $\\Gamma$ not containing $A$ and $D$. Prove that the excenter of triangle $BCE$ opposite $E$ lies on the line $LM$.",
+              "id": 3
+            },
+            {
+              "description": "Given a $32 \times 32$ table, we put a mouse (facing up) at the bottom left cell and a piece of cheese at several other cells. The mouse then starts moving. It moves forward except that when it reaches a piece of cheese, it eats a part of it, turns right, and continues moving forward. We say that a subset of cells containing cheese is good if, during this process, the mouse tastes each piece of cheese exactly once and then falls off the table. Show that: (a) No good subset consists of 888 cells. (b) There exists a good subset consisting of at least 666 cells.",
+              "id": 4
+            },
+            {
+              "description": "Determine all Functions $f:\\mathbb{Z} \to \\mathbb{Z}$ such that $f(f(a)-b)+bf(2a)$ is a perfect square for all integers $a$ and $b$.",
+              "id": 5
+            }
+          ]
+        },
+
+        {
+          "id": "15",
+          "name": "2020",
+          "problems": [
+            {
+              "description": "Let $\\Gamma$ be the circumcircle of $\triangle ABC$. Let $D$ be a point on the side $BC$. The tangent to $\\Gamma$ at $A$ intersects the parallel line to $BA$ through $D$ at point $E$. The segment $CE$ intersects $\\Gamma$ again at $F$. Suppose $B$, $D$, $F$, $E$ are concyclic. Prove that $AC$, $BF$, $DE$ are concurrent.",
+              "id": 1
+            },
+            {
+              "description": "Show that $r = 2$ is the largest real number $r$ which satisfies the following condition: If a sequence $a_1$, $a_2$, $\\ldots$ of positive integers fulfills the inequalities \\[a_n \\leq a_{n+2} \\leq\\sqrt{a_n^2+ra_{n+1}}\\]for every positive integer $n$, then there exists a positive integer $M$ such that $a_{n+2} = a_n$ for every $n \\geq M$.",
+              "id": 2
+            },
+            {
+              "description": "Determine all positive integers $k$ for which there exist a positive integer $m$ and a set $S$ of positive integers such that any integer $n > m$ can be written as a sum of distinct elements of $S$ in exactly $k$ ways.",
+              "id": 3
+            },
+            {
+              "description": "Let $\\mathbb{Z}$ denote the set of all integers. Find all polynomials $P(x)$ with integer coefficients that satisfy the following property: For any infinite sequence $a_1$, $a_2$, $\\dotsc$ of integers in which each integer in $\\mathbb{Z}$ appears exactly once, there exist indices $i < j$ and an integer $k$ such that $a_i +a_{i+1} +\\dotsb +a_j = P(k)$.",
+              "id": 4
+            },
+            {
+              "description": "Let $n \\geq 3$ be a fixed integer. The number $1$ is written $n$ times on a blackboard. Below the blackboard, there are two buckets that are initially empty. A move consists of erasing two of the numbers $a$ and $b$, replacing them with the numbers $1$ and $a+b$, then adding one stone to the first bucket and $\\gcd(a, b)$ stones to the second bucket. After some finite number of moves, there are $s$ stones in the first bucket and $t$ stones in the second bucket, where $s$ and $t$ are positive integers. Find all possible values of the ratio $\frac{t}{s}$.",
+              "id": 5
             }
           ]
         }
@@ -322,15 +648,94 @@
       "name": "Балканская",
       "years": [
         {
-          "2022": [
+          "id": "16",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "17",
+          "name": "2021",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "18",
+          "name": "2020",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
             }
           ]
         }
@@ -341,15 +746,94 @@
       "name": "EGMO",
       "years": [
         {
-          "2022": [
+          "id": "19",
+          "name": "2022",
+          "problems": [
             {
-              "No 1": "aoaoaoa"
+              "description": "Let $ABC$ be an acute-angled triangle in which $BC<AB$ and $BC<CA$. Let point $P$ lie on segment $AB$ and point $Q$ lie on segment $AC$ such that $P \neq B$, $Q \neq C$ and $BQ = BC = CP$. Let $T$ be the circumcenter of triangle $APQ$, $H$ the orthocenter of triangle $ABC$, and $S$ the point of intersection of the lines $BQ$ and $CP$. Prove that $T$, $H$, and $S$ are collinear.",
+              "id": 1
             },
             {
-              "No 2": "bobobobo"
+              "description": "Let $\\mathbb{N}=\\{1, 2, 3, \\dots\\}$ be the set of all positive integers. Find all functions $f : \\mathbb{N} \rightarrow \\mathbb{N}$ such that for any positive integers $a$ and $b$, the following two conditions hold: (1) $f(ab) = f(a)f(b)$, and (2) at least two of the numbers $f(a)$, $f(b)$, and $f(a+b)$ are equal.",
+              "id": 2
             },
             {
-              "No 3": "cocococ"
+              "description": "An infinite sequence of positive integers $a_1, a_2, \\dots$ is called $good$ if (1) $a_1$ is a perfect square, and (2) for any integer $n \\ge 2$, $a_n$ is the smallest positive integer such that$$na_1 + (n-1)a_2 + \\dots + 2a_{n-1} + a_n$$is a perfect square. Prove that for any good sequence $a_1, a_2, \\dots$, there exists a positive integer $k$ such that $a_n=a_k$ for all integers $n \\ge k$. (reposting because the other thread didn't get moved)",
+              "id": 3
+            },
+            {
+              "description": "Given a positive integer $n \\ge 2$, determine the largest positive integer $N$ for which there exist $N+1$ real numbers $a_0, a_1, \\dots, a_N$ such that $(1) \\ $ $a_0+a_1 = -\frac{1}{n},$ and $(2) \\ $ $(a_k+a_{k-1})(a_k+a_{k+1})=a_{k-1}-a_{k+1}$ for $1 \\le k \\le N-1$.",
+              "id": 4
+            },
+            {
+              "description": "For all positive integers $n$, $k$, let $f(n, 2k)$ be the number of ways an $n \times 2k$ board can be fully covered by $nk$ dominoes of size $2 \times 1$. (For example, $f(2, 2)=2$ and $f(3, 2)=3$.) Find all positive integers $n$ such that for every positive integer $k$, the number $f(n, 2k)$ is odd.",
+              "id": 5
+            },
+            {
+              "description": "Let $ABCD$ be a cyclic quadrilateral with circumcenter $O$. Let the internal angle bisectors at $A$ and $B$ meet at $X$, the internal angle bisectors at $B$ and $C$ meet at $Y$, the internal angle bisectors at $C$ and $D$ meet at $Z$, and the internal angle bisectors at $D$ and $A$ meet at $W$. Further, let $AC$ and $BD$ meet at $P$. Suppose that the points $X$, $Y$, $Z$, $W$, $O$, and $P$ are distinct. Prove that $O$, $X$, $Y$ $Z$, $W$ lie on the same circle if and only if $P$, $X$, $Y$, $Z$, and $W$ lie on the same circle.",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "20",
+          "name": "2021",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
+            }
+          ]
+        },
+
+        {
+          "id": "21",
+          "name": "2020",
+          "problems": [
+            {
+              "description": "",
+              "id": 1
+            },
+            {
+              "description": "",
+              "id": 2
+            },
+            {
+              "description": "",
+              "id": 3
+            },
+            {
+              "description": "",
+              "id": 4
+            },
+            {
+              "description": "",
+              "id": 5
+            },
+            {
+              "description": "",
+              "id": 6
             }
           ]
         }

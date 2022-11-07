@@ -1,19 +1,27 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { YearBoxForm } from "../../components";
 
-import { useOlymps } from "../../pages";
-import { BoxForm } from "../../components";
+export function YearsList({ olympId }) {
+  const yearList = useSelector(
+    (state) => state.olymps.olympObjs?.[olympId].years
+  );
 
-import "./olympiads.css";
+  const olympName = useSelector(
+    (state) => state.olymps.olympObjs[olympId].name
+  );
 
-export function Olympiads() {
-  const olympiads = useSelector((state) => state.olymps.olympNames);
-  useOlymps();
+  if (!yearList || yearList.length === 0) {
+    return null;
+  }
 
   return (
     <div className="outerOlympElem">
-      <Link to="/">
-        <a className="flex w-min items-center text-blue-500 text-sm mb-6">
+      <Link to="/olympiads/">
+        <a
+          className="flex w-min items-center text-blue-500 text-sm mb-6"
+          href="/"
+        >
           <svg
             className="mr-2"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,23 +41,20 @@ export function Olympiads() {
       </Link>
       <div className="olympHeader">
         <div>
-          <h1 className="olympRealHeader"> Задачи олимпиад прошлых лет</h1>
-          <p className="olympUnderHeader">
-            Здесь вы можете найти задания и решения различных олимпиад
-          </p>
+          <h1 className="olympRealHeader"> Maтематика → {olympName} </h1>
         </div>
       </div>
       <div>
-        <h2 className="olymTextDelim">Олимпиады</h2>
+        <h2 className="olymTextDelim">года:</h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-        {olympiads.map((olympiad) => (
-          <BoxForm key={olympiad} id={olympiad} name={olympiad.name} />
+        {yearList.map((year) => (
+          <YearBoxForm key={year} yearId={year} olympId={olympId} />
         ))}
       </div>
     </div>
   );
 }
 
-export default Olympiads;
+export default YearsList;

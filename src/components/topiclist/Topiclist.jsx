@@ -31,17 +31,17 @@ const Topiclist = (props) => {
             aria-level="2"
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
-            onClick={() => {
-              const views = blog.views + 1;
+            //onClick={() => {
+            //  const views = blog.views + 1;
 
-              ajaxService(`/blogs/${id}`, {
-                method: "PUT",
-                body: JSON.stringify({ title, description, views, answers }),
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              });
-            }}
+            //  ajaxService(`/blogs/${id}`, {
+            //    method: "PUT",
+            //    body: JSON.stringify({ title, description, views, answers }),
+            //    headers: {
+            //      "Content-Type": "application/json",
+            //    },
+            //  });
+            //}}
           >
             {" "}
             <Latex>{title}</Latex>
