@@ -1,13 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { schema, normalize } from 'normalizr';
+import { schema, normalize } from "normalizr";
 
 const initialState = {
   blogIds: [],
   blogObj: {},
+  posts: {},
+  comments: {},
   page: 1,
 };
 
-const blogSchema = new schema.Entity('blogs')
+const userSchema = new schema.Entity("user");
+const commentSchema = new schema.Entity("comments", { user: userSchema });
+const postSchema = new schema.Entity("posts", {
+  comments: [commentSchema],
+  user: userSchema,
+});
+const blogSchema = new schema.Entity("blogs", {
+  posts: [postSchema],
+  user: userSchema,
+});
 
 const blogsSlice = createSlice({
   name: "blogs",
@@ -24,13 +35,16 @@ const blogsSlice = createSlice({
 
       state.blogIds = result;
       state.blogObj = { ...state.blogObj, ...entities.blogs };
+      state.posts = { ...state.posts, ...entities.posts };
+      state.comments = { ...state.comments, ...entities.comments };
     },
     setBlogsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
 
       state.blogIds = [...state.blogIds, ...result];
       state.blogObj = { ...state.blogObj, ...entities.blogs };
-
+      state.posts = { ...state.posts, ...entities.posts };
+      state.comments = { ...state.comments, ...entities.comments };
     },
   },
 });

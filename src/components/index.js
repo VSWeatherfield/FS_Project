@@ -9,4 +9,6 @@ export { default as CreateBlog } from "./createBlog/CreateBlog";
 
 export { default as Loader } from "./loader/Loader";
 
-export { default as BoxForm } from "./olympBoxForm/BoxForm";
+export { default as BoxForm } from "./olympBoxForm/olympBoxForm/OlympBoxForm";
+export { default as YearBoxForm } from "./olympBoxForm/yearBoxForm/YearBoxForm";
+export { default as ModalContainer } from "./modalContainer/modalContainer";

@@ -42,3 +42,5 @@ export function ModalContainer() {
 
   return <>{renderContent()}</>;
 }
+
+export default ModalContainer;

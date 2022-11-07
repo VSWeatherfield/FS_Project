@@ -12,7 +12,8 @@ export function Main() {
       blogs={blogs.map((blog) => (
         <Topiclist key={blog} id={blog} />
       ))}
-    />);
+    />
+  );
 }
 
 export default Main;
