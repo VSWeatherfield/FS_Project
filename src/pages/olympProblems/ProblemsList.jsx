@@ -21,7 +21,7 @@ export function ProblemsList({ olympId, yearId }) {
 
   return (
     <div className="outerOlympElem">
-      <Link to={`/olympiads/${yearId}`}>
+      <Link to={`/olympiads/${olympId}`}>
         <a className="flex w-min items-center text-blue-500 text-sm mb-6">
           <svg
             className="mr-2"

@@ -280,7 +280,7 @@
               "id": 2
             },
             {
-              "description": "Given $m\\in\\mathbb{N}$. Find all functions $f:\\mathbb{R^{+}}\rightarrow\\mathbb{R^{+}}$ such that$$f(f(x)+y)-f(x)=\\left( \frac{f(y)}{y}-1\right)x+f^m(y)$$holds for all $x,y\\in\\mathbb{R^{+}}.$ ($f^m(x) =$ $f$ applies $m$ times.)",
+              "description": "Given $m\\in\\mathbb{N}$. Find all functions $f:\\mathbb{R^{+}}\rightarrow\\mathbb{R^{+}}$ such that$$f(f(x)+y)-f(x)=\\left( \\frac{f(y)}{y}-1\right)x+f^m(y)$$holds for all $x,y\\in\\mathbb{R^{+}}.$ ($f^m(x) =$ $f$ applies $m$ times.)",
               "id": 3
             },
             {
@@ -303,7 +303,7 @@
           "name": "2021",
           "problems": [
             {
-              "description": "Given $a,b,c>0$ such that $$a+b+c+\frac{1}{abc}=\frac{19}{2}$$ What is the greatest value for $a$?",
+              "description": "Given $a,b,c>0$ such that $$a+b+c+\\frac{1}{abc}=\\frac{19}{2}$$ What is the greatest value for $a$?",
               "id": 1
             },
             {
@@ -338,7 +338,7 @@
               "id": 1
             },
             {
-              "description": "Find all functions $ f: \\mathbb {R} ^ + \to \\mathbb {R} ^ + $ such that for any $ x, y \\in \\mathbb {R} ^ + $ the following equality holds:\\[f (x) f (y) = f \\left (\frac {xy} {x f (x) + y} \right). \\]$ \\mathbb {R} ^ + $ denotes the set of positive real numbers.",
+              "description": "Find all functions $ f: \\mathbb {R} ^ + \to \\mathbb {R} ^ + $ such that for any $ x, y \\in \\mathbb {R} ^ + $ the following equality holds:\\[f (x) f (y) = f \\left (\\frac {xy} {x f (x) + y} \right). \\]$ \\mathbb {R} ^ + $ denotes the set of positive real numbers.",
               "id": 2
             },
             {
@@ -465,93 +465,117 @@
       "years": [
         {
           "id": "10",
-          "name": "2020",
+          "name": "2022",
           "problems": [
             {
-              "description": "",
+              "description": "Some of $100$ towns of a kingdom are connected by roads.It is known that for each two towns $A$ and $B$ connected by a road there is a town $C$ which is not connected by a road with at least one of the towns $A$ and $B$. Determine the maximum possible number of roads in the kingdom.",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Two circles $w_{1}$ and $w_{2}$ of different radii touch externally at $L$. A line touches $w_{1}$ at $A$ and $w_{2}$ at $B$ (the points $A$ and $B$ are different from $L$). A point $X$ is chosen in the plane. $Y$ and $Z$ are the second points of intersection of the lines $XA$ and $XB$ with $w_{1}$ and $w_{2}$ respectively. Prove that all $X$ such that $AB||Y Z$ belong to one circle.",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Is there a colouring of all positive integers in three colours so that for each positive integer the numbers of its divisors of any two colours differ at most by $2?$",
               "id": 3
             },
             {
-              "description": "",
+              "description": "For every positive $a_1, a_2, \\dots, a_6$, prove the inequality \\[ \\sqrt[4]{\\frac{a_1}{a_2 + a_3 + a_4}} + \\sqrt[4]{\\frac{a_2}{a_3 + a_4 + a_5}} + \\dots + \\sqrt[4]{\\frac{a_6}{a_1 + a_2 + a_3}} \\ge 2 \\]",
               "id": 4
             },
             {
-              "description": "",
+              "description": "Prove that a quadratic trinomial $x^2 + ax + b (a, b \\in R)$ cannot attain at ten consecutive integral points values equal to powers of $2$ with non-negative integral exponent. (F. Petrov )",
               "id": 5
             },
             {
-              "description": "",
+              "description": "Kostya marked the points $A(0, 1), B(1, 0), C(0, 0)$ in the coordinate plane. On the legs of the triangle ABC he marked the points with coordinates $(\\frac{1}{2},0), (\\frac{1}{3},0), \\cdots, (\\frac{1}{n+1},0)$ and $(0,\\frac{1}{2}), (0,\\frac{1}{3}), \\cdots, (0,\\frac{1}{n+1}).$ Then Kostya joined each pair of marked points with a segment. Sasha drew a $1 \times n$ rectangle and joined with a segment each pair of integer points on its border. As a result both the triangle and the rectangle are divided into polygons by the segments drawn. Who has the greater number of polygons: Sasha or Kostya? (M. Alekseyev )",
               "id": 6
+            },
+            {
+              "description": "A $1 \times 5n$ rectangle is partitioned into tiles, each of the tile being either a separate $1 \times 1$ square or a broken domino consisting of two such squares separated by four squares (not belonging to the domino). Prove that the number of such partitions is a perfect fifth power. (K. Kokhas)",
+              "id": 7
+            },
+            {
+              "description": "In an acute triangle $\triangle ABC$ the points $C_m, A_m, B_m$ are the midpoints of $AB, BC, CA$ respectively. Inside the triangle $\triangle ABC$ a point $P$ is chosen so that $\\angle PCB = \\angle B_mBC$ and $\\angle PAB = \\angle ABB_m.$ A line passing through $P$ and perpendicular to $AC$ meets the median $BB_m$ at $E.$ Prove that $E$ lies on the circumcircle of the triangle $\triangle A_mB_mC_m.$ (K. Ivanov ",
+              "id": 8
             }
           ]
         },
 
         {
           "id": "11",
-          "name": "2019",
+          "name": "2021",
           "problems": [
             {
-              "description": "",
+              "description": "Polynomials $F$ and $G$ satisfy: $$F(F(x))>G(F(x))>G(G(x))$$for all real $x$.Prove that $F(x)>G(x)$ for all real $x$.",
               "id": 1
             },
             {
-              "description": "",
+              "description": "In trapezoid $ABCD$,$M$ is the midpoint of the base $AD$.Point $E$ lies on the segment $BM$.It is known that $\\angle ADB=\\angle MAE=\\angle BMC$.Prove that the triangle $BCE $ is isosceles.",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Positive real numbers $a_1, \\dots, a_k, b_1, \\dots, b_k$ are given. Let $A = \\sum_{i = 1}^k a_i, B = \\sum_{i = 1}^k b_i$. Prove the inequality \\[ \\left( \\sum_{i = 1}^k \\frac{a_i b_i}{a_i B + b_i A} - 1 \\right)^2 \\ge \\sum_{i = 1}^k \\frac{a_i^2}{a_i B + b_i A} \\cdot \\sum_{i = 1}^k \\frac{b_i^2}{a_i B + b_i A}. \\]",
               "id": 3
             },
             {
-              "description": "",
+              "description": "An $n\times n$ square ($n$ is a positive integer) consists of $n^2$ unit squares.A $\\emph{monotonous path}$ in this square is a path of length $2n$ beginning in the left lower corner of the square,ending in its right upper corner and going along the sides of unit squares. For each $k$, $0\\leq k\\leq 2n-1$, let $S_k$ be the set of all the monotonous paths such that the number of unit squares lying below the path leaves remainder $k$ upon division by $2n-1$.Prove that all $S_k$ contain equal number of elements.",
               "id": 4
             },
             {
-              "description": "",
+              "description": "In a $n\times n$ table ($n>1$) $k$ unit squares are marked.One wants to rearrange rows and columns so that all the marked unit squares are above the main diagonal or on it.For what maximum $k$ is it always possible?",
               "id": 5
             },
             {
-              "description": "",
+              "description": "Sines of three acute angles form an arithmetic progression, while the cosines of these angles form a geometric progression. Prove that all three angles are equal.",
               "id": 6
+            },
+            {
+              "description": "An acute triangle $ABC$ is given, $AC \not= BC$. The altitudes drawn from $A$ and $B$ meet at $H$ and intersect the external bisector of the angle $C$ at $Y$ and $X$ respectively. The external bisector of the angle $AHB$ meets the segments $AX$ and $BY$ at $P$ and $Q$ respectively. If $PX = QY$, prove that $AP + BQ \\ge 2CH$.",
+              "id": 7
+            },
+            {
+              "description": "In a sequence $P_n$ of quadratic trinomials each trinomial, starting with the third, is the sum of the two preceding trinomials. The first two trinomials do not have common roots. Is it possible that $P_n$ has an integral root for each $n$?",
+              "id": 8
             }
           ]
         },
 
         {
           "id": "12",
-          "name": "2018",
+          "name": "2020",
           "problems": [
             {
-              "description": "",
+              "description": "Does the system of equation \begin{align*}\begin{cases} x_1 + x_2 &= y_1 + y_2 + y_3 + y_4 \\ x_1^2 + x_2^2 &= y_1^2 + y_2^2 + y_3^2 + y_4^2 \\ x_1^3 + x_2^3 &= y_1^3 + y_2^3 + y_3^3 + y_4^3 \\end{cases} \\end{align*}admit a solution in integers such that the absolute value of each of these integers is greater than $2020$?",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Given positive real numbers $a_1, a_2, \\dots, a_n$. Let \\[ m = \\min \\left( a_1 + \\frac{1}{a_2}, a_2 + \\frac{1}{a_3}, \\dots, a_{n - 1} + \\frac{1}{a_n} , a_n + \\frac{1}{a_1} \right). \\]Prove the inequality \\[ \\sqrt[n]{a_1 a_2 \\dots a_n} + \\frac{1}{\\sqrt[n]{a_1 a_2 \\dots a_n}} \\ge m. \\]",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Points $D$ and $E$ lie on the lines $BC$ and $AC$ respectively so that $B$ is between $C$ and $D$, $C$ is between $A$ and $E$, $BC = BD$ and $\\angle BAD = \\angle CDE$. It is known that the ratio of the perimeters of the triangles $ABC$ and $ADE$ is $2$. Find the ratio of the areas of these triangles.",
               "id": 3
             },
             {
-              "description": "",
+              "description": "For each positive integer $k$, let $g(k)$ be the maximum possible number of points in the plane such that pairwise distances between these points have only $k$ different values. Prove that there exists $k$ such that $g(k) > 2k + 2020$.",
               "id": 4
             },
             {
-              "description": "",
+              "description": "Coordinate axes (without any marks, with the same scale) and the graph of a quadratic trinomial $y = x^2 + ax + b$ are drawn in the plane. The numbers $a$ and $b$ are not known. How to draw a unit segment using only ruler and compass?",
               "id": 5
             },
             {
-              "description": "",
+              "description": "An isosceles triangle $ABC$ ($AB = BC$) is given. Circles $\\omega_1$ and $\\omega_2$ with centres $O_1$ and $O_2$ lie in the angle $ABC$ and touch the sides $AB$ and $CB$ at $A$ and $C$ respectively, and touch each other externally at point $X$. The side $AC$ meets the circles again at points $Y$ and $Z$. $O$ is the circumcenter of the triangle $XYZ$. Lines $O_2 O$ and $O_1 O$ intersect lines $AB$ and $BC$ at points $C_1$ and $A_1$ respectively. Prove that $B$ is the circumcentre of the triangle $A_1 OC_1$.",
               "id": 6
+            },
+            {
+              "description": "Several policemen try to catch a thief who has $2m$ accomplices. To that end they place the accomplices under surveillance. In the beginning, the policemen shadow nobody. Every morning each policeman places under his surveillance one of the accomplices. Every evening the thief stops trusting one of his accomplices The thief is caught if by the $m$-th evening some policeman shadows exactly those $m$ accomplices who are still trusted by the thief. Prove that to guarantee the capture of the thief at least $2^m$ policemen are needed.",
+              "id": 7
+            },
+            {
+              "description": "The degrees of polynomials $P$ and $Q$ with real coefficients do not exceed $n$. These polynomials satisfy the identity \\[ P(x) x^{n + 1} + Q(x) (x+1)^{n + 1} = 1. \\]Determine all possible values of $Q \\left( - \\frac{1}{2} \right)$.",
+              "id": 8
             }
           ]
         }
@@ -574,7 +598,7 @@
               "id": 2
             },
             {
-              "description": "Find all positive integers $k<202$ for which there exist a positive integers $n$ such that $$\bigg {\\{}\frac{n}{202}\bigg {\\}}+\bigg {\\{}\frac{2n}{202}\bigg {\\}}+\\cdots +\bigg {\\{}\frac{kn}{202}\bigg {\\}}=\frac{k}{2}$$",
+              "description": "Find all positive integers $k<202$ for which there exist a positive integers $n$ such that $$\bigg {\\{}\\frac{n}{202}\bigg {\\}}+\bigg {\\{}\\frac{2n}{202}\bigg {\\}}+\\cdots +\bigg {\\{}\\frac{kn}{202}\bigg {\\}}=\\frac{k}{2}$$",
               "id": 3
             },
             {
@@ -636,7 +660,7 @@
               "id": 4
             },
             {
-              "description": "Let $n \\geq 3$ be a fixed integer. The number $1$ is written $n$ times on a blackboard. Below the blackboard, there are two buckets that are initially empty. A move consists of erasing two of the numbers $a$ and $b$, replacing them with the numbers $1$ and $a+b$, then adding one stone to the first bucket and $\\gcd(a, b)$ stones to the second bucket. After some finite number of moves, there are $s$ stones in the first bucket and $t$ stones in the second bucket, where $s$ and $t$ are positive integers. Find all possible values of the ratio $\frac{t}{s}$.",
+              "description": "Let $n \\geq 3$ be a fixed integer. The number $1$ is written $n$ times on a blackboard. Below the blackboard, there are two buckets that are initially empty. A move consists of erasing two of the numbers $a$ and $b$, replacing them with the numbers $1$ and $a+b$, then adding one stone to the first bucket and $\\gcd(a, b)$ stones to the second bucket. After some finite number of moves, there are $s$ stones in the first bucket and $t$ stones in the second bucket, where $s$ and $t$ are positive integers. Find all possible values of the ratio $\\frac{t}{s}$.",
               "id": 5
             }
           ]
@@ -652,28 +676,20 @@
           "name": "2022",
           "problems": [
             {
-              "description": "",
+              "description": "Let $ABC$ be an acute triangle such that $CA \neq CB$ with circumcircle $\\omega$ and circumcentre $O$. Let $t_A$ and $t_B$ be the tangents to $\\omega$ at $A$ and $B$ respectively, which meet at $X$. Let $Y$ be the foot of the perpendicular from $O$ onto the line segment $CX$. The line through $C$ parallel to line $AB$ meets $t_A$ at $Z$. Prove that the line $YZ$ passes through the midpoint of the line segment $AC$. Proposed by Dominic Yeo, United Kingdom",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Let $a, b$ and $n$ be positive integers with $a>b$ such that all of the following hold: i. $a^{2021}$ divides $n$, ii. $b^{2021}$ divides $n$, iii. 2022 divides $a-b$. Prove that there is a subset $T$ of the set of positive divisors of the number $n$ such that the sum of the elements of $T$ is divisible by 2022 but not divisible by $2022^2$. Proposed by Silouanos Brazitikos, Greece",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Find all functions $f: (0, \\infty) \to (0, \\infty)$ such that \begin{align*} f(y(f(x))^3 + x) = x^3f(y) + f(x)  \\end{align*}for all $x, y>0$. Proposed by Jason Prodromidis, Greece",
               "id": 3
             },
             {
-              "description": "",
+              "description": "Consider an $n \times n$ grid consisting of $n^2$ until cells, where $n \\geq 3$ is a given odd positive integer. First, Dionysus colours each cell either red or blue. It is known that a frog can hop from one cell to another if and only if these cells have the same colour and share at least one vertex. Then, Xanthias views the colouring and next places $k$ frogs on the cells so that each of the $n^2$ cells can be reached by a frog in a finite number (possible zero) of hops. Find the least value of $k$ for which this is always possible regardless of the colouring chosen by Dionysus. Proposed by Tommy Walker Mackay, United Kingdom",
               "id": 4
-            },
-            {
-              "description": "",
-              "id": 5
-            },
-            {
-              "description": "",
-              "id": 6
             }
           ]
         },
@@ -683,28 +699,20 @@
           "name": "2021",
           "problems": [
             {
-              "description": "",
+              "description": "Let $ABC$ be a triangle with $AB<AC$. Let $\\omega$ be a circle passing through $B, C$ and assume that $A$ is inside $\\omega$. Suppose $X, Y$ lie on $\\omega$ such that $\\angle BXA=\\angle AYC$. Suppose also that $X$ and $C$ lie on opposite sides of the line $AB$ and that $Y$ and $B$ lie on opposite sides of the line $AC$. Show that, as $X, Y$ vary on $\\omega$, the line $XY$ passes through a fixed point.",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Find all functions $f: \\mathbb{R}^{+} \rightarrow \\mathbb{R}^{+}$, such that $f(x+f(x)+f(y))=2f(x)+y$ for all positive reals $x,y$.",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Let $a, b$ and $c$ be positive integers satisfying the equation $(a, b) + [a, b]=2021^c$. If $|a-b|$ is a prime number, prove that the number $(a+b)^2+4$ is composite.",
               "id": 3
             },
             {
-              "description": "",
+              "description": "Problem 4. Angel has a warehouse, which initially contains $100$ piles of $100$ pieces of rubbish each. Each morning, Angel performs exactly one of the following moves: (a) He clears every piece of rubbish from a single pile. (b) He clears one piece of rubbish from each pile. However, every evening, a demon sneaks into the warehouse and performs exactly one of the following moves: (a) He adds one piece of rubbish to each non-empty pile. (b) He creates a new pile with one piece of rubbish. What is the first morning when Angel can guarantee to have cleared all the rubbish from the warehouse?",
               "id": 4
-            },
-            {
-              "description": "",
-              "id": 5
-            },
-            {
-              "description": "",
-              "id": 6
             }
           ]
         },
@@ -714,28 +722,20 @@
           "name": "2020",
           "problems": [
             {
-              "description": "",
+              "description": "Let $ABC$ be an acute triangle with $AB=AC$, let $D$ be the midpoint of the side $AC$, and let $\\gamma$ be the circumcircle of the triangle $ABD$. The tangent of $\\gamma$ at $A$ crosses the line $BC$ at $E$. Let $O$ be the circumcenter of the triangle $ABE$. Prove that midpoint of the segment $AO$ lies on $\\gamma$. Proposed by Sam Bealing, United Kingdom",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Denote $\\mathbb{Z}_{>0}=\\{1,2,3,...\\}$ the set of all positive integers. Determine all functions $f:\\mathbb{Z}_{>0}\rightarrow \\mathbb{Z}_{>0}$ such that, for each positive integer $n$, $\\hspace{1cm}i) \\sum_{k=1}^{n}f(k)$ is a perfect square, and $\\vspace{0.1cm}$ $\\hspace{1cm}ii) f(n)$ divides $n^3$. Proposed by Dorlir Ahmeti, Albania",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Let $k$ be a positive integer. Determine the least positive integer $n$, with $n\\geq k+1$, for which the game below can be played indefinitely: Consider $n$ boxes, labelled $b_1,b_2,...,b_n$. For each index $i$, box $b_i$ contains exactly $i$ coins. At each step, the following three substeps are performed in order: (1) Choose $k+1$ boxes; (2) Of these $k+1$ boxes, choose $k$ and remove at least half of the coins from each, and add to the remaining box, if labelled $b_i$, a number of $i$ coins. (3) If one of the boxes is left empty, the game ends; otherwise, go to the next step. Proposed by Demetres Christofides, Cyprus",
               "id": 3
             },
             {
-              "description": "",
+              "description": "Let $a_1=2$ and, for every positive integer $n$, let $a_{n+1}$ be the smallest integer strictly greater than $a_n$ that has more positive divisors than $a_n$. Prove that $2a_{n+1}=3a_n$ only for finitely many indicies $n$. Proposed by Ilija Jovčevski, North Macedonia",
               "id": 4
-            },
-            {
-              "description": "",
-              "id": 5
-            },
-            {
-              "description": "",
-              "id": 6
             }
           ]
         }
@@ -762,7 +762,7 @@
               "id": 3
             },
             {
-              "description": "Given a positive integer $n \\ge 2$, determine the largest positive integer $N$ for which there exist $N+1$ real numbers $a_0, a_1, \\dots, a_N$ such that $(1) \\ $ $a_0+a_1 = -\frac{1}{n},$ and $(2) \\ $ $(a_k+a_{k-1})(a_k+a_{k+1})=a_{k-1}-a_{k+1}$ for $1 \\le k \\le N-1$.",
+              "description": "Given a positive integer $n \\ge 2$, determine the largest positive integer $N$ for which there exist $N+1$ real numbers $a_0, a_1, \\dots, a_N$ such that $(1) \\ $ $a_0+a_1 = -\\frac{1}{n},$ and $(2) \\ $ $(a_k+a_{k-1})(a_k+a_{k+1})=a_{k-1}-a_{k+1}$ for $1 \\le k \\le N-1$.",
               "id": 4
             },
             {
@@ -781,27 +781,27 @@
           "name": "2021",
           "problems": [
             {
-              "description": "",
+              "description": "The number 2021 is fantabulous. For any positive integer $m$, if any element of the set $\\{m, 2m+1, 3m\\}$ is fantabulous, then all the elements are fantabulous. Does it follow that the number $2021^{2021}$ is fantabulous?",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Find all functions $f:\\mathbb{Q}\to\\mathbb{Q}$ such that the equation \\[f(xf(x)+y) = f(y) + x^2\\]holds for all rational numbers $x$ and $y$. Here, $\\mathbb{Q}$ denotes the set of rational numbers.",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Let $ABC$ be a triangle with an obtuse angle at $A$. Let $E$ and $F$ be the intersections of the external bisector of angle $A$ with the altitudes of $ABC$ through $B$ and $C$ respectively. Let $M$ and $N$ be the points on the segments $EC$ and $FB$ respectively such that $\\angle EMA = \\angle BCA$ and $\\angle ANF = \\angle ABC$. Prove that the points $E, F, N, M$ lie on a circle.",
               "id": 3
             },
             {
-              "description": "",
+              "description": "Let $ABC$ be a triangle with incenter $I$ and let $D$ be an arbitrary point on the side $BC$. Let the line through $D$ perpendicular to $BI$ intersect $CI$ at $E$. Let the line through $D$ perpendicular to $CI$ intersect $BI$ at $F$. Prove that the reflection of $A$ across the line $EF$ lies on the line $BC$.",
               "id": 4
             },
             {
-              "description": "",
+              "description": "A plane has a special point $O$ called the origin. Let $P$ be a set of 2021 points in the plane such that no three points in $P$ lie on a line and no two points in $P$ lie on a line through the origin. A triangle with vertices in $P$ is fat if $O$ is strictly inside the triangle. Find the maximum number of fat triangles.",
               "id": 5
             },
             {
-              "description": "",
+              "description": "Does there exist a nonnegative integer $a$ for which the equation \\[\\left\\lfloor\frac{m}{1}\right\rfloor + \\left\\lfloor\frac{m}{2}\right\rfloor + \\left\\lfloor\frac{m}{3}\right\rfloor + \\cdots + \\left\\lfloor\frac{m}{m}\right\rfloor = n^2 + a\\]has more than one million different solutions $(m, n)$ where $m$ and $n$ are positive integers? The expression $\\lfloor x\rfloor$ denotes the integer part (or floor) of the real number $x$. Thus $\\lfloor\\sqrt{2}\rfloor = 1, \\lfloor\\pi\rfloor =\\lfloor 22/7 \rfloor = 3, \\lfloor 42\rfloor = 42,$ and $\\lfloor 0 \rfloor = 0$.",
               "id": 6
             }
           ]
@@ -812,27 +812,27 @@
           "name": "2020",
           "problems": [
             {
-              "description": "",
+              "description": "The positive integers $a_0, a_1, a_2, \\ldots, a_{3030}$ satisfy$$2a_{n + 2} = a_{n + 1} + 4a_n \text{ for } n = 0, 1, 2, \\ldots, 3028.$$ Prove that at least one of the numbers $a_0, a_1, a_2, \\ldots, a_{3030}$ is divisible by $2^{2020}$.",
               "id": 1
             },
             {
-              "description": "",
+              "description": "Find all lists $(x_1, x_2, \\ldots, x_{2020})$ of non-negative real numbers such that the following three conditions are all satisfied: $x_1 \\le x_2 \\le \\ldots \\le x_{2020}$; $x_{2020} \\le x_1  + 1$; there is a permutation $(y_1, y_2, \\ldots, y_{2020})$ of $(x_1, x_2, \\ldots, x_{2020})$ such that$$\\sum_{i = 1}^{2020} ((x_i + 1)(y_i + 1))^2 = 8 \\sum_{i = 1}^{2020} x_i^3.$$ A permutation of a list is a list of the same length, with the same entries, but the entries are allowed to be in any order. For example, $(2, 1, 2)$ is a permutation of $(1, 2, 2)$, and they are both permutations of $(2, 2, 1)$. Note that any list is a permutation of itself.",
               "id": 2
             },
             {
-              "description": "",
+              "description": "Let $ABCDEF$ be a convex hexagon such that $\\angle A = \\angle C = \\angle E$ and $\\angle B = \\angle D = \\angle F$ and the (interior) angle bisectors of $\\angle A, ~\\angle C,$ and $\\angle E$ are concurrent. Prove that the (interior) angle bisectors of $\\angle B, ~\\angle D, $ and $\\angle F$ must also be concurrent. Note that $\\angle A = \\angle FAB$. The other interior angles of the hexagon are similarly described.",
               "id": 3
             },
             {
-              "description": "",
+              "description": "A permutation of the integers $1, 2, \\ldots, m$ is called fresh if there exists no positive integer $k < m$ such that the first $k$ numbers in the permutation are $1, 2, \\ldots, k$ in some order. Let $f_m$ be the number of fresh permutations of the integers $1, 2, \\ldots, m$. Prove that $f_n \\ge n \\cdot f_{n - 1}$ for all $n \\ge 3$. For example, if $m = 4$, then the permutation $(3, 1, 4, 2)$ is fresh, whereas the permutation $(2, 3, 1, 4)$ is not.",
               "id": 4
             },
             {
-              "description": "",
+              "description": "Consider the triangle $ABC$ with $\\angle BCA > 90^{\\circ}$. The circumcircle $\\Gamma$ of $ABC$ has radius $R$. There is a point $P$ in the interior of the line segment $AB$ such that $PB = PC$ and the length of $PA$ is $R$. The perpendicular bisector of $PB$ intersects $\\Gamma$ at the points $D$ and $E$. Prove $P$ is the incentre of triangle $CDE$.",
               "id": 5
             },
             {
-              "description": "",
+              "description": "Let $m > 1$ be an integer. A sequence $a_1, a_2, a_3, \\ldots$ is defined by $a_1 = a_2 = 1$, $a_3 = 4$, and for all $n \\ge 4$,$$a_n = m(a_{n - 1} + a_{n - 2}) - a_{n - 3}.$$ Determine all integers $m$ such that every term of the sequence is a square.",
               "id": 6
             }
           ]
