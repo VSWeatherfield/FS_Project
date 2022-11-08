@@ -1,25 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-//import { schema, normalize } from 'normalizr';
 
 const initialState = {
   modalData: null,
   modalName: null,
 };
 
-const modalSlice = createSlice({
-  name: "modal",
+const composeModalSlice = createSlice({
+  name: "composeModal",
   initialState,
   reducers: {
-    openModal: (state, action) => {
+    openComposeModal: (state, action) => {
       state.modalData = action.payload.data;
       state.modalName = action.payload.name;
     },
-    closeModal: (state) => {
+    closeComposeModal: (state) => {
       state.modalData = null;
       state.modalName = null;
     },
   },
 });
 
-export const modalReducer = modalSlice.reducer;
-export const { openModal, closeModal } = modalSlice.actions;
+export const composeModalReducer = composeModalSlice.reducer;
+export const { openComposeModal, closeComposeModal } =
+  composeModalSlice.actions;

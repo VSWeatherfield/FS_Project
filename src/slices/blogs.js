@@ -30,6 +30,11 @@ const blogsSlice = createSlice({
     increasePage: (state) => {
       state.page = state.page + 1;
     },
+    increaseViews: (state, id) => {
+      console.log(initialState.blogObj);
+      state.blogObj[id].views = state.blogObj[id].views + 1;
+    },
+
     setBlogs: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
 
@@ -50,5 +55,5 @@ const blogsSlice = createSlice({
 });
 
 export const blogsReducer = blogsSlice.reducer;
-export const { setPage, setBlogs, setBlogsMore, increasePage } =
+export const { setPage, setBlogs, setBlogsMore, increasePage, increaseViews } =
   blogsSlice.actions;

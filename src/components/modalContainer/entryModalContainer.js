@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { CreateBlog, EditBlog } from "../../components";
-import { closeModal } from "../../slices/modal";
+import { LoginPage, SigUpPage } from "..";
+import { closeEntryModal } from "../../slices/composeModal";
 
-export function ModalContainer() {
+export function EntryModalContainer() {
   const dispatch = useDispatch();
-  const { modalData, modalName } = useSelector((state) => state.modal);
+  const { modalData, modalName } = useSelector((state) => state.entryModal);
 
   if (!modalName) {
     return null;
@@ -13,22 +13,23 @@ export function ModalContainer() {
 
   function renderContent() {
     switch (modalName) {
-      case "edit": {
+      case "logIn": {
         return (
-          <EditBlog
+          <LoginPage
             id={modalData}
             onClose={() => {
-              dispatch(closeModal());
+              dispatch(closeEntryModal());
             }}
           />
         );
       }
 
-      case "create": {
+      case "signUp": {
         return (
-          <CreateBlog
+          <SigUpPage
+            id={modalData}
             onClose={() => {
-              dispatch(closeModal());
+              dispatch(closeEntryModal());
             }}
           />
         );
@@ -43,4 +44,4 @@ export function ModalContainer() {
   return <>{renderContent()}</>;
 }
 
-export default ModalContainer;
+export default EntryModalContainer;

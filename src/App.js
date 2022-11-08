@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { store } from "./store";
-import { ModalContainer } from "./components";
+import { ComposeModalContainer } from "./components";
 import { Footer, Header } from "./containers";
 import { Main, Scoreboard, Profile, Blog } from "./pages";
 import { Olympiads, PartOlympiad, OlympProblems } from "./pages";
@@ -15,7 +15,7 @@ const App = () => {
     <Provider store={store}>
       <BrowserRouter>
         <Header />
-        <ModalContainer />
+        <ComposeModalContainer />
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/olympiads" element={<Olympiads />}></Route>

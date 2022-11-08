@@ -9,7 +9,7 @@ export function Main() {
 
   return (
     <Forum
-    blogs={blogs.map((blog) => (
+      blogs={blogs.map((blog) => (
         <Topiclist key={blog} id={blog} />
       ))}
     />

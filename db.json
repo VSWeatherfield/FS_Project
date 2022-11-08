@@ -160,9 +160,29 @@
       "views": 2,
       "answers": 0,
       "id": 29
+    },
+    {
+      "title": "A problem that seems to be easy but difficult for me",
+      "description": "$k\\in\\mathbb{N}^{*},1=d_0<d_1<\\cdots <d_m=4k\\text{ are all positive factors of }4k$\n$\\text{Prove that }\\exists i\\in\\{1,2,\\cdots ,m\\}\\text{ satisfying }d_i-d_{i-1}=2$",
+      "views": 1,
+      "answers": 1,
+      "id": 30
+    },
+    {
+      "title": "Limits- Easier Than You Think",
+      "description": "Nice and straightforward problem: $\\lim_{x\\to1}\\frac{(x-1)^2\\sin(\\frac{1}{x-1})}{\\sin(\\pi x)}.$",
+      "views": 1,
+      "answers": 1,
+      "id": 31
+    },
+    {
+      "title": "ML _|_BC, mediabs BE_|_CF, M centroid, L Lemoine point",
+      "description": "Given a triangle $ABC$, in which the medians $BE$ and $CF$ are perpendicular. Let $M$ is the intersection point of the medians of this triangle, and $L$ is its Lemoine point (the intersection point of lines symmetrical to the medians with respect to the bisectors of the corresponding angles). Prove that $ML \\perp BC$.\n\n(Mykhailo Sydorenko)",
+      "views": 1,
+      "answers": 1,
+      "id": 32
     }
   ],
-
   "olympiads": [
     {
       "id": 1,
@@ -198,7 +218,6 @@
             }
           ]
         },
-
         {
           "id": "2",
           "name": "2021",
@@ -229,7 +248,6 @@
             }
           ]
         },
-
         {
           "id": "3",
           "name": "2020",
@@ -262,7 +280,6 @@
         }
       ]
     },
-
     {
       "id": 2,
       "name": "Республиканская",
@@ -297,7 +314,6 @@
             }
           ]
         },
-
         {
           "id": "5",
           "name": "2021",
@@ -328,7 +344,6 @@
             }
           ]
         },
-
         {
           "id": "6",
           "name": "2020",
@@ -395,7 +410,6 @@
             }
           ]
         },
-
         {
           "id": "8",
           "name": "2021",
@@ -426,7 +440,6 @@
             }
           ]
         },
-
         {
           "id": "9",
           "name": "2020",
@@ -501,7 +514,6 @@
             }
           ]
         },
-
         {
           "id": "11",
           "name": "2021",
@@ -540,7 +552,6 @@
             }
           ]
         },
-
         {
           "id": "12",
           "name": "2020",
@@ -611,7 +622,6 @@
             }
           ]
         },
-
         {
           "id": "14",
           "name": "2021",
@@ -638,7 +648,6 @@
             }
           ]
         },
-
         {
           "id": "15",
           "name": "2020",
@@ -693,7 +702,6 @@
             }
           ]
         },
-
         {
           "id": "17",
           "name": "2021",
@@ -716,7 +724,6 @@
             }
           ]
         },
-
         {
           "id": "18",
           "name": "2020",
@@ -775,7 +782,6 @@
             }
           ]
         },
-
         {
           "id": "20",
           "name": "2021",
@@ -806,7 +812,6 @@
             }
           ]
         },
-
         {
           "id": "21",
           "name": "2020",

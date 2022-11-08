@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { Topicheader } from "../../components";
 import { increasePage } from "../../slices/blogs";
-import { openModal } from "../../slices/modal";
+import { openComposeModal } from "../../slices/composeModal";
 
 import plus_img from "../../images/plus.png";
 import "./forum.css";
@@ -15,7 +15,7 @@ const Forum = (props) => {
     event.stopPropagation();
     event.preventDefault();
 
-    dispatch(openModal({ data: "hzhz", name: "create" }));
+    dispatch(openComposeModal({ data: "hzhz", name: "create" }));
   };
 
   return (

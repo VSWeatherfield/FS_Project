@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { ProblemDescrForm } from "../../pages";
+import { ProblemDescrForm } from "../../components";
 import { Loader } from "../../components";
 
 export function ProblemsList({ olympId, yearId }) {

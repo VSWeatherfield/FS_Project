@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
-import { ajaxService } from "../../services/ajaxservice";
-import { BlogForm } from "../../components";
+import { ajaxService } from "../../../services/ajaxservice";
+import { BlogForm } from "../..";
 
 import "./editBlog.css";
 

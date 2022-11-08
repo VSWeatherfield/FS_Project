@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import { ajaxService } from "../../services/ajaxservice";
-import { openModal } from "../../slices/modal";
+import { ajaxService } from "../../../services/ajaxservice";
+import { openComposeModal } from "../../../slices/composeModal";
 
 import "./topixlist.css";
 
@@ -18,7 +18,7 @@ const Topiclist = (props) => {
     event.stopPropagation();
     event.preventDefault();
 
-    dispatch(openModal({ data: id, name: "edit" }));
+    dispatch(openComposeModal({ data: id, name: "edit" }));
   };
 
   return (
@@ -31,6 +31,7 @@ const Topiclist = (props) => {
             aria-level="2"
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
+            //onClick={() => dispatch(increaseViews(id))}
             //onClick={() => {
             //  const views = blog.views + 1;
 

@@ -1,5 +1,5 @@
-import { ajaxService } from "../../services/ajaxservice";
-import { BlogForm } from "..";
+import { ajaxService } from "../../../services/ajaxservice";
+import { BlogForm } from "../../";
 
 import "./createBlog.css";
 

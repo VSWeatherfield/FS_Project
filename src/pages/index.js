@@ -11,5 +11,4 @@ export { default as useOlymp } from "./partOlympiad/UseOlymp";
 export { default as YearsList } from "./partOlympiad/YearsList";
 export { default as ProblemsList } from "./olympProblems/ProblemsList";
 export { default as OlympProblems } from "./olympProblems/OlympProblems";
-export { default as ProblemDescrForm } from "../components/olympDescrForm/ProblemDescrForm";
 export { default as useProblemYear } from "./olympProblems/UseProblemYear";
