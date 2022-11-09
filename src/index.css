@@ -129,6 +129,28 @@ code {
     monospace;
 }
 
+.svg-icon,
+.svg-icon-title {
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+  display: inline-flex;
+  position: relative;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+form {
+  margin: 0 0 18px;
+}
+
+form {
+  display: block;
+  margin-top: 0em;
+}
+
 @font-face {
   font-family: "RobotoRegular";
   src: url("./fonts/Roboto-Regular.ttf");

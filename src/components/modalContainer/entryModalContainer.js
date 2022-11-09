@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { LoginPage, SigUpPage } from "..";
-import { closeEntryModal } from "../../slices/composeModal";
+import { LoginPage, SignUpPage, PageForm } from "..";
+import { closeEntryModal } from "../../slices/entryModal";
 
 export function EntryModalContainer() {
   const dispatch = useDispatch();
@@ -15,23 +15,25 @@ export function EntryModalContainer() {
     switch (modalName) {
       case "logIn": {
         return (
-          <LoginPage
-            id={modalData}
+          <PageForm
             onClose={() => {
               dispatch(closeEntryModal());
             }}
-          />
+          >
+            <LoginPage />
+          </PageForm>
         );
       }
 
       case "signUp": {
         return (
-          <SigUpPage
-            id={modalData}
+          <PageForm
             onClose={() => {
               dispatch(closeEntryModal());
             }}
-          />
+          >
+            <SignUpPage />
+          </PageForm>
         );
       }
 

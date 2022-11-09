@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   modalData: null,
   modalName: null,
+  userName: null,
 };
 
 const entryModalSlice = createSlice({
