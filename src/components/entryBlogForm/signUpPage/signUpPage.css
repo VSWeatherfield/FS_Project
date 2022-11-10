@@ -1,11 +1,6 @@
-.login-welcome-header {
+.d-modal .create-account .login-welcome-header {
   grid-area: header;
   padding: 3em 2em 1em;
-}
-
-.d-modal .login-form .input-group {
-  padding: 0 2em;
-  margin-bottom: 1em;
 }
 
 .login-form .input-group {
@@ -15,12 +10,7 @@
   margin-bottom: 0.8em;
 }
 
-.d-modal .has-alt-auth .login-form .input-group input,
-.d-modal .login-form .input-group input {
-  width: 100%;
-}
-
-.d-modal .login-form .input-group input {
+.d-modal .create-account .login-form .input-group input {
   padding: 0.75em 0.77em;
   border-radius: 0.25em;
   min-width: 250px;
@@ -29,7 +19,7 @@
   width: 100%;
 }
 
-.d-modal .login-form .input-group label.alt-placeholder {
+.d-modal .create-account .login-form .input-group label.alt-placeholder {
   color: #919191;
   font-size: 16px;
   font-weight: normal;
@@ -43,122 +33,49 @@
 }
 
 .d-modal
+  .create-account
+  .has-alt-auth
   .login-form
   .input-group
   input:not(.value-entered):not(:focus)
   + label.alt-placeholder,
 .d-modal
+  .create-account
   .login-form
   .input-group
   input:not(.value-entered):not(:focus)
   + label.alt-placeholder {
   top: 12px;
   left: 3em;
-}
-
-.d-modal
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder,
-.d-modal
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder {
-  top: 12px;
-  left: 3em;
-}
-
-.d-modal .login-form .input-group label.alt-placeholder,
-.d-modal .login-form .input-group label.alt-placeholder {
-  color: #919191;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 1em;
-  top: 10px;
-  box-shadow: 0 0 0 0px rgba(0, 136, 204, 0);
-  border-radius: 0.25em;
-  transition: 0.2s ease all;
 }
 
 .has-alt-auth .tip {
   max-width: 100%;
 }
 
-.d-modal .has-alt-auth .login-form .input-group,
-.d-modal .login-form .input-group {
+.d-modal .create-account .has-alt-auth .login-form .input-group,
+.d-modal .create-account .login-form .input-group {
   padding: 0 2em;
   margin-bottom: 1em;
 }
 
-.d-modal .login-form .input-group span.more-info {
+.d-modal .create-account .login-form .input-group span.more-info {
   color: #919191;
   min-height: 1.4em;
 }
 
-.d-modal .has-alt-auth .login-form .input-group,
-.d-modal .login-form .input-group {
-  padding: 0 2em;
-  margin-bottom: 1em;
-}
-
-.d-modal .login-form .input-group {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.8em;
-}
-
-.d-modal .has-alt-auth .login-form .input-group input,
-.d-modal .login-form .input-group input {
-  width: 100%;
-}
-
-.d-modal .login-form .input-group input {
-  padding: 0.75em 0.77em;
-  border-radius: 0.25em;
-  min-width: 250px;
-  box-shadow: none;
-  margin-bottom: 0.25em;
-  width: 100%;
-}
-
-.d-modal .login-form .input-group label.alt-placeholder {
-  color: #919191;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 1em;
-  top: 10px;
-  box-shadow: 0 0 0 0px rgb(0 136 204 / 0%);
-  border-radius: 0.25em;
-  transition: 0.2s ease all;
-}
-
 .d-modal
-  .has-alt-auth
+  .create-account
   .login-form
   .input-group
   input:focus
   + label.alt-placeholder,
 .d-modal
-  .has-alt-auth
+  .create-account
   .login-form
   .input-group
   input.value-entered
-  + label.alt-placeholder,
-.d-modal .login-form .input-group input:focus + label.alt-placeholder,
-.d-modal .login-form .input-group input.value-entered + label.alt-placeholder {
-  top: -8px;
-  left: calc(3em - 0.25em);
-}
-
-.d-modal .login-form .input-group input:focus + label.alt-placeholder,
-.d-modal .login-form .input-group input.value-entered + label.alt-placeholder {
+  + label.alt-placeholder {
   top: -8px;
   left: calc(3em - 0.25em);
   background-color: #fff;
@@ -166,25 +83,42 @@
   font-size: 0.8706em;
 }
 
-.create-account .login-form .input-group label.alt-placeholder {
-  color: #919191;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 1em;
-  top: 10px;
-  box-shadow: 0 0 0 0px rgba(0, 132, 204, 0);
-  border-radius: 0.25em;
-  transition: 0.2s ease all;
+.d-modal
+  .create-account
+  .has-alt-auth
+  .login-form
+  .input-group
+  input:focus
+  + label.alt-placeholder,
+.d-modal
+  .create-account
+  .has-alt-auth
+  .login-form
+  .input-group
+  input.value-entered
+  + label.alt-placeholder,
+.d-modal
+  .create-account
+  .login-form
+  .input-group
+  input:focus
+  + label.alt-placeholder,
+.d-modal
+  .create-account
+  .login-form
+  .input-group
+  input.value-entered
+  + label.alt-placeholder {
+  top: -8px;
+  left: calc(3em - 0.25em);
 }
 
-.d-modal .login-form .input-group span.more-info {
+.d-modal .create-account .login-form .input-group span.more-info {
   color: #919191;
   min-height: 1.4em;
 }
 
-.d-modal .modal-footer {
+.d-modal .create-account .modal-footer {
   grid-area: footer;
   background-color: #fff;
   position: relative;
@@ -199,28 +133,12 @@
   --btn-bottom-margin: 0.3em;
 }
 
-button#login-link,
-button#new-account-link {
-  background: transparent;
-  color: #646464;
-}
-
-#login-link,
-#new-account-link {
-  cursor: pointer;
-  text-align: left;
-}
-
-.modal-footer .btn {
-  margin: 0 0.75em var(--btn-bottom-margin) 0;
-}
-
-.d-modal .disclaimer {
+.d-modal .create-account .disclaimer {
   color: #919191;
   margin-top: 0.5em;
 }
 
-.d-modal .create-account-login-buttons {
+.d-modal .create-account .create-account-login-buttons {
   grid-area: login-buttons;
   padding: 1em;
   display: flex;
@@ -230,7 +148,7 @@ button#new-account-link {
   background: #08c;
 }
 
-.d-modal .create-account-form {
+.d-modal .create-account .create-account-form {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: auto 1fr;
@@ -238,53 +156,4 @@ button#new-account-link {
     "header login-buttons"
     "form login-buttons"
     "footer login-buttons";
-}
-
-.d-modal .login-form .input-group input {
-  padding: 0.75em 0.77em;
-  border-radius: 0.25em;
-  min-width: 250px;
-  box-shadow: none;
-  margin-bottom: 0.25em;
-  width: 100%;
-}
-
-.d-modal
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder,
-.d-modal
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder {
-  top: 12px;
-  left: 3em;
-}
-
-.d-modal
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder,
-.d-modal
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder {
-  top: 12px;
-  left: 3em;
-}
-
-.d-modal .login-form .input-group label.alt-placeholder {
-  color: #919191;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 1em;
-  top: 10px;
-  box-shadow: 0 0 0 0px rgba(0, 136, 204, 0);
-  border-radius: 0.25em;
-  transition: 0.2s ease all;
 }

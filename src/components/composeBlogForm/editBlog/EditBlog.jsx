@@ -10,6 +10,16 @@ const EditBlog = (props) => {
   const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, description } = blog;
 
+  const updateBlog = (blog, title, description) => {
+    return {
+      ...blog,
+      views: blog.views + 1,
+      answers: blog.answers + 1,
+      title: title,
+      description: description,
+    };
+  };
+
   return (
     <BlogForm
       onClose={props.onClose}
@@ -17,12 +27,9 @@ const EditBlog = (props) => {
       defaultTitle={title}
       defaultDescription={description}
       onSubmitForm={({ title, description }) => {
-        const views = blog.views + 1;
-        const answers = blog.answers + 1;
-
         ajaxService(`/blogs/${id}`, {
           method: "PUT",
-          body: JSON.stringify({ title, description, views, answers }),
+          body: JSON.stringify(updateBlog(blog, title, description)),
           headers: {
             "Content-Type": "application/json",
           },

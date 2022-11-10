@@ -1,0 +1,104 @@
+.d-modal .modal-header {
+  border-bottom: none;
+  padding: 0;
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  z-index: 9999;
+}
+.modal-header .modal-close {
+  order: 2;
+  margin-left: auto;
+}
+
+.d-modal .create-account .login-welcome-header,
+.d-modal .login-modal .login-welcome-header,
+.invites-show .login-welcome-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  background: #fff;
+  max-width: 33em;
+  word-break: break-word;
+}
+
+.login-modal .login-left-side .login-welcome-header .login-title {
+  line-height: var(1);
+  font-size: 2.296em;
+}
+
+.login-modal .login-left-side {
+  align-self: stretch;
+  background: #fff;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 3em 2.5em;
+}
+
+.login-modal .login-left-side .login-welcome-header p.login-subheader {
+  font-size: var(1);
+}
+
+.login-modal .login-left-side #login-form {
+  margin: 3em 0 1.25em 0;
+}
+
+.login-modal .login-left-side #credentials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+#login-form .input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+#login-form .input-group input {
+  padding: 0.75em 0.77em;
+  border-radius: 0.25em;
+  min-width: 250px;
+  box-shadow: none;
+  margin-bottom: 0.25em;
+  width: 100%;
+}
+
+#login-form .input-group input.value-entered + label.alt-placeholder {
+  top: -8px;
+  left: calc(1em - 0.25em);
+  background-color: #fff;
+  padding: 0 0.25em 0 0.25em;
+  font-size: 0.8706em;
+}
+
+#login-form .input-group label.alt-placeholder {
+  color: #919191;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 1em;
+  top: 10px;
+  box-shadow: 0 0 0 0px rgba(var(0, 136, 204), 0);
+  border-radius: 0.25em;
+  transition: 0.2s ease all;
+}
+
+.login-left-side .modal-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+
+.login-right-side {
+  padding: 0 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -99,6 +99,13 @@ a {
   transition: all 0.25s;
 }
 
+.btn-flat {
+  background: transparent;
+  border: 0;
+  line-height: 1;
+  transition: color 0.25s, background 0.25s;
+}
+
 thead {
   display: table-header-group;
   vertical-align: middle;
@@ -141,12 +148,8 @@ code {
   flex-shrink: 0;
   overflow: visible;
 }
-
 form {
   margin: 0 0 18px;
-}
-
-form {
   display: block;
   margin-top: 0em;
 }

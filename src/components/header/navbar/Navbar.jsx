@@ -43,16 +43,18 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <button className="sign-up-button btn btn-primary btn-small">
-        <span className="d-button-label" onClick={handleSignUpEditClick}>
-          Регистрация
-        </span>
+      <button
+        className="sign-up-button btn btn-primary btn-small"
+        onClick={handleSignUpEditClick}
+      >
+        <span className="d-button-label">Регистрация</span>
       </button>
 
-      <button className="login-button btn btn-primary btn-small">
-        <span className="d-button-label" onClick={handleLogInEditClick}>
-          Вход
-        </span>
+      <button
+        className="login-button btn btn-primary btn-small"
+        onClick={handleLogInEditClick}
+      >
+        <span className="d-button-label">Вход</span>
       </button>
     </div>
   );

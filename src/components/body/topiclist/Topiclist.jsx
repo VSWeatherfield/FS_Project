@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { ajaxService } from "../../../services/ajaxservice";
-import { openComposeModal } from "../../../slices/composeModal";
+import {
+  openComposeModal,
+  closeComposeModal,
+} from "../../../slices/composeModal";
 
 import "./topixlist.css";
 
@@ -12,13 +15,20 @@ const Topiclist = (props) => {
   const dispatch = useDispatch();
   const { id } = props;
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const { title, description, views, answers } = blog;
+  const { title, views, answers } = blog;
 
   const handleEditClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
     dispatch(openComposeModal({ data: id, name: "edit" }));
+  };
+
+  const updateViews = (blog) => {
+    return {
+      ...blog,
+      views: blog.views + 1,
+    };
   };
 
   return (
@@ -31,20 +41,16 @@ const Topiclist = (props) => {
             aria-level="2"
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
-            //onClick={() => dispatch(increaseViews(id))}
-            //onClick={() => {
-            //  const views = blog.views + 1;
-
-            //  ajaxService(`/blogs/${id}`, {
-            //    method: "PUT",
-            //    body: JSON.stringify({ title, description, views, answers }),
-            //    headers: {
-            //      "Content-Type": "application/json",
-            //    },
-            //  });
-            //}}
+            onClick={() => {
+              ajaxService(`/blogs/${id}`, {
+                method: "PUT",
+                body: JSON.stringify(updateViews(blog)),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
+            }}
           >
-            {" "}
             <Latex>{title}</Latex>
           </Link>
 

@@ -3,7 +3,7 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 26,
+      "views": 28,
       "answers": 0,
       "id": 1
     },
@@ -155,10 +155,10 @@
       "id": 28
     },
     {
-      "title": "шалалала",
+      "title": "aaaaaa",
       "description": "лала",
-      "views": 2,
-      "answers": 0,
+      "views": 10,
+      "answers": 3,
       "id": 29
     },
     {
@@ -176,10 +176,10 @@
       "id": 31
     },
     {
-      "title": "ML _|_BC, mediabs BE_|_CF, M centroid, L Lemoine point",
+      "title": "ML $\\perp$ BC, mediabs BE $\\perp$ CF, M centroid, L Lemoine point",
       "description": "Given a triangle $ABC$, in which the medians $BE$ and $CF$ are perpendicular. Let $M$ is the intersection point of the medians of this triangle, and $L$ is its Lemoine point (the intersection point of lines symmetrical to the medians with respect to the bisectors of the corresponding angles). Prove that $ML \\perp BC$.\n\n(Mykhailo Sydorenko)",
-      "views": 1,
-      "answers": 1,
+      "views": 11,
+      "answers": 3,
       "id": 32
     }
   ],

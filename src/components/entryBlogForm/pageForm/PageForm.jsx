@@ -1,7 +1,3 @@
-import { useState } from "react";
-import { wavingHand } from "../../../images/wavingHand.png";
-import { cross } from "./cross.png";
-
 import "./pageForm.css";
 
 const PageForm = (props) => {

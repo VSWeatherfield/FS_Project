@@ -1,5 +1,7 @@
 import { useDispatch } from "react-redux";
+
 import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
+import wavingHand from "../../../images/wavingHand.png";
 
 import "./loginPage.css";
 
@@ -15,7 +17,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="ember-view">
+    <div className="login-modal">
       <div
         tabindex="-1"
         id="ember455"
@@ -24,7 +26,7 @@ const LoginPage = () => {
         <div className="login-left-side">
           <div className="login-welcome-header">
             <h1 className="login-title">С возвращением!</h1>
-            {/*<img src={wavingHand} alt="" className="waving-hand"></img>*/}
+            <img src={wavingHand} alt className="waving-hand" />
             <p className="login-subheader">Войдите в свою учётную запись</p>
           </div>
 
