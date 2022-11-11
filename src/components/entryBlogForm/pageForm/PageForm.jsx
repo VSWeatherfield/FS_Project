@@ -26,12 +26,12 @@ const PageForm = (props) => {
       <div className="modal-outer-container" onClick={handleOverlayClick}>
         <div className="modal-middle-container">
           <div className="modal-inner-container" onClick={handleModalClick}>
-            <div class="modal-header">
+            <div className="modal-header">
               <button
                 onClick={props.onClose}
                 title="закрыть"
                 id="ember421"
-                class="btn-flat modal-close close btn no-text btn-icon ember-view"
+                className="btn-flat modal-close close btn no-text btn-icon ember-view"
                 type="button"
               >
                 ✕

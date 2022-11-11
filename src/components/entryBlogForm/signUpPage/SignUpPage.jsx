@@ -1,13 +1,19 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
-import wavingHand from "../../../images/wavingHand.png";
 
-import { PageForm } from "../../";
+import { ajaxService } from "../../../services/ajaxservice";
+import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
 
 import "./signUpPage.css";
+import wavingHand from "../../../images/wavingHand.png";
 
-const SignUpPage = (props) => {
+const SignUpPage = () => {
   const dispatch = useDispatch();
+
+  const [userName, setUserName] = useState();
+  const [mailField, setMailField] = useState();
+  const [password, setPassword] = useState();
+  const [titleError, setTitleError] = useState("");
 
   const handleLogInEditClick = (event) => {
     event.stopPropagation();
@@ -17,12 +23,43 @@ const SignUpPage = (props) => {
     dispatch(openEntryModal({ data: "hzhz", name: "logIn" }));
   };
 
+  const handleChangeUserName = (event) => {
+    if (event.target.value.length <= 28) {
+      setUserName(event.target.value);
+      setTitleError("");
+    } else {
+      setTitleError("username должен быть меньше 29 символов");
+    }
+  };
+
+  const handleChangeMailField = (event) => {
+    setMailField(event.target.value);
+  };
+
+  const handleChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    ajaxService("/users", {
+      method: "POST",
+      body: JSON.stringify({ userName, mailField, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    dispatch(closeEntryModal());
+  };
+
   return (
     <div className="create-account">
       <div className="create-account-form ">
         <div className="login-welcome-header" id="create-account-title">
           <h1 className="login-title">Добро пожаловать!</h1>
-          <img src={wavingHand} alt className="waving-hand" />
+          <img src={wavingHand} className="waving-hand" />
           <p className="login-subheader">
             Давайте создадим вашу учётную запись
           </p>
@@ -35,12 +72,14 @@ const SignUpPage = (props) => {
                 aria-invalid=""
                 aria-describedby="account-email-validation"
                 name="email"
-                autofocus="autofocus"
+                autoFocus="autofocus"
                 id="new-account-email"
                 className="ember-text-field ember-view"
                 type="email"
+                value={mailField}
+                onChange={handleChangeMailField}
               />
-              <label className="alt-placeholder" for="new-account-email">
+              <label className="alt-placeholder" htmlFor="new-account-email">
                 Эл. почта
               </label>
               <div
@@ -55,13 +94,15 @@ const SignUpPage = (props) => {
                 aria-invalid=""
                 aria-describedby="username-validation"
                 name="username"
-                autocomplete="off"
-                maxlength="20"
+                autoComplete="off"
+                maxLength="20"
                 id="new-account-username"
                 className="ember-text-field ember-view"
                 type="text"
+                value={userName}
+                onChange={handleChangeUserName}
               />
-              <label class="alt-placeholder" for="new-account-username">
+              <label className="alt-placeholder" htmlFor="new-account-username">
                 Псевдоним
               </label>
 
@@ -74,13 +115,15 @@ const SignUpPage = (props) => {
             <div className="input-group create-account__password">
               <input
                 aria-describedby="password-validation"
-                autocomplete="current-password"
+                autoComplete="current-password"
                 placeholder=""
                 id="new-account-password"
                 className="ember-text-field ember-view"
                 type="password"
+                value={password}
+                onChange={handleChangePassword}
               />
-              <label className="alt-placeholder" for="new-account-password">
+              <label className="alt-placeholder" htmlFor="new-account-password">
                 Пароль
               </label>
               <span className="more-info">не менее 8 символов</span>
@@ -93,6 +136,7 @@ const SignUpPage = (props) => {
             id="ember590"
             className="btn-large btn-primary btn btn-text ember-view"
             type="button"
+            onClick={onSubmit}
           >
             <span className="d-button-label">Создать учётную запись</span>
           </button>

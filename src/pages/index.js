@@ -12,3 +12,5 @@ export { default as YearsList } from "./partOlympiad/YearsList";
 export { default as ProblemsList } from "./olympProblems/ProblemsList";
 export { default as OlympProblems } from "./olympProblems/OlympProblems";
 export { default as useProblemYear } from "./olympProblems/UseProblemYear";
+export { default as UserItem } from "./profile/userItem/UserItem";
+export { default as UserMainPage } from "./profile/userMainPage/UserMainPage";

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { LoginPage, SignUpPage, PageForm } from "..";
+import { LogInPage, SignUpPage, PageForm } from "..";
 import { closeEntryModal } from "../../slices/entryModal";
 
 export function EntryModalContainer() {
@@ -20,7 +20,7 @@ export function EntryModalContainer() {
               dispatch(closeEntryModal());
             }}
           >
-            <LoginPage />
+            <LogInPage />
           </PageForm>
         );
       }

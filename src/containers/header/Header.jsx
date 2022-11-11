@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="d-header">
       <div className="wrap">
-        <Link to="/" data-auto-route="true" className="menuref"></Link>
+        
 
         <span className="title">
           <Link to="/" data-auto-route="true">

@@ -5,11 +5,12 @@ const initialState = {
   blogIds: [],
   blogObj: {},
   posts: {},
+  users: {},
   comments: {},
   page: 1,
 };
 
-const userSchema = new schema.Entity("user");
+const userSchema = new schema.Entity("users");
 const commentSchema = new schema.Entity("comments", { user: userSchema });
 const postSchema = new schema.Entity("posts", {
   comments: [commentSchema],

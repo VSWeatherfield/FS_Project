@@ -3,9 +3,9 @@ import { useDispatch } from "react-redux";
 import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
 import wavingHand from "../../../images/wavingHand.png";
 
-import "./loginPage.css";
+import "./logInPage.css";
 
-const LoginPage = () => {
+const LogInPage = () => {
   const dispatch = useDispatch();
 
   const handleSignUpEditClick = (event) => {
@@ -98,4 +98,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default LogInPage;

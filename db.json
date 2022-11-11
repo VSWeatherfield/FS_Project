@@ -1,4 +1,12 @@
 {
+  "users": [
+    {
+      "userName": "VSWeatherfield",
+      "mailField": "voff.smirnoff@gmail.com",
+      "password": "NaahNotThatTime",
+      "id": 1
+    }
+  ],
   "blogs": [
     {
       "title": "Материал по векторам",
@@ -10,7 +18,7 @@
     {
       "title": "Maman Maman",
       "description": "Le vent se leve! Il faut tenter de vivre!",
-      "views": 11,
+      "views": 17,
       "answers": 3,
       "id": 2
     },
@@ -73,7 +81,7 @@
     {
       "title": "А так можно было?",
       "description": "сейчас и проверим",
-      "views": 3,
+      "views": 4,
       "answers": 1,
       "id": 16
     },
@@ -155,10 +163,10 @@
       "id": 28
     },
     {
-      "title": "aaaaaa",
-      "description": "лала",
-      "views": 10,
-      "answers": 3,
+      "title": " Классическая задача на квадратичные вычеты",
+      "description": "Ботал что-то как обычно и наткнулся опять на данную задачу:\nДокажите что любое простое число вида 4k+1 представимо в виде суммы двух квадратов\n\nПункт шел со звездочкой и решения поэтому не приводилось. Заниматься олимпиадами перестал давно, но помню что в свое время брали утверждение просто за данность. Не знает ли кто олимпиадного решения(о красоте наверное не стоит) ну или хотя бы ссылки на решение?\n\nЗаранее всем спасибо)",
+      "views": 19,
+      "answers": 5,
       "id": 29
     },
     {
@@ -169,10 +177,10 @@
       "id": 30
     },
     {
-      "title": "Limits- Easier Than You Think",
+      "title": "Limits - Easier Than You Think",
       "description": "Nice and straightforward problem: $\\lim_{x\\to1}\\frac{(x-1)^2\\sin(\\frac{1}{x-1})}{\\sin(\\pi x)}.$",
-      "views": 1,
-      "answers": 1,
+      "views": 3,
+      "answers": 2,
       "id": 31
     },
     {

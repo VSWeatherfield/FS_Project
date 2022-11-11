@@ -13,16 +13,6 @@ dd {
   padding: 0;
 }
 
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
-
 li {
   display: list-item;
   text-align: -webkit-match-parent;
@@ -154,6 +144,14 @@ form {
   margin-top: 0em;
 }
 
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 @font-face {
   font-family: "RobotoRegular";
   src: url("./fonts/Roboto-Regular.ttf");
@@ -187,4 +185,9 @@ form {
 @font-face {
   font-family: "GaramnodBold";
   src: url("./fonts/CormorantGaramond-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./fonts/Manrope-ExtraBold.ttf");
 }

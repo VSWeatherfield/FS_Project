@@ -1,23 +1,13 @@
+import { UserMainPage } from "../"
+
 export function Profile() {
+
+  const id = 1;
+  const userName = "VSWeatherfield";
+  const mailField = "voff.smirnoff@gmail.com";
+
   return (
-    <aside>
-      {" "}
-      <h1>
-        Profile <br></br>
-      </h1>{" "}
-      <h1>
-        Profile <br></br>
-      </h1>{" "}
-      <h1>
-        Profile <br></br>
-      </h1>{" "}
-      <h1>
-        Profile <br></br>
-      </h1>{" "}
-      <h1>
-        Profile <br></br>
-      </h1>
-    </aside>
+    <UserMainPage id={id} userName={userName} mailField={mailField} />
   );
 }
 
