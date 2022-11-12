@@ -33,7 +33,7 @@ const UserItem = () => {
               <span class="badge-category-bg"></span>
 
               <span data-drop-close="true" class="badge-category clear-badge">
-                <span class="category-name">Теория Чисел</span>
+                <span class="category-name">Математика</span>
               </span>
             </div>
           </div>

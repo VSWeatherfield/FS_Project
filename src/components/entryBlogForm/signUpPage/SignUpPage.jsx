@@ -91,7 +91,6 @@ const SignUpPage = () => {
 
             <div className="input-group create-account__username">
               <input
-                aria-invalid=""
                 aria-describedby="username-validation"
                 name="username"
                 autoComplete="off"
@@ -133,7 +132,6 @@ const SignUpPage = () => {
 
         <div className="modal-footer">
           <button
-            id="ember590"
             className="btn-large btn-primary btn btn-text ember-view"
             type="button"
             onClick={onSubmit}

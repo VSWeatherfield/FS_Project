@@ -18,8 +18,12 @@ const entryModalSlice = createSlice({
       state.modalData = null;
       state.modalName = null;
     },
+    submitEntryModal: (state, action) => {
+      state.userName = action.payload.username;
+    },
   },
 });
 
 export const entryModalReducer = entryModalSlice.reducer;
-export const { openEntryModal, closeEntryModal } = entryModalSlice.actions;
+export const { openEntryModal, closeEntryModal, submitEntryModal } =
+  entryModalSlice.actions;

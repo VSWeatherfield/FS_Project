@@ -10,8 +10,6 @@ const Header = () => {
   return (
     <header className="d-header">
       <div className="wrap">
-        
-
         <span className="title">
           <Link to="/" data-auto-route="true">
             <img src={logo} alt="Logo" id="site-logo" />

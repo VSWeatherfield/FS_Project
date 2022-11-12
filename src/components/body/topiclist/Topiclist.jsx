@@ -15,7 +15,7 @@ const Topiclist = (props) => {
   const dispatch = useDispatch();
   const { id } = props;
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const { title, views, answers } = blog;
+  const { title, views, answersNum } = blog;
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -64,7 +64,7 @@ const Topiclist = (props) => {
         className="num posts-map posts  topic-list-data"
         title="В этой теме 2 сообщения"
       >
-        <span className="number">{answers}</span>
+        <span className="number">{answersNum}</span>
       </td>
 
       <td className="num views  topic-list-data">

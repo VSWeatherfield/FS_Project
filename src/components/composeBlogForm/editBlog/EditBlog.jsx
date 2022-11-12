@@ -14,7 +14,7 @@ const EditBlog = (props) => {
     return {
       ...blog,
       views: blog.views + 1,
-      answers: blog.answers + 1,
+      answersNum: blog.answersNum + 1,
       title: title,
       description: description,
     };

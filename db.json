@@ -1,109 +1,131 @@
 {
   "users": [
     {
+      "nameAndSurname": "Vladimir Smirnov",
       "userName": "VSWeatherfield",
       "mailField": "voff.smirnoff@gmail.com",
       "password": "NaahNotThatTime",
       "id": 1
     }
   ],
+  "answers": [
+    {
+      "id": "1",
+      "description": "Нидерланды, вообще-то",
+      "user": {
+        "id": "1"
+      }
+    },
+    {
+      "id": "2",
+      "description": "Нидерланды, вообще-то",
+      "user": {
+        "id": "1"
+      }
+    }
+  ],
   "blogs": [
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 28,
-      "answers": 0,
+      "views": 56,
+      "answersNum": 0,
       "id": 1
     },
     {
-      "title": "Maman Maman",
-      "description": "Le vent se leve! Il faut tenter de vivre!",
-      "views": 17,
-      "answers": 3,
+      "title": "Le vent se leve! Il faut tenter de vivre!",
+      "description": "Le vent se lève !… Il faut tenter de vivre !\nL'air immense ouvre et referme mon livre,\nLa vague en poudre ose jaillir des rocs !\nEnvolez-vous, pages tout éblouies !\nRompez, vagues ! Rompez d'eaux réjouies\nCe toit tranquille où picoraient des focs !",
+      "views": 23,
+      "answersNum": 4,
       "id": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 5,
-      "answers": 0,
-      "id": 3
+      "views": 10,
+      "answersNum": 4,
+      "id": 3,
+      "user": "1",
+      "answers": [
+        "1",
+        "2"
+      ]
     },
     {
       "title": "Свойство центроида треугольникоффф",
       "description": "Хым, что-то про треугольники а не голландию",
       "views": 5,
-      "answers": 2,
+      "answersNum": 2,
       "id": 4
     },
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 7,
-      "answers": 0,
+      "views": 10,
+      "answersNum": 0,
       "id": 5
     },
     {
       "title": "Интегралы (basic int. form)",
       "description": "Я люблю Голланди..",
       "views": 6,
-      "answers": 0,
+      "answersNum": 0,
       "id": 6
     },
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
       "views": 3,
-      "answers": 0,
+      "answersNum": 0,
       "id": 7
     },
     {
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
       "views": 3,
-      "answers": 0,
+      "answersNum": 0,
       "id": 10
     },
     {
       "title": "Точно точно работаешь?",
       "description": "да!",
       "views": 2,
-      "answers": 0,
+      "answersNum": 0,
       "id": 11
     },
     {
-      "title": "please please work",
+      "title": "please please me",
       "description": "I love you, I really do!",
-      "views": 4,
-      "answers": 2,
+      "views": 5,
+      "answersNum": 3,
       "id": 14
     },
     {
       "title": "А так можно было?",
       "description": "сейчас и проверим",
-      "views": 4,
-      "answers": 1,
+      "views": 5,
+      "answersNum": 1,
       "id": 16
     },
     {
       "title": "if you work, then i'm i love with you",
       "description": "I love you",
       "views": 1,
-      "answers": 0,
+      "answersNum": 0,
       "id": 17
     },
     {
       "title": "Holland Holland Holland",
       "description": "Only not Hollad!",
       "id": 18,
-      "views": 0,
-      "answers": 0
+      "views": 1,
+      "answersNum": 0
     },
     {
       "title": "If you're out on the road",
       "description": "Feeling lonely, and so colddafdf",
       "views": 2,
-      "answers": 1,
+      "answersNum": 1,
       "id": 19
     },
     {
@@ -111,83 +133,83 @@
       "description": "Yes!!",
       "id": 20,
       "views": 0,
-      "answers": 0
+      "answersNum": 0
     },
     {
       "title": "Примеры не ассоциативных операций",
       "description": "Товарищи старшие математики, знает ли кто примеры не ассоциативных операций?\n\nНу т.е. чтобы $$(A\\cdot B)\\cdot C \\neq A\\cdot (B \\cdot C)(A⋅B)⋅C\n=A⋅(B⋅C)$$ при неком определении операции $$\\cdot$$⋅ и некой форме $$A,B,CA,B,C$$?",
       "views": 2,
-      "answers": 0,
+      "answersNum": 0,
       "id": 21
     },
     {
       "title": "Nice problem",
       "description": "$f(x)$ polynomial , find $f(x)$ given $2f(x)+2x^{2}=f(x^{2}-2x+4)+8x+5$",
       "views": 3,
-      "answers": 0,
+      "answersNum": 0,
       "id": 22
     },
     {
       "title": "Inequalities",
       "description": "Let $a, b, c>0$. Prove that$$ \\\\ \\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{a^2+b^2} {c^2} \\geq2+3\\sqrt[3]{2} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{2(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{4} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{k(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{2k} \\\\ $$Where $k\\in N^+.$",
       "views": 4,
-      "answers": 0,
+      "answersNum": 0,
       "id": 23
     },
     {
       "title": "I really need some recommendation for functional equation books.",
       "description": "Are there good books have free pdf which excellent for practicing functional equation from $\\mathbb{R+} \\rightarrow \\mathbb{R+}$?",
       "views": 1,
-      "answers": 0,
+      "answersNum": 0,
       "id": 24
     },
     {
       "title": "Combinatorics HALP!!",
       "description": "A group of 50 people of different ages sit around a big round table. We call any pair consisting\nof two people $A$ and $B$ a newbie pair, if $A$ and $B$ are not sitting next to each another, and on at\nleast one of the arcs connecting $A$ and $B$ around the table edge all people are older than $A$ and $B$.\nDetermine the minimal number of newbie pairs.",
-      "views": 5,
-      "answers": 0,
+      "views": 6,
+      "answersNum": 0,
       "id": 25
     },
     {
       "title": "Findint the inverse of $(A+BC^{T})$",
       "description": "Let $n$ and $p$ be positive integers and let ${\\bf F}$ be a field. Let $A\\in M_{n\\times n}({\\bf F})$ and let $B,C\\in M_{n\\times p}({\\bf F})$ be matrices satisfying the condition that $A$ and $(I+C^{\\top}A^{-1}B)$ are nonsingular. Show that $A+BC^{\\top}$ is nonsingular, and that\\[ (A+BC^{\\top})^{-1}=A^{-1}-A^{-1}B(I+C^{\\top}A^{-1}B)^{-1}C^{\\top}A^{-1}.\\]",
-      "views": 9,
-      "answers": 0,
+      "views": 10,
+      "answersNum": 0,
       "id": 26
     },
     {
       "title": "do u think amc10 this year will be hard",
       "description": "do u guys think amc10 this year will be hard? Approximate cutoff, maybe? answer in the comments, like this:\nformat:\nvery easy/easy/ok/hard/very hard\nenter cutoff expectation here",
       "views": 0,
-      "answers": 0,
+      "answersNum": 0,
       "id": 28
     },
     {
       "title": " Классическая задача на квадратичные вычеты",
       "description": "Ботал что-то как обычно и наткнулся опять на данную задачу:\nДокажите что любое простое число вида 4k+1 представимо в виде суммы двух квадратов\n\nПункт шел со звездочкой и решения поэтому не приводилось. Заниматься олимпиадами перестал давно, но помню что в свое время брали утверждение просто за данность. Не знает ли кто олимпиадного решения(о красоте наверное не стоит) ну или хотя бы ссылки на решение?\n\nЗаранее всем спасибо)",
-      "views": 19,
-      "answers": 5,
+      "views": 21,
+      "answersNum": 5,
       "id": 29
     },
     {
       "title": "A problem that seems to be easy but difficult for me",
       "description": "$k\\in\\mathbb{N}^{*},1=d_0<d_1<\\cdots <d_m=4k\\text{ are all positive factors of }4k$\n$\\text{Prove that }\\exists i\\in\\{1,2,\\cdots ,m\\}\\text{ satisfying }d_i-d_{i-1}=2$",
       "views": 1,
-      "answers": 1,
+      "answersNum": 1,
       "id": 30
     },
     {
       "title": "Limits - Easier Than You Think",
       "description": "Nice and straightforward problem: $\\lim_{x\\to1}\\frac{(x-1)^2\\sin(\\frac{1}{x-1})}{\\sin(\\pi x)}.$",
-      "views": 3,
-      "answers": 2,
+      "views": 6,
+      "answersNum": 4,
       "id": 31
     },
     {
       "title": "ML $\\perp$ BC, mediabs BE $\\perp$ CF, M centroid, L Lemoine point",
       "description": "Given a triangle $ABC$, in which the medians $BE$ and $CF$ are perpendicular. Let $M$ is the intersection point of the medians of this triangle, and $L$ is its Lemoine point (the intersection point of lines symmetrical to the medians with respect to the bisectors of the corresponding angles). Prove that $ML \\perp BC$.\n\n(Mykhailo Sydorenko)",
-      "views": 11,
-      "answers": 3,
+      "views": 13,
+      "answersNum": 3,
       "id": 32
     }
   ],

@@ -10,7 +10,6 @@ import { setBlogsMore } from "../../slices/blogs";
 export function Blog() {
   const dispatch = useDispatch();
   const params = useParams();
-  const [blog, setBlog] = useState(null);
   const initialBlog = useSelector(
     (state) => state.blogs.blogObj[Number(params.id)]
   );
@@ -28,6 +27,7 @@ export function Blog() {
     <div>
       {initialBlog ? (
         <BlogItem
+          id={initialBlog.id}
           title={initialBlog.title}
           description={initialBlog.description}
         />

@@ -14,7 +14,7 @@ const Topicheader = () => {
 
       <th
         data-sort-order="posts"
-        className="posts sortable num topic-list-data"
+        className="postss sortable num topic-list-data"
         scope="col"
         aria-label="Сортировать по ответам"
         tabIndex="0"

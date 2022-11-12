@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
+import {
+  openEntryModal,
+  closeEntryModal,
+  submitEntryModal,
+} from "../../../slices/entryModal";
 import wavingHand from "../../../images/wavingHand.png";
 
 import "./logInPage.css";
@@ -8,12 +13,30 @@ import "./logInPage.css";
 const LogInPage = () => {
   const dispatch = useDispatch();
 
+  const [userName, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  const handleChangeUserName = (event) => {
+    setUserName(event.target.value);
+  };
+
+  const handleChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
   const handleSignUpEditClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
     dispatch(closeEntryModal());
     dispatch(openEntryModal({ data: "hzhzhz", name: "signUp" }));
+  };
+
+  const handleSubmitClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+    dispatch(submitEntryModal({ username: { userName } }));
+    dispatch(closeEntryModal());
   };
 
   return (
@@ -42,6 +65,8 @@ const LogInPage = () => {
                   id="login-account-name"
                   className="ember-text-field ember-view value-entered"
                   type="email"
+                  value={userName}
+                  onChange={handleChangeUserName}
                 />
                 <label className="alt-placeholder" for="login-account-name">
                   Эл. почта / Псевдоним
@@ -57,6 +82,8 @@ const LogInPage = () => {
                   id="login-account-password"
                   className="ember-text-field ember-view value-entered"
                   type="password"
+                  value={password}
+                  onChange={handleChangePassword}
                 />
                 <label className="alt-placeholder" for="login-account-password">
                   Пароль
@@ -72,6 +99,7 @@ const LogInPage = () => {
               id="login-button"
               className="btn btn-large btn-primary btn btn-icon-text ember-view"
               type="button"
+              onClick={handleSubmitClick}
             >
               <span className="d-button-label">Войти</span>
             </button>
