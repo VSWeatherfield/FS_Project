@@ -9,8 +9,8 @@ import VSImage from "../../../images/VSWeatherfield.png";
 const AnswerItem = ({ answerId }) => {
   const ansl = useSelector((state) => state.answers.answerObj[answerId]);
 
-  return (ansl ? 
-    (<div className="topic-post clearfix group-up-quarks regular">
+  return ansl ? (
+    <div className="topic-post clearfix group-up-quarks regular">
       <article
         id="post_1"
         role="region"
@@ -64,7 +64,10 @@ const AnswerItem = ({ answerId }) => {
           </div>
         </div>
       </article>
-    </div>) : (<Loader />));
+    </div>
+  ) : (
+    <Loader />
+  );
 };
 
 export default AnswerItem;

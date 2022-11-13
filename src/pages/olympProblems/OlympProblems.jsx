@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { UseProblemYear } from "../../hooks";
 import { Loader } from "../../components";
-import { ProblemsList} from "../../pages";
+import { ProblemsList } from "../../pages";
 
 export function OlympProblems() {
   const params = useParams();

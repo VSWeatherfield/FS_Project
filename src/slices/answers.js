@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { schema, normalize } from "normalizr";
 
 const initialState = {
-    answerIds: [],
-    answerObj: {}
-}
+  answerIds: [],
+  answerObj: {},
+};
 
 const userSchema = new schema.Entity("users");
 const ansSchema = new schema.Entity("answers", {
-    users: [userSchema],
+  users: [userSchema],
 });
 
 const answersSlice = createSlice({

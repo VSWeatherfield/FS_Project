@@ -10,7 +10,6 @@ const BlogItem = (props) => {
   const { id, title, description } = props;
   //const { id, title, description, user } = props;
 
-
   return (
     <div id="main-outlet-wrapper" className="wrap">
       <div id="main-outlet">
@@ -82,7 +81,7 @@ const BlogItem = (props) => {
                                   data-user-card="CappuccinosBurritos"
                                 >
                                   John Doe
-                                {/*  {user.nameAndSurname} */}
+                                  {/*  {user.nameAndSurname} */}
                                 </Link>
                               </span>
                               <span className="second username">

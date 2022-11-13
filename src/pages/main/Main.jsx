@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import { UseBlogs, UseAnswers, UseUsers } from "../../hooks"
+import { UseBlogs, UseAnswers, UseUsers } from "../../hooks";
 import { Topiclist } from "../../components";
 import { Forum } from "../../pages";
 
