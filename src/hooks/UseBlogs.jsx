@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ajaxService } from "../services/ajaxservice";
 import { setBlogs, setBlogsMore } from "../slices/blogs";
 
-export function useBlogs() {
+export function UseBlogs() {
   const dispatch = useDispatch();
   const page = useSelector((state) => state.blogs.page);
 
@@ -19,4 +19,4 @@ export function useBlogs() {
   }, [page]);
 }
 
-export default useBlogs;
+export default UseBlogs;

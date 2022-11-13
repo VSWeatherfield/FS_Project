@@ -9,6 +9,9 @@ export function useBlog(blogId) {
   const blog = useSelector((state) => state.blogs.blogObj[blogId]);
 
   useEffect(() => {
+    if (blog) {
+      return;
+    }
     ajaxService(`/blogs/${blogId}/`).then((data) => {
       dispatch(setBlogsMore([data]));
     });

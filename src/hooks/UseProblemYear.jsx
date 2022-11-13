@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ajaxService } from "../../services/ajaxservice";
-import { setOlympsMore } from "../../slices/olympiads";
+import { ajaxService } from "../services/ajaxservice";
+import { setOlympsMore } from "../slices/olympiads";
 
-export function useProblemYear(olympId, yearId) {
+export function UseProblemYear(olympId, yearId) {
   const dispatch = useDispatch();
   const olymp = useSelector((state) => state.olymps.olympObjs[olympId]);
   const year = useSelector((state) => state.olymps.years[yearId]);
@@ -12,7 +12,7 @@ export function useProblemYear(olympId, yearId) {
     if (olymp && year) {
       return;
     }
-    ajaxService(`/olympiads/${olympId}/years/${yearId}`).then((data) => {
+    ajaxService(`/olympiads/${olympId}`).then((data) => {
       dispatch(setOlympsMore([data]));
     });
   }, []);
@@ -20,4 +20,4 @@ export function useProblemYear(olympId, yearId) {
   return { olymp, year };
 }
 
-export default useProblemYear;
+export default UseProblemYear;

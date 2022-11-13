@@ -8,6 +8,8 @@ import "./blog-item.css";
 
 const BlogItem = (props) => {
   const { id, title, description } = props;
+  //const { id, title, description, user } = props;
+
 
   return (
     <div id="main-outlet-wrapper" className="wrap">
@@ -79,7 +81,8 @@ const BlogItem = (props) => {
                                   to="/profile"
                                   data-user-card="CappuccinosBurritos"
                                 >
-                                  Vladimir Smirnov
+                                  John Doe
+                                {/*  {user.nameAndSurname} */}
                                 </Link>
                               </span>
                               <span className="second username">
@@ -87,7 +90,8 @@ const BlogItem = (props) => {
                                   to="/profile"
                                   data-user-card="CappuccinosBurritos"
                                 >
-                                  CappuccinosBurritos
+                                  johndoe
+                                  {/* {user.userName} */}
                                 </Link>
                               </span>
                             </div>

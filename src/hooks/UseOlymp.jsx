@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ajaxService } from "../../services/ajaxservice";
-import { setOlympsMore } from "../../slices/olympiads";
+import { ajaxService } from "../services/ajaxservice";
+import { setOlympsMore } from "../slices/olympiads";
 
-export function useOlymp(olympId) {
+export function UseOlymp(olympId) {
   const dispatch = useDispatch();
   const olymp = useSelector((state) => state.olymps.olympObjs[olympId]);
 
@@ -19,4 +19,4 @@ export function useOlymp(olympId) {
   return olymp;
 }
 
-export default useOlymp;
+export default UseOlymp;

@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 
-import { useBlogs } from "../../hooks"
+import { UseBlogs, UseAnswers, UseUsers } from "../../hooks"
 import { Topiclist } from "../../components";
-import { Forum, useAnswers } from "../../pages";
+import { Forum } from "../../pages";
 
 export function Main() {
   const blogs = useSelector((state) => state.blogs.blogIds);
-  useBlogs();
-  useAnswers();
+  UseBlogs();
+  UseUsers();
 
   return (
     <Forum

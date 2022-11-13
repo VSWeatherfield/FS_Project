@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { useOlymps } from "../../pages";
+import { UseOlymps } from "../../hooks";
 import { BoxForm } from "../../components";
 
 import "./olympiads.css";
 
 export function Olympiads() {
   const olympiads = useSelector((state) => state.olymps.olympNames);
-  useOlymps();
+  UseOlymps();
 
   return (
     <div className="outerOlympElem">
@@ -22,9 +22,9 @@ export function Olympiads() {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M19 12H6M12 5l-7 7 7 7"></path>
           </svg>

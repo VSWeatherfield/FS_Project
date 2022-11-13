@@ -250,3 +250,7 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
 }
+
+.group-up-quarks {
+  padding-left: 50px;
+}

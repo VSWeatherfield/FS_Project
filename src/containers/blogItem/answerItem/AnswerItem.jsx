@@ -8,7 +8,7 @@ import VSImage from "../../../images/VSWeatherfield.png";
 
 const AnswerItem = ({ answerId }) => {
   const ansl = useSelector((state) => state.answers.answerObj[answerId]);
-  
+
   return (ansl ? 
     (<div className="topic-post clearfix group-up-quarks regular">
       <article

@@ -10,9 +10,9 @@ import VSImage from "../../../images/VSWeatherfield.png";
 
 export function UserMainPage(props) {
   const dispatch = useDispatch();
-  const { id, mailField } = props;
-  const user = useSelector((state) => state.entryModal.userName);
-  const { userName } = user;
+  const { id, userName, mailField } = props;
+
+  const user = new Boolean(true);
 
   const handleLogOutClick = (event) => {
     event.stopPropagation();

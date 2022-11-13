@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { schema, normalize } from "normalizr";
 
 const initialState = {
@@ -37,6 +37,7 @@ const blogsSlice = createSlice({
     },
     setBlogsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
+      
       state.blogIds = [...state.blogIds, ...result];
       state.blogObj = { ...state.blogObj, ...entities.blogs };
       state.answers = { ...state.answers, ...entities.answers };

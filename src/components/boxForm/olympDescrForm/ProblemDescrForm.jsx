@@ -13,7 +13,7 @@ const ProblemDescrForm = (props) => {
         <Latex>{noTitle}</Latex>
       </h2>
 
-      <article class="content prose-sm sm:prose dark:prose-dark sm:dark:prose-dark max-w-full md:max-w-full">
+      <article className="content prose-sm sm:prose dark:prose-dark sm:dark:prose-dark max-w-full md:max-w-full">
         <p>
           <Latex>{description}</Latex>
         </p>

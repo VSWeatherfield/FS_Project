@@ -26,7 +26,7 @@ const olympsSlice = createSlice({
     setOlympsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [olympSchema]);
 
-      state.blogNames = [...state.blogNames, ...result];
+      state.olympNames = [...state.olympNames, ...result];
       state.olympObjs = { ...state.olympObjs, ...entities.olymps };
       state.years = { ...state.years, ...entities.years };
     },

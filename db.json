@@ -6,263 +6,291 @@
       "mailField": "voff.smirnoff@gmail.com",
       "password": "NaahNotThatTime",
       "id": 1
+    },
+    {
+      "nameAndSurname": "Nursultan Khajimuratov",
+      "userName": "NurKhaj",
+      "mailField": "nurkhaj@gmail.com",
+      "password": "NaahNotThatTime",
+      "id": 2
+    },
+    {
+      "nameAndSurname": "Anton Morgunov",
+      "userName": "AntonNeGandon",
+      "mailField": "anton.morgunov@gmail.com",
+      "password": "NaahNotThatTime",
+      "id": 3
+    },
+    {
+      "nameAndSurname": "John Doe",
+      "userName": "JohnDoe",
+      "mailField": "john.doe@gmail.com",
+      "password": "NaahNotThatTime",
+      "id": 4
     }
   ],
   "answers": [
     {
       "id": "1",
       "description": "Для школы достаточно понимать вектора как стрелочки с направлением. Попробуй спросить здесь что именно вызывает трудности. А так в гордине достаточно углубленно вектора преподносятся.",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "2",
       "description": "вот тоже не совсем понимаю что именно вы не можете понять второй год. Уточните ваш запрос, пожалуйста.",
-      "user": {
-        "id": "1"
-      }
+      "user": 2
     },
     {
       "id": "3",
       "description": " L'air immense ouvre et referme mon livre, La vague en poudre ose jaillir des rocs ! Envolez-vous, pages tout éblouies ! Rompez, vagues ! Rompez d'eaux réjouies Ce toit tranquille où picoraient des focs !",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "4",
       "description": "Нидерланды, вообще-то",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "5",
       "description": "Нидерланды, вообще-то",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "6",
       "description": "Нидерланды, вообще-то",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "7",
       "description": "Нидерланды, вообще-то",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "8",
       "description": "Rewrite inequality as follows: $$2(x^2+y^2+z^2)+ \\frac{4}{3}\bigg(\\frac{1}{x^2+1}+\\frac{1}{y^2+1}+\\frac{1}{z^2+1}\bigg) \\ge 5 \\  3+ 2(x^2+y^2+z^2)+\\frac{4}{3}\bigg(\\frac{1}{x^2+1}+\\frac{1}{y^2+1}+\\frac{1}{z^2+1}\bigg) \\ge 8$$ From AM-GM we have that: $$ \frac{3}{4}(x^2+1)+\frac{4}{3} \\cdot \frac{1}{x^2+1} \\ge 2 \\ \\frac{3}{4}(y^2+1)+\\frac{4}{3} \\cdot \frac{1}{y^2+1} \\ge 2 \\ \\frac{3}{4}(z^2+1)+\\frac{4}{3} \\cdot \frac{1}{z^2+1} \\ge 2$$ Therefore it is sufficient to prove that: \begin{align*} \frac{5}{4}(x^2+y^2+z^2)+\frac{3}{4} \\ge 2 \\ \frac{5}{4}(x^2+y^2+z^2) \\ge \frac{5}{4} \\ x^2+y^2+z^2 \\ge 1 = xy+yz+zx \\ (x-y)^2+(y-z)^2+(z-x)^2 \\ge 0 \\end{align*}The last inequality is obviously true.",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     },
     {
       "id": "9",
       "description": "This problem was proposed by me.",
-      "user": {
-        "id": "1"
-      }
+      "user": 1
     }
   ],
   "blogs": [
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 84,
+      "views": 107,
       "id": 1,
       "answers": [
         "1",
         "2"
-      ]
+      ],
+      "user": 2
     },
     {
       "title": "Le vent se leve! Il faut tenter de vivre!",
       "description": "Le vent se lève !… Il faut tenter de vivre !\n",
-      "views": 29,
+      "views": 34,
       "id": 2,
       "answers": [
         "3"
-      ]
+      ],
+      "user": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 18,
+      "views": 20,
       "id": 3,
-      "user": "1",
       "answers": [
         "3"
-      ]
+      ],
+      "user": 2
     },
     {
       "title": "Свойство центроида треугольникоффф",
       "description": "Хым, что-то про треугольники а не голландию",
-      "views": 6,
+      "views": 8,
       "id": 4,
-      "answers": []
+      "answers": [],
+      "user": 2
     },
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
       "views": 12,
       "id": 5,
-      "answers": []
+      "answers": [],
+      "user": 2
     },
     {
       "title": "Интегралы (basic int. form)",
       "description": "Я люблю Голланди..",
-      "views": 8,
+      "views": 11,
       "id": 6,
-      "answers": []
+      "answers": [],
+      "user": 2
     },
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 3,
+      "views": 4,
       "id": 7,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
       "views": 5,
       "id": 10,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Точно точно работаешь?",
       "description": "да!",
       "views": 2,
       "id": 11,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "please please me",
       "description": "I love you, I really do!",
       "views": 7,
       "id": 14,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "А так можно было?",
       "description": "сейчас и проверим",
       "views": 5,
       "id": 16,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "if you work, then i'm i love with you",
       "description": "I love you",
-      "views": 1,
+      "views": 2,
       "id": 17,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Holland Holland Holland",
       "description": "Only not Hollad!",
       "id": 18,
       "views": 4,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "If you're out on the road",
       "description": "Feeling lonely, and so colddafdf",
       "views": 2,
       "id": 19,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Business business business, is this working?",
       "description": "Yes!!",
       "id": 20,
       "views": 0,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Примеры не ассоциативных операций",
       "description": "Товарищи старшие математики, знает ли кто примеры не ассоциативных операций?\n\nНу т.е. чтобы $$(A\\cdot B)\\cdot C \\neq A\\cdot (B \\cdot C)(A⋅B)⋅C\n=A⋅(B⋅C)$$ при неком определении операции $$\\cdot$$⋅ и некой форме $$A,B,CA,B,C$$?",
       "views": 2,
       "id": 21,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Nice problem",
       "description": "$f(x)$ polynomial , find $f(x)$ given $2f(x)+2x^{2}=f(x^{2}-2x+4)+8x+5$",
       "views": 3,
       "id": 22,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Inequalities",
       "description": "Let $a, b, c>0$. Prove that$$ \\\\ \\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{a^2+b^2} {c^2} \\geq2+3\\sqrt[3]{2} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{2(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{4} \\\\ $$$$\\frac{b+c} {a} +\\frac{c+a}{b} +\\frac{k(a^2+b^2)} {c^2} \\geq 2+3\\sqrt[3]{2k} \\\\ $$Where $k\\in N^+.$",
       "views": 4,
       "id": 23,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "I really need some recommendation for functional equation books.",
       "description": "Are there good books have free pdf which excellent for practicing functional equation from $\\mathbb{R+} \\rightarrow \\mathbb{R+}$?",
       "views": 1,
       "id": 24,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Combinatorics HALP!!",
       "description": "A group of 50 people of different ages sit around a big round table. We call any pair consisting\nof two people $A$ and $B$ a newbie pair, if $A$ and $B$ are not sitting next to each another, and on at\nleast one of the arcs connecting $A$ and $B$ around the table edge all people are older than $A$ and $B$.\nDetermine the minimal number of newbie pairs.",
       "views": 6,
       "id": 25,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Findint the inverse of $(A+BC^{T})$",
       "description": "Let $n$ and $p$ be positive integers and let ${\\bf F}$ be a field. Let $A\\in M_{n\\times n}({\\bf F})$ and let $B,C\\in M_{n\\times p}({\\bf F})$ be matrices satisfying the condition that $A$ and $(I+C^{\\top}A^{-1}B)$ are nonsingular. Show that $A+BC^{\\top}$ is nonsingular, and that\\[ (A+BC^{\\top})^{-1}=A^{-1}-A^{-1}B(I+C^{\\top}A^{-1}B)^{-1}C^{\\top}A^{-1}.\\]",
       "views": 11,
       "id": 26,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "do u think amc10 this year will be hard",
       "description": "do u guys think amc10 this year will be hard? Approximate cutoff, maybe? answer in the comments, like this:\nformat:\nvery easy/easy/ok/hard/very hard\nenter cutoff expectation here",
       "views": 0,
       "id": 28,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": " Классическая задача на квадратичные вычеты",
       "description": "Ботал что-то как обычно и наткнулся опять на данную задачу:\nДокажите что любое простое число вида 4k+1 представимо в виде суммы двух квадратов\n\nПункт шел со звездочкой и решения поэтому не приводилось. Заниматься олимпиадами перестал давно, но помню что в свое время брали утверждение просто за данность. Не знает ли кто олимпиадного решения(о красоте наверное не стоит) ну или хотя бы ссылки на решение?\n\nЗаранее всем спасибо)",
       "views": 22,
       "id": 29,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "A problem that seems to be easy but difficult for me",
       "description": "$k\\in\\mathbb{N}^{*},1=d_0<d_1<\\cdots <d_m=4k\\text{ are all positive factors of }4k$\n$\\text{Prove that }\\exists i\\in\\{1,2,\\cdots ,m\\}\\text{ satisfying }d_i-d_{i-1}=2$",
-      "views": 2,
+      "views": 3,
       "id": 30,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Limits - Easier Than You Think",
       "description": "Nice and straightforward problem: $\\lim_{x\\to1}\\frac{(x-1)^2\\sin(\\frac{1}{x-1})}{\\sin(\\pi x)}.$",
       "views": 6,
       "id": 31,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "ML $\\perp$ BC, mediabs BE $\\perp$ CF, M centroid, L Lemoine point",
       "description": "Given a triangle $ABC$, in which the medians $BE$ and $CF$ are perpendicular. Let $M$ is the intersection point of the medians of this triangle, and $L$ is its Lemoine point (the intersection point of lines symmetrical to the medians with respect to the bisectors of the corresponding angles). Prove that $ML \\perp BC$.\n\n(Mykhailo Sydorenko)",
       "views": 13,
       "id": 32,
-      "answers": []
+      "answers": [],
+      "user": 1
     },
     {
       "title": "Inequality with xy+yz+zx=1",
@@ -272,7 +300,8 @@
         8,
         9
       ],
-      "id": 33
+      "id": 33,
+      "user": 1
     }
   ],
   "olympiads": [

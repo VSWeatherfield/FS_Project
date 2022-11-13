@@ -22,7 +22,7 @@ export function ProblemsList({ olympId, yearId }) {
   return (
     <div className="outerOlympElem">
       <Link to={`/olympiads/${olympId}`}>
-        <a className="flex w-min items-center text-blue-500 text-sm mb-6">
+        <div className="flex w-min items-center text-blue-500 text-sm mb-6">
           <svg
             className="mr-2"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,14 +31,14 @@ export function ProblemsList({ olympId, yearId }) {
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M19 12H6M12 5l-7 7 7 7"></path>
           </svg>
           <span>Назад</span>
-        </a>
+        </div>
       </Link>
 
       <div className="OlympNameHeader">
