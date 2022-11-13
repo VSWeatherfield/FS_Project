@@ -5,7 +5,7 @@ export { default as Scoreboard } from "./scoreboard/Scoreboard";
 export { default as Profile } from "./profile/Profile";
 export { default as Blog } from "./blog/Blog";
 export { default as PartOlympiad } from "./partOlympiad/PartOlympiad";
-export { default as useBlogs } from "./main/useBlogs";
+export { default as useAnswers } from "./main/useAnswers";
 export { default as useOlymps } from "./olympiads/useOlympiads";
 export { default as useOlymp } from "./partOlympiad/UseOlymp";
 export { default as YearsList } from "./partOlympiad/YearsList";

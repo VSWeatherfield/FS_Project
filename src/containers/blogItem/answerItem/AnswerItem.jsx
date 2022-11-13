@@ -1,11 +1,16 @@
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import VSImage from "../../images/VSWeatherfield.png";
+import { Loader } from "../../../components";
 
-const AnswerItem = () => {
-  return (
-    <div class="topic-post clearfix group-up-quarks regular">
+import VSImage from "../../../images/VSWeatherfield.png";
+
+const AnswerItem = ({ answerId }) => {
+  const ansl = useSelector((state) => state.answers.answerObj[answerId]);
+  
+  return (ansl ? 
+    (<div className="topic-post clearfix group-up-quarks regular">
       <article
         id="post_1"
         role="region"
@@ -37,13 +42,13 @@ const AnswerItem = () => {
 
           <div className="topic-body clearfix">
             <div role="heading" className="topic-meta-data">
-              <div class="names trigger-user-card">
-                <span class="first full-name">
+              <div className="names trigger-user-card">
+                <span className="first full-name">
                   <Link to="/profile" data-user-card="CappuccinosBurritos">
                     Vladimir Smirnov
                   </Link>
                 </span>
-                <span class="second username">
+                <span className="second username">
                   <Link to="/profile" data-user-card="CappuccinosBurritos">
                     CappuccinosBurritos
                   </Link>
@@ -53,18 +58,13 @@ const AnswerItem = () => {
 
             <div className="regular contents">
               <div className="cooked">
-                <Latex>
-                  Для доказательства, нам понадобится одна лемма Лемма 1. Для
-                  любого p = 4k +1, $$\exists$$ m $\in$ $$\math N : p \\mid m^2
-                  + 1p=4k+1,∃m∈N:p ∣ m^2 +1$$
-                </Latex>
+                <Latex>{ansl.description}</Latex>
               </div>
             </div>
           </div>
         </div>
       </article>
-    </div>
-  );
+    </div>) : (<Loader />));
 };
 
 export default AnswerItem;

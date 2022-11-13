@@ -10,11 +10,16 @@ const CreateBlog = (props) => {
       submitTitle="Создать тему"
       onSubmitForm={({ title, description }) => {
         const views = 0;
-        const answersNum = 0;
+        const answers = [];
 
         ajaxService("/blogs", {
           method: "POST",
-          body: JSON.stringify({ title, description, views, answersNum }),
+          body: JSON.stringify({
+            title,
+            description,
+            views,
+            answers,
+          }),
           headers: {
             "Content-Type": "application/json",
           },

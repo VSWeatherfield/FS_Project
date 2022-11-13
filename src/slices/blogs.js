@@ -4,20 +4,17 @@ import { schema, normalize } from "normalizr";
 const initialState = {
   blogIds: [],
   blogObj: {},
-  posts: {},
+  answers: {},
   users: {},
-  comments: {},
   page: 1,
 };
 
 const userSchema = new schema.Entity("users");
-const commentSchema = new schema.Entity("comments", { user: userSchema });
-const postSchema = new schema.Entity("posts", {
-  comments: [commentSchema],
+const answerSchema = new schema.Entity("answers", {
   user: userSchema,
 });
 const blogSchema = new schema.Entity("blogs", {
-  posts: [postSchema],
+  answers: [answerSchema],
   user: userSchema,
 });
 
@@ -36,16 +33,13 @@ const blogsSlice = createSlice({
 
       state.blogIds = result;
       state.blogObj = { ...state.blogObj, ...entities.blogs };
-      state.posts = { ...state.posts, ...entities.posts };
-      state.comments = { ...state.comments, ...entities.comments };
+      state.answers = { ...state.answers, ...entities.answers };
     },
     setBlogsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
-
       state.blogIds = [...state.blogIds, ...result];
       state.blogObj = { ...state.blogObj, ...entities.blogs };
-      state.posts = { ...state.posts, ...entities.posts };
-      state.comments = { ...state.comments, ...entities.comments };
+      state.answers = { ...state.answers, ...entities.answers };
     },
   },
 });

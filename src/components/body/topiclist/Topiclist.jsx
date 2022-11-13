@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { ajaxService } from "../../../services/ajaxservice";
-import {
-  openComposeModal,
-  closeComposeModal,
-} from "../../../slices/composeModal";
+import { openComposeModal } from "../../../slices/composeModal";
 
 import "./topixlist.css";
 
@@ -15,7 +12,7 @@ const Topiclist = (props) => {
   const dispatch = useDispatch();
   const { id } = props;
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const { title, views, answersNum } = blog;
+  const { title, views } = blog;
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -58,13 +55,22 @@ const Topiclist = (props) => {
             ред.
           </button>
         </span>
+
+        <div className="link-bottom-line">
+          <div className="badge-wrapper bullet">
+            <span className="badge-category-parent-bg"></span>
+            <span data-drop-close="true" className="badge-category clear-badge">
+              <span className="category-name">Математика</span>
+            </span>
+          </div>
+        </div>
       </td>
 
       <td
         className="num posts-map posts  topic-list-data"
         title="В этой теме 2 сообщения"
       >
-        <span className="number">{answersNum}</span>
+        <span className="number">{blog.answers.length}</span>
       </td>
 
       <td className="num views  topic-list-data">

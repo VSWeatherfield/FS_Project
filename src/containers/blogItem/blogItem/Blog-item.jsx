@@ -1,9 +1,9 @@
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
 
-import { AnswerItem } from "../../components"
+import { AnswerList } from "../../../containers";
 
-import VSImage from "../../images/VSWeatherfield.png";
+import VSImage from "../../../images/VSWeatherfield.png";
 import "./blog-item.css";
 
 const BlogItem = (props) => {
@@ -71,13 +71,10 @@ const BlogItem = (props) => {
                           </div>
                         </div>
 
-          
-
-
                         <div className="topic-body clearfix">
                           <div role="heading" className="topic-meta-data">
-                            <div class="names trigger-user-card">
-                              <span class="first full-name">
+                            <div className="names trigger-user-card">
+                              <span className="first full-name">
                                 <Link
                                   to="/profile"
                                   data-user-card="CappuccinosBurritos"
@@ -85,7 +82,7 @@ const BlogItem = (props) => {
                                   Vladimir Smirnov
                                 </Link>
                               </span>
-                              <span class="second username">
+                              <span className="second username">
                                 <Link
                                   to="/profile"
                                   data-user-card="CappuccinosBurritos"
@@ -102,14 +99,16 @@ const BlogItem = (props) => {
                             </div>
 
                             <section className="post-menu-area clearfix">
-                              <nav class="post-controls collapsed replies-button-visible">
-                                <div class="actions">
+                              <nav className="post-controls collapsed replies-button-visible">
+                                <div className="actions">
                                   <button
-                                    class="widget-button btn-flat reply create fade-out btn-icon-text"
+                                    className="widget-button btn-flat reply create fade-out btn-icon-text"
                                     title="Начать составление ответа на сообщение"
                                     aria-label="Ответить на сообщение #1 от пользователя @CappuccinosBurritos"
                                   >
-                                    <span class="d-button-label">Ответить</span>
+                                    <span className="d-button-label">
+                                      Ответить
+                                    </span>
                                   </button>
                                 </div>
                               </nav>
@@ -120,72 +119,7 @@ const BlogItem = (props) => {
                     </article>
                   </div>
 
-                  <div class="topic-post clearfix group-up-quarks regular">
-                    <article
-                      id="post_1"
-                      role="region"
-                      data-post-id="15547"
-                      data-topic-id="4125"
-                      data-user-id="643"
-                      className="boxed onscreen-post"
-                    >
-                      <div className="row">
-                        <div className="topic-avatar user-online">
-                          <div className="post-avatar">
-                            <a
-                              className="trigger-user-card main-avatar "
-                              href="/u/CappuccinosBurritos"
-                              data-user-card="CappuccinosBurritos"
-                              aria-hidden="true"
-                              tabIndex="-1"
-                            >
-                              <img
-                                width="45"
-                                height="45"
-                                loading="lazy"
-                                className="avatar"
-                                src={VSImage}
-                              />
-                            </a>
-                          </div>
-                        </div>
-
-                        <div className="topic-body clearfix">
-                          <div role="heading" className="topic-meta-data">
-                            <div class="names trigger-user-card">
-                              <span class="first full-name">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  Vladimir Smirnov
-                                </Link>
-                              </span>
-                              <span class="second username">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  CappuccinosBurritos
-                                </Link>
-                              </span>
-                            </div>
-                          </div>
-
-                          <div className="regular contents">
-                            <div className="cooked">
-                              <Latex>
-                                Для доказательства, нам понадобится одна лемма
-                                Лемма 1. Для любого p = 4k +1, $$\exists$$ m
-                                $\in$ $$\math N : p \\mid m^2 + 1p=4k+1,∃m∈N:p ∣
-                                m^2 +1$$
-                              </Latex>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
+                  <AnswerList blogId={id} />
                 </div>
               </div>
             </section>

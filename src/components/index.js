@@ -18,4 +18,3 @@ export { default as PageForm } from "./entryBlogForm/pageForm/PageForm";
 export { default as LogInPage } from "./entryBlogForm/logInPage/LogInPage";
 export { default as SignUpPage } from "./entryBlogForm/signUpPage/SignUpPage";
 export { default as EntryModalContainer } from "./modalContainer/entryModalContainer";
-export { default as AnswerItem } from "./answerItem/AnswerItem";

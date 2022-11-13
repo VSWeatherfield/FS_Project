@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ajaxService } from "../../services/ajaxservice";
-import { setBlogs, setBlogsMore } from "../../slices/blogs";
+
+import { ajaxService } from "../services/ajaxservice";
+import { setBlogs, setBlogsMore } from "../slices/blogs";
 
 export function useBlogs() {
   const dispatch = useDispatch();
