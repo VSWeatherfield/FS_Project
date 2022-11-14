@@ -11,6 +11,7 @@ import "./topixlist.css";
 const Topiclist = (props) => {
   const dispatch = useDispatch();
   const { id } = props;
+
   const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, views } = blog;
 

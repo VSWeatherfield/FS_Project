@@ -4,12 +4,7 @@ import { Link } from "react-router-dom";
 import "./answerForm.css";
 
 const AnswerForm = (props) => {
-  const {
-    onClose,
-    submitTitle,
-    answerBlog,
-    onSubmitForm,
-  } = props;
+  const { onClose, submitTitle, answerBlog, onSubmitForm } = props;
 
   const [description, setDescirption] = useState();
 
@@ -40,7 +35,9 @@ const AnswerForm = (props) => {
           <div className="reply-details">
             <div id="ember436" className="composer-action-title ember-view">
               <Link to={`/blog/${answerBlog.id}`} className="answerTitle">
-                <span className="action-title reply-title">{answerBlog.title}</span>
+                <span className="action-title reply-title">
+                  {answerBlog.title}
+                </span>
               </Link>
             </div>
           </div>
