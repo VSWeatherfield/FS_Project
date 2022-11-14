@@ -1,14 +1,24 @@
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
+import { openComposeModal } from "../../../slices/composeModal";
 import { AnswerList } from "../../../containers";
 
 import VSImage from "../../../images/VSWeatherfield.png";
 import "./blog-item.css";
 
 const BlogItem = (props) => {
+  const dispatch = useDispatch();
   const { id, title, description } = props;
   //const { id, title, description, user } = props;
+
+  const handleAnswerClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    dispatch(openComposeModal({ data: id, name: "answer" }));
+  };
 
   return (
     <div id="main-outlet-wrapper" className="wrap">
@@ -108,6 +118,7 @@ const BlogItem = (props) => {
                                     className="widget-button btn-flat reply create fade-out btn-icon-text"
                                     title="Начать составление ответа на сообщение"
                                     aria-label="Ответить на сообщение #1 от пользователя @CappuccinosBurritos"
+                                    onClick={handleAnswerClick}
                                   >
                                     <span className="d-button-label">
                                       Ответить

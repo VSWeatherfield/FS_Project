@@ -4,7 +4,9 @@ export { default as Topicheader } from "./body/topicheader/Topicheader";
 export { default as Topiclist } from "./body/topiclist/Topiclist";
 
 export { default as BlogForm } from "./composeBlogForm/blogForm/BlogForm";
+export { default as AnswerForm } from "./composeBlogForm/answerForm/AnswerForm";
 export { default as EditBlog } from "./composeBlogForm/editBlog/EditBlog";
+export { default as AnswerBlog } from "./composeBlogForm/answerBlog/AnswerBlog";
 export { default as CreateBlog } from "./composeBlogForm/createBlog/CreateBlog";
 
 export { default as Loader } from "./loader/Loader";

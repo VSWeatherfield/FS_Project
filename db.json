@@ -31,80 +31,82 @@
   ],
   "answers": [
     {
-      "id": "1",
+      "id": 1,
       "description": "Для школы достаточно понимать вектора как стрелочки с направлением. Попробуй спросить здесь что именно вызывает трудности. А так в гордине достаточно углубленно вектора преподносятся.",
       "user": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "description": "вот тоже не совсем понимаю что именно вы не можете понять второй год. Уточните ваш запрос, пожалуйста.",
       "user": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "description": " L'air immense ouvre et referme mon livre, La vague en poudre ose jaillir des rocs ! Envolez-vous, pages tout éblouies ! Rompez, vagues ! Rompez d'eaux réjouies Ce toit tranquille où picoraient des focs !",
       "user": 1
     },
     {
-      "id": "4",
-      "description": "Нидерланды, вообще-то",
-      "user": 1
-    },
-    {
-      "id": "5",
-      "description": "Нидерланды, вообще-то",
-      "user": 1
-    },
-    {
-      "id": "6",
-      "description": "Нидерланды, вообще-то",
-      "user": 1
-    },
-    {
-      "id": "7",
-      "description": "Нидерланды, вообще-то",
-      "user": 1
-    },
-    {
-      "id": "8",
+      "id": 4,
       "description": "Rewrite inequality as follows: $$2(x^2+y^2+z^2)+ \\frac{4}{3}\bigg(\\frac{1}{x^2+1}+\\frac{1}{y^2+1}+\\frac{1}{z^2+1}\bigg) \\ge 5 \\  3+ 2(x^2+y^2+z^2)+\\frac{4}{3}\bigg(\\frac{1}{x^2+1}+\\frac{1}{y^2+1}+\\frac{1}{z^2+1}\bigg) \\ge 8$$ From AM-GM we have that: $$ \frac{3}{4}(x^2+1)+\frac{4}{3} \\cdot \frac{1}{x^2+1} \\ge 2 \\ \\frac{3}{4}(y^2+1)+\\frac{4}{3} \\cdot \frac{1}{y^2+1} \\ge 2 \\ \\frac{3}{4}(z^2+1)+\\frac{4}{3} \\cdot \frac{1}{z^2+1} \\ge 2$$ Therefore it is sufficient to prove that: \begin{align*} \frac{5}{4}(x^2+y^2+z^2)+\frac{3}{4} \\ge 2 \\ \frac{5}{4}(x^2+y^2+z^2) \\ge \frac{5}{4} \\ x^2+y^2+z^2 \\ge 1 = xy+yz+zx \\ (x-y)^2+(y-z)^2+(z-x)^2 \\ge 0 \\end{align*}The last inequality is obviously true.",
       "user": 1
     },
     {
-      "id": "9",
+      "id": 6,
       "description": "This problem was proposed by me.",
       "user": 1
+    },
+    {
+      "description": "Я тоже, она ведь очень классная, да??)",
+      "user": 1,
+      "id": 6
+    },
+    {
+      "description": "\"The greatest such $C$ is $1010$. First, to see that this cannot be improved, take $(a_1, a_2, \\cdots, a_{2019}) = (x, 1, x+y, 1+y, x+2y, 1+2y, x+3y, \\cdots, x+1008y, 1+1008y, 1+\\epsilon),$ where $x = \\epsilon^2,  y = \\epsilon^3$ and $\\epsilon$ is tiny.\"\n\nhow this shows it can't be improved?",
+      "user": 1,
+      "id": 7
+    },
+    {
+      "description": "Бывал я однажды в Нидерландах, в музее Ван-Гога...",
+      "user": 1,
+      "id": 9
     }
   ],
   "blogs": [
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 107,
+      "views": 112,
       "id": 1,
-      "answers": ["1", "2"],
+      "answers": [
+        "1",
+        "2"
+      ],
       "user": 2
     },
     {
       "title": "Le vent se leve! Il faut tenter de vivre!",
       "description": "Le vent se lève !… Il faut tenter de vivre !\n",
-      "views": 34,
+      "views": 35,
       "id": 2,
-      "answers": ["3"],
+      "answers": [
+        "3"
+      ],
       "user": 2
     },
     {
       "title": "Circle and angle 2",
       "description": "Я люблю Голлаaaaa",
-      "views": 20,
+      "views": 22,
       "id": 3,
-      "answers": ["3"],
+      "answers": [
+        "3"
+      ],
       "user": 2
     },
     {
       "title": "Свойство центроида треугольникоффф",
       "description": "Хым, что-то про треугольники а не голландию",
-      "views": 8,
+      "views": 10,
       "id": 4,
       "answers": [],
       "user": 2
@@ -112,7 +114,7 @@
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 12,
+      "views": 13,
       "id": 5,
       "answers": [],
       "user": 2
@@ -120,7 +122,7 @@
     {
       "title": "Интегралы (basic int. form)",
       "description": "Я люблю Голланди..",
-      "views": 11,
+      "views": 14,
       "id": 6,
       "answers": [],
       "user": 2
@@ -128,9 +130,12 @@
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 4,
+      "views": 9,
       "id": 7,
-      "answers": [],
+      "answers": [
+        6,
+        9
+      ],
       "user": 1
     },
     {
@@ -144,7 +149,7 @@
     {
       "title": "Точно точно работаешь?",
       "description": "да!",
-      "views": 2,
+      "views": 3,
       "id": 11,
       "answers": [],
       "user": 1
@@ -208,7 +213,7 @@
     {
       "title": "Nice problem",
       "description": "$f(x)$ polynomial , find $f(x)$ given $2f(x)+2x^{2}=f(x^{2}-2x+4)+8x+5$",
-      "views": 3,
+      "views": 4,
       "id": 22,
       "answers": [],
       "user": 1
@@ -289,9 +294,18 @@
       "title": "Inequality with xy+yz+zx=1",
       "description": "The positive real numbers $x,y,z$ satisfy $xy+yz+zx=1$. Prove that:\n$$ 2(x^2+y^2+z^2)+\\frac{4}{3}(\\frac{1}{x^2+1}+\\frac{1}{y^2+1}+\\frac{1}{z^2+1}) \\ge 5 $$",
       "views": 11,
-      "answers": [8, 9],
+      "answers": [],
       "id": 33,
       "user": 1
+    },
+    {
+      "title": "Izho 2019 P2",
+      "description": "Find the biggest real number $C$, such that for every different positive real numbers $a_1,a_2...a_{2019}$ that satisfy inequality :\n$\\frac{a_1}{|a_2-a_3|} + \\frac{a_2}{|a_3-a_4|} + ... + \\frac{a_{2019}}{|a_1-a_2|} > C$",
+      "views": 2,
+      "answers": [
+        7
+      ],
+      "id": 34
     }
   ],
   "olympiads": [

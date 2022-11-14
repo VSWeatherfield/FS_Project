@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { CreateBlog, EditBlog } from "..";
+import { CreateBlog, EditBlog, AnswerBlog } from "..";
 import { closeComposeModal } from "../../slices/composeModal";
 
 export function ComposeModalContainer() {
@@ -27,6 +27,17 @@ export function ComposeModalContainer() {
       case "create": {
         return (
           <CreateBlog
+            onClose={() => {
+              dispatch(closeComposeModal());
+            }}
+          />
+        );
+      }
+
+      case "answer": {
+        return (
+          <AnswerBlog
+            blogId={modalData}
             onClose={() => {
               dispatch(closeComposeModal());
             }}
