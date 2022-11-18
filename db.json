@@ -85,17 +85,22 @@
     {
       "title": "Материал по векторам",
       "description": "Всем привет, хотел бы у вас спросить хорошего материала по векторам, обычных школьных учебников и Гордина недостаточно, можете пожалуйста посоветовать что нибудь, какую то литературу или статьи. Хочу понять вектора, а никак не могу уже второй год из за отстуствия материалов по ним) Нужно что то более по школьной программе, но более углубленно",
-      "views": 116,
+      "views": 118,
       "id": 1,
-      "answers": ["1", "2"],
+      "answers": [
+        "1",
+        "2"
+      ],
       "user": 2
     },
     {
       "title": "Le vent se leve! Il faut tenter de vivre!",
       "description": "Le vent se lève !… Il faut tenter de vivre !\n",
-      "views": 35,
+      "views": 37,
       "id": 2,
-      "answers": ["3"],
+      "answers": [
+        "3"
+      ],
       "user": 2
     },
     {
@@ -103,7 +108,9 @@
       "description": "Я люблю Голлаaaaa",
       "views": 23,
       "id": 3,
-      "answers": ["3"],
+      "answers": [
+        "3"
+      ],
       "user": 2
     },
     {
@@ -117,7 +124,7 @@
     {
       "title": "Интегралы (solving problems)",
       "description": "Я люблю Голландию",
-      "views": 14,
+      "views": 15,
       "id": 5,
       "answers": [],
       "user": 2
@@ -133,15 +140,18 @@
     {
       "title": "Вкошп 2020-2021",
       "description": "Я люблю Голландию",
-      "views": 10,
+      "views": 12,
       "id": 7,
-      "answers": [6, 9],
+      "answers": [
+        6,
+        9
+      ],
       "user": 1
     },
     {
       "title": "Неужели это и правда работает?",
       "description": "Только не Голландия",
-      "views": 5,
+      "views": 6,
       "id": 10,
       "answers": [],
       "user": 1
@@ -159,7 +169,10 @@
       "description": "I love you, I really do!",
       "views": 9,
       "id": 14,
-      "answers": [10, 11],
+      "answers": [
+        10,
+        11
+      ],
       "user": 1
     },
     {
@@ -285,7 +298,7 @@
     {
       "title": "ML $\\perp$ BC, mediabs BE $\\perp$ CF, M centroid, L Lemoine point",
       "description": "Given a triangle $ABC$, in which the medians $BE$ and $CF$ are perpendicular. Let $M$ is the intersection point of the medians of this triangle, and $L$ is its Lemoine point (the intersection point of lines symmetrical to the medians with respect to the bisectors of the corresponding angles). Prove that $ML \\perp BC$.\n\n(Mykhailo Sydorenko)",
-      "views": 14,
+      "views": 15,
       "id": 32,
       "answers": [],
       "user": 1
@@ -302,8 +315,19 @@
       "title": "Izho 2019 P2",
       "description": "Find the biggest real number $C$, such that for every different positive real numbers $a_1,a_2...a_{2019}$ that satisfy inequality :\n$\\frac{a_1}{|a_2-a_3|} + \\frac{a_2}{|a_3-a_4|} + ... + \\frac{a_{2019}}{|a_1-a_2|} > C$",
       "views": 4,
-      "answers": [7],
+      "answers": [
+        7
+      ],
       "id": 34
+    },
+    {
+      "title": "a+b+c=3 and easy",
+      "description": "If $a,b,c\\ge0: a+b+c=3$. Find Max value$$P=2\\sqrt{3}\\left(a\\sqrt{a^2+a+1}+b\\sqrt{b^2+b+1}+c\\sqrt{c^2+c+1}\\right)+7(ab+bc+ca)$$",
+      "views": 2,
+      "answers": [
+        11
+      ],
+      "id": 35
     }
   ],
   "olympiads": [
