@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'olymp',
     'year',
     'problem',
-    'user'
+    'userprofile'
 ]
 
 MIDDLEWARE = [
