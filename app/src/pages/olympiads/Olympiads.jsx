@@ -7,29 +7,32 @@ import { BoxForm } from "../../components";
 import "./olympiads.css";
 
 export function Olympiads() {
-  const olympiads = useSelector((state) => state.olymps.olympNames);
   UseOlymps();
+
+  const olympIds = useSelector((state) => state.olymps.olympNames);
+  const olympiads = useSelector((state) => state.olymps.olympObjs);
 
   return (
     <div className="outerOlympElem">
-      <Link to="/">
-        <a className="flex w-min items-center text-blue-500 text-sm mb-6">
-          <svg
-            className="mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M19 12H6M12 5l-7 7 7 7"></path>
-          </svg>
-          <span>Назад</span>
-        </a>
+      <Link
+        to="/"
+        className="flex w-min items-center text-blue-500 text-sm mb-6"
+      >
+        <svg
+          className="mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M19 12H6M12 5l-7 7 7 7"></path>
+        </svg>
+        <span>Назад</span>
       </Link>
       <div className="olympHeader">
         <div>
@@ -44,8 +47,8 @@ export function Olympiads() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-        {olympiads.map((olympiad) => (
-          <BoxForm key={olympiad} id={olympiad} name={olympiad.name} />
+        {olympIds.map((id) => (
+          <BoxForm key={id} id={id} name={olympiads[id].title} />
         ))}
       </div>
     </div>

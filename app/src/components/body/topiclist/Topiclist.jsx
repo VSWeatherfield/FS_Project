@@ -13,7 +13,7 @@ const Topiclist = (props) => {
   const { id } = props;
 
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const { title, views } = blog;
+  const { title, num_views, answer_set } = blog;
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -25,7 +25,7 @@ const Topiclist = (props) => {
   const updateViews = (blog) => {
     return {
       ...blog,
-      views: blog.views + 1,
+      views: blog.num_views + 1,
     };
   };
 
@@ -40,13 +40,17 @@ const Topiclist = (props) => {
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
             onClick={() => {
+              {
+                /*
               ajaxService(`/blogs/${id}`, {
                 method: "PUT",
                 body: JSON.stringify(updateViews(blog)),
                 headers: {
                   "Content-Type": "application/json",
                 },
-              });
+              })
+            */
+              }
             }}
           >
             <Latex>{title}</Latex>
@@ -71,12 +75,12 @@ const Topiclist = (props) => {
         className="num posts-map posts  topic-list-data"
         title="В этой теме 2 сообщения"
       >
-        <span className="number">{blog.answers.length}</span>
+        <span className="number">{answer_set.length}</span>
       </td>
 
       <td className="num views  topic-list-data">
         <span className="number" title="Тема просмотрена 37 раз">
-          {views}
+          {num_views}
         </span>
       </td>
 

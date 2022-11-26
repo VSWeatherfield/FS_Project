@@ -1,11 +1,14 @@
 import { useSelector } from "react-redux";
 
-import { UseAnswers } from "../../../hooks";
+import { UseAnswers, UseBlog } from "../../../hooks";
 import { AnswerItem } from "../../../containers";
 
 const AnswerList = ({ blogId }) => {
   UseAnswers();
-  const ansList = useSelector((state) => state.blogs.blogObj[blogId].answers);
+
+  const ansList = useSelector(
+    (state) => state.blogs.blogObj[blogId].answer_set
+  );
 
   return (
     <>

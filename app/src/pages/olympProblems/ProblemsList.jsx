@@ -1,50 +1,41 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { ProblemDescrForm } from "../../components";
 import { Loader } from "../../components";
 
-export function ProblemsList({ olympId, yearId }) {
-  const problemList = useSelector(
-    (state) => state.olymps.years[Number(yearId)].problems
-  );
+export function ProblemsList({ olymp, year }) {
+  const problemList = year.problem_set;
 
-  const olympName = useSelector(
-    (state) => state.olymps.olympObjs[olympId].name
-  );
-
-  const yearName = useSelector((state) => state.olymps.years[yearId].name);
-
-  if (!problemList || problemList.length === 0) {
+  if (!problemList) {
     return null;
   }
 
   return (
     <div className="outerOlympElem">
-      <Link to={`/olympiads/${olympId}`}>
-        <div className="flex w-min items-center text-blue-500 text-sm mb-6">
-          <svg
-            className="mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M19 12H6M12 5l-7 7 7 7"></path>
-          </svg>
-          <span>Назад</span>
-        </div>
+      <Link
+        to={`/olympiads/${olymp.id}`}
+        className="flex w-min items-center text-blue-500 text-sm mb-6"
+      >
+        <svg
+          className="mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M19 12H6M12 5l-7 7 7 7"></path>
+        </svg>
+        <span>Назад</span>
       </Link>
 
       <div className="OlympNameHeader">
         <h1 className="olympRealHeader">
-          {" "}
-          Maтематика → {olympName} → {yearName}{" "}
+          Maтематика → {olymp.title} → {year.title}
         </h1>
       </div>
 
@@ -53,12 +44,11 @@ export function ProblemsList({ olympId, yearId }) {
       </div>
       <div>
         {problemList.map((problem) => (
-          //<ProblemDescrForm key={problem.id} problemId={problem.id} problemDescr={problem.description} />
           <div>
             {problem ? (
               <ProblemDescrForm
                 key={problem.id}
-                title={problem.id.toString()}
+                title={problem.title}
                 description={problem.description}
               />
             ) : (

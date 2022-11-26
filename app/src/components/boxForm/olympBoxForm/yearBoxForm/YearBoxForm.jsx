@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 
 import "./yearBoxForm.css";
 
-const YearBoxForm = ({ olympId, yearId }) => {
-  const year = useSelector((state) => state.olymps.years[yearId]);
-
+const YearBoxForm = ({ olympId, year }) => {
   if (!year) {
     return null;
   }
@@ -13,7 +11,7 @@ const YearBoxForm = ({ olympId, yearId }) => {
   return (
     <Link
       className="flex items-center p-4 rounded bg-gray-100 dark:bg-black border border-transparent dark:border-gray-700 transition-transform transform active:scale-95"
-      to={`/olympiads/${olympId}/year/${yearId}`}
+      to={`/olympiads/${olympId}/year/${year.id}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +28,7 @@ const YearBoxForm = ({ olympId, yearId }) => {
         <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
       </svg>
       <span className="whitespace-nowrap overflow-hidden overflow-ellipsis">
-        {year.name}
+        {year.title}
       </span>
     </Link>
   );

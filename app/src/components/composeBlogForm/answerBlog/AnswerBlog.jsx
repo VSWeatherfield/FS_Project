@@ -10,8 +10,6 @@ const AnswerBlog = (props) => {
   const id = useSelector(
     (state) => blog.answers.length + 1 + state.answers.answerIds.length
   );
-  console.log(blog);
-  console.log(id);
 
   const updateAnswers = (blog, id) => {
     return {

@@ -82,10 +82,7 @@ const SignUpPage = () => {
               <label className="alt-placeholder" htmlFor="new-account-email">
                 Эл. почта
               </label>
-              <div
-                id="account-email-validation"
-                className="tip bad"
-              ></div>
+              <div id="account-email-validation" className="tip bad"></div>
               <span className="more-info">Не будет отображаться.</span>
             </div>
 

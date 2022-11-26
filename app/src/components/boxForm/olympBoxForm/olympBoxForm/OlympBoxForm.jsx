@@ -4,9 +4,7 @@ import { useSelector } from "react-redux";
 import "./boxForm.css";
 
 const BoxForm = (props) => {
-  const { id } = props;
-  const ol = useSelector((state) => state.olymps.olympObjs[id]);
-  const { name } = ol;
+  const { id, name } = props;
 
   return (
     <Link

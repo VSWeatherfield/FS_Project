@@ -14,7 +14,7 @@ const answerSchema = new schema.Entity("answers", {
   user: userSchema,
 });
 const blogSchema = new schema.Entity("blogs", {
-  answers: [answerSchema],
+  answer_set: [answerSchema],
   user: userSchema,
 });
 

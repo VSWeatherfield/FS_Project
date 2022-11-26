@@ -11,7 +11,6 @@ import "./blog-item.css";
 const BlogItem = (props) => {
   const dispatch = useDispatch();
   const { id, title, description } = props;
-  //const { id, title, description, user } = props;
 
   const handleAnswerClick = (event) => {
     event.stopPropagation();

@@ -43,13 +43,13 @@ const Forum = (props) => {
           </div>
         </div>
         <div className="contents">
-            <table className="topic-list">
-              <thead className="topic-list-header">
-                <Topicheader />
-              </thead>
+          <table className="topic-list">
+            <thead className="topic-list-header">
+              <Topicheader />
+            </thead>
 
-              <tbody className="topic-list-body"> {blogs} </tbody>
-            </table>
+            <tbody className="topic-list-body"> {blogs} </tbody>
+          </table>
         </div>
 
         <div className="more-topics">

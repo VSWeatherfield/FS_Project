@@ -11,9 +11,9 @@ export function UseBlogs() {
   useEffect(() => {
     ajaxService(`/blogs?page=${page}`).then((data) => {
       if (page === 1) {
-        dispatch(setBlogs(data));
+        dispatch(setBlogs(data.results));
       } else {
-        dispatch(setBlogsMore(data));
+        dispatch(setBlogsMore(data.results));
       }
     });
   }, [page]);

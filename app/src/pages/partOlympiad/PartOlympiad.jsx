@@ -6,14 +6,13 @@ import { YearsList } from "../../pages";
 
 export function PartOlympiad() {
   const params = useParams();
-
   const olymp = UseOlymp(params.id);
 
   return (
     <div>
       {olymp ? (
         <div>
-          <YearsList olympId={olymp.id} />
+          <YearsList olympId={params.id} />
         </div>
       ) : (
         <Loader />

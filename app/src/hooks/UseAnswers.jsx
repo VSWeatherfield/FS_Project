@@ -8,7 +8,7 @@ export function UseAnswers() {
 
   useEffect(() => {
     ajaxService(`/answers`).then((data) => {
-      dispatch(setAnswers(data));
+      dispatch(setAnswers(data.results));
     });
   }, []);
 }

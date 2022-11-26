@@ -7,8 +7,8 @@ export function UseOlymps() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    ajaxService(`/olympiads`).then((data) => {
-      dispatch(setOlymps(data));
+    ajaxService(`/olymps`).then((data) => {
+      dispatch(setOlymps(data.results));
     });
   }, []);
 }

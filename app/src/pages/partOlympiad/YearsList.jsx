@@ -1,47 +1,41 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+
 import { YearBoxForm } from "../../components";
+import { UseOlymp } from "../../hooks";
 
 export function YearsList({ olympId }) {
-  const yearList = useSelector(
-    (state) => state.olymps.olympObjs?.[olympId].years
-  );
+  const olymp = UseOlymp(olympId);
 
-  const olympName = useSelector(
-    (state) => state.olymps.olympObjs[olympId].name
-  );
-
-  if (!yearList || yearList.length === 0) {
+  if (!olymp.year_set) {
     return null;
   }
 
   return (
     <div className="outerOlympElem">
-      <Link to="/olympiads/">
-        <a
-          className="flex w-min items-center text-blue-500 text-sm mb-6"
-          href="/"
+      <Link
+        to="/olympiads/"
+        className="flex w-min items-center text-blue-500 text-sm mb-6"
+      >
+        <svg
+          className="mr-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <svg
-            className="mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M19 12H6M12 5l-7 7 7 7"></path>
-          </svg>
-          <span>Назад</span>
-        </a>
+          <path d="M19 12H6M12 5l-7 7 7 7"></path>
+        </svg>
+        <span>Назад</span>
       </Link>
       <div className="olympHeader">
         <div>
-          <h1 className="olympRealHeader"> Maтематика → {olympName} </h1>
+          <h1 className="olympRealHeader"> Maтематика → {olymp.title} </h1>
         </div>
       </div>
       <div>
@@ -49,8 +43,8 @@ export function YearsList({ olympId }) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-        {yearList.map((year) => (
-          <YearBoxForm key={year} yearId={year} olympId={olympId} />
+        {olymp.year_set.map((year) => (
+          <YearBoxForm key={year.id} year={year} olympId={year.olymp} />
         ))}
       </div>
     </div>
