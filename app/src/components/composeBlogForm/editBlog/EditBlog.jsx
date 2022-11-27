@@ -26,7 +26,7 @@ const EditBlog = (props) => {
       defaultTitle={title}
       defaultDescription={description}
       onSubmitForm={({ title, description }) => {
-        ajaxService(`/blogs/${id}`, {
+        ajaxService(`/blogs/${id}/`, {
           method: "PUT",
           body: JSON.stringify(updateBlog(blog, title, description)),
           headers: {

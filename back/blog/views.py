@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from rest_framework import viewsets
-from back.urls import router
+from rest_framework import viewsets, mixins, permissions
 
+from back.urls import router
 from .models import Blog
 from .serializers import BlogSerializer, BlogsSerializer
 
@@ -26,4 +26,13 @@ class BlogViewSet(viewsets.ModelViewSet):
       return BlogSerializer
     return BlogsSerializer
 
+class MyBlogsViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
+  queryset = Blog.objects.all()
+  serializer_class = BlogsSerializer
+  permission_classes = [permissions.IsAuthenticated]
+
+  def get_queryset(self):
+    return Blog.objects.filter(user=self.request.user)
+
 router.register(r'blogs', BlogViewSet)
+router.register(r'myblogs', MyBlogsViewSet)

@@ -34,7 +34,7 @@
 
 .new-user-wrapper .new-user-content-wrapper .user-content {
   padding: 0;
-  margin-top: 2em;
+  margin-top: 0em;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;

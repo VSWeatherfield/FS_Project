@@ -12,7 +12,7 @@ const CreateBlog = (props) => {
         const views = 0;
         const answers = [];
 
-        ajaxService("/blogs", {
+        ajaxService("/blogs/", {
           method: "POST",
           body: JSON.stringify({
             title,

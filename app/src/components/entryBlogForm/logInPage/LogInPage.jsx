@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import {
-  openEntryModal,
-  closeEntryModal,
-  submitEntryModal,
-} from "../../../slices/entryModal";
+import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
+import { ajaxAuthService } from "../../../services/ajaxservice";
 import wavingHand from "../../../images/wavingHand.png";
 
 import "./logInPage.css";
@@ -13,14 +10,17 @@ import "./logInPage.css";
 const LogInPage = () => {
   const dispatch = useDispatch();
 
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleChangeUserName = (event) => {
-    setUserName(event.target.value);
+  const handleChangeLogin = (event) => {
+    setError("");
+    setLogin(event.target.value);
   };
 
   const handleChangePassword = (event) => {
+    setError("");
     setPassword(event.target.value);
   };
 
@@ -33,23 +33,49 @@ const LogInPage = () => {
   };
 
   const handleSubmitClick = (event) => {
+    if (!login) {
+      setError("Введите Логин");
+      return;
+    }
+
+    if (!password) {
+      setError("Введите Пароль!");
+      return;
+    }
+
+    ajaxAuthService("/token/", {
+      method: "POST",
+      body: JSON.stringify({ username: login, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((data) => {
+        window.localStorage.setItem("ACCESS", data.access);
+        window.localStorage.setItem("REFRESH", data.refresh);
+
+        //dispatch(closeEntryModal());
+        window.location.reload();
+      })
+      .catch((error) => {
+        setError("Неверный логин или пароль");
+      });
+
     event.stopPropagation();
     event.preventDefault();
-    dispatch(submitEntryModal({ username: { userName } }));
-    dispatch(closeEntryModal());
   };
 
   return (
     <div className="login-modal">
       <div
-        tabindex="-1"
+        tabIndex="-1"
         id="ember455"
         className="login-modal-body has-alt-auth modal-body"
       >
         <div className="login-left-side">
           <div className="login-welcome-header">
             <h1 className="login-title">С возвращением!</h1>
-            <img src={wavingHand} alt className="waving-hand" />
+            <img src={wavingHand} className="waving-hand" />
             <p className="login-subheader">Войдите в свою учётную запись</p>
           </div>
 
@@ -57,44 +83,49 @@ const LogInPage = () => {
             <div id="credentials">
               <div className="input-group">
                 <input
-                  autocomplete="username"
-                  tabindex="1"
-                  autofocus="autofocus"
-                  autocorrect="off"
-                  autocapitalize="off"
+                  autoComplete="username"
+                  tabIndex="1"
+                  autoFocus="autofocus"
+                  autoCorrect="off"
+                  autoCapitalize="off"
                   id="login-account-name"
                   className="ember-text-field value-entered"
                   type="email"
-                  value={userName}
-                  onChange={handleChangeUserName}
+                  value={login}
+                  onChange={handleChangeLogin}
                 />
-                <label className="alt-placeholder" for="login-account-name">
+                <label className="alt-placeholder" htmlFor="login-account-name">
                   Эл. почта / Псевдоним
                 </label>
               </div>
 
               <div className="input-group">
                 <input
-                  autocomplete="current-password"
-                  tabindex="1"
+                  autoComplete="current-password"
+                  tabIndex="1"
                   placeholder=""
-                  maxlength="200"
+                  maxLength="200"
                   id="login-account-password"
                   className="ember-text-field value-entered"
                   type="password"
                   value={password}
                   onChange={handleChangePassword}
                 />
-                <label className="alt-placeholder" for="login-account-password">
+                <label
+                  className="alt-placeholder"
+                  htmlFor="login-account-password"
+                >
                   Пароль
                 </label>
               </div>
             </div>
           </form>
 
+          <div className="login-error">{error}</div>
+
           <div className="modal-footer">
             <button
-              tabindex="2"
+              tabIndex="2"
               form="login-form"
               id="login-button"
               className="btn btn-large btn-primary btn btn-icon-text"
@@ -105,7 +136,7 @@ const LogInPage = () => {
             </button>
 
             <button
-              tabindex="3"
+              tabIndex="3"
               id="new-account-link"
               className="btn-large btn btn-text"
               type="button"

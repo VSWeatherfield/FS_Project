@@ -18,20 +18,28 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 from answer.views import AnswerViewSet
 from olymp.views import OlympViewSet
 from year.views import YearViewSet
 from problem.views import ProblemViewSet
+from userprofile.views import UserProfileViewSet
 
 router = routers.DefaultRouter()
 router.register(r'answers', AnswerViewSet)
 router.register(r'olymps', OlympViewSet)
 router.register(r'years', YearViewSet)
 router.register(r'problems', ProblemViewSet)
+router.register(r'profile', UserProfileViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/', include(router.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

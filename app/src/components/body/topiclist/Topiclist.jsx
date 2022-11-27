@@ -22,12 +22,16 @@ const Topiclist = (props) => {
     dispatch(openComposeModal({ data: id, name: "edit" }));
   };
 
+  {
+    /*
   const updateViews = (blog) => {
     return {
       ...blog,
       views: blog.num_views + 1,
     };
   };
+  */
+  }
 
   return (
     <tr className="topic-list-item category-informatics unseen-topic">

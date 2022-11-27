@@ -43,14 +43,6 @@ const SignUpPage = () => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    ajaxService("/users", {
-      method: "POST",
-      body: JSON.stringify({ userName, mailField, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
     dispatch(closeEntryModal());
   };
 
