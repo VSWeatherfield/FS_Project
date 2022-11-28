@@ -8,17 +8,14 @@ const CreateBlog = (props) => {
     <BlogForm
       onClose={props.onClose}
       submitTitle="Создать тему"
-      onSubmitForm={({ title, description }) => {
-        const views = 0;
-        const answers = [];
+      onSubmitForm={({ title, description, topic }) => {
 
         ajaxService("/blogs/", {
           method: "POST",
           body: JSON.stringify({
             title,
             description,
-            views,
-            answers,
+            topic
           }),
           headers: {
             "Content-Type": "application/json",

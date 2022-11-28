@@ -48,7 +48,7 @@ const blogsSlice = createSlice({
       const { entities, result } = normalize(action.payload, [blogSchema]);
 
       state.myBlogIds = result;
-      state.blogObj = { ...state.myBlogIds, ...entities.blogs };
+      state.blogObj = { ...state.blogObj, ...entities.blogs };
       state.answers = { ...state.answers, ...entities.answers };
     },
     setMyBlogsMore: (state, action) => {

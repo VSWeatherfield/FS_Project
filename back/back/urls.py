@@ -28,6 +28,8 @@ from olymp.views import OlympViewSet
 from year.views import YearViewSet
 from problem.views import ProblemViewSet
 from userprofile.views import UserProfileViewSet
+from blog.views import BlogViewSet, MyBlogsViewSet
+from user.views import UserViewSet
 
 router = routers.DefaultRouter()
 router.register(r'answers', AnswerViewSet)
@@ -35,10 +37,14 @@ router.register(r'olymps', OlympViewSet)
 router.register(r'years', YearViewSet)
 router.register(r'problems', ProblemViewSet)
 router.register(r'profile', UserProfileViewSet)
+router.register(r'myblogs', MyBlogsViewSet)
+router.register(r'blogs', BlogViewSet)
+router.register(r'user', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
+    path('user/', include('user.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/', include(router.urls)),

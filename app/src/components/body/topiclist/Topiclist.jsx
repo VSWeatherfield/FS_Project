@@ -13,7 +13,7 @@ const Topiclist = (props) => {
   const { id } = props;
 
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const { title, num_views, answer_set } = blog;
+  const { title, topic, num_views, answer_set } = blog;
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -22,16 +22,12 @@ const Topiclist = (props) => {
     dispatch(openComposeModal({ data: id, name: "edit" }));
   };
 
-  {
-    /*
   const updateViews = (blog) => {
     return {
       ...blog,
-      views: blog.num_views + 1,
+      num_views: blog.num_views + 1,
     };
   };
-  */
-  }
 
   return (
     <tr className="topic-list-item category-informatics unseen-topic">
@@ -44,17 +40,13 @@ const Topiclist = (props) => {
             className="title raw-link raw-topic-link"
             data-topic-id="5207"
             onClick={() => {
-              {
-                /*
-              ajaxService(`/blogs/${id}`, {
+              ajaxService(`/blogs/${id}/`, {
                 method: "PUT",
                 body: JSON.stringify(updateViews(blog)),
                 headers: {
                   "Content-Type": "application/json",
                 },
               })
-            */
-              }
             }}
           >
             <Latex>{title}</Latex>
@@ -69,7 +61,7 @@ const Topiclist = (props) => {
           <div className="badge-wrapper bullet">
             <span className="badge-category-parent-bg"></span>
             <span data-drop-close="true" className="badge-category clear-badge">
-              <span className="category-name">Математика</span>
+              <span className="category-name">{topic}</span>
             </span>
           </div>
         </div>

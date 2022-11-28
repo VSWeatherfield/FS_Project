@@ -16,6 +16,7 @@ export function UserMainPage(props) {
 
   function onLogout() {
     window.localStorage.setItem("ACCESS", "");
+    window.localStorage.setItem("REFRESH", "");
     window.location.href = "/";
   }
 

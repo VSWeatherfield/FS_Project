@@ -9,22 +9,32 @@ const BlogForm = (props) => {
     onSubmitForm,
     defaultTitle,
     defaultDescription,
+    defaultTopic
   } = props;
 
   const [title, setTitle] = useState(defaultTitle);
+  const [topic, setTopic] = useState(defaultTopic);
   const [description, setDescirption] = useState(defaultDescription);
   const [titleError, setTitleError] = useState("");
 
   const onSubmit = (event) => {
     event.preventDefault();
-    onSubmitForm({ title, description });
+    onSubmitForm({ title, description, topic });
     onClose();
-    //dispatch(closeModal());
   };
 
   const handleChangeTitle = (event) => {
     if (event.target.value.length <= 257) {
       setTitle(event.target.value);
+      setTitleError("");
+    } else {
+      setTitleError("Название должно быть меньше 257 символов");
+    }
+  };
+
+  const handleChangeTopic = (event) => {
+    if (event.target.value.length <= 257) {
+      setTopic(event.target.value);
       setTitleError("");
     } else {
       setTitleError("Название должно быть меньше 257 символов");
@@ -49,19 +59,19 @@ const BlogForm = (props) => {
       >
         <div className="reply-to">
           <div className="reply-details">
-            <div id="ember436" className="composer-action-title">
+            <div className="composer-action-title">
               <span className="action-title">Создать новую тему</span>
             </div>
           </div>
         </div>
 
-        <div id="ember448" className="toolbar-visible wmd-controls">
-          <div id="ember449" className="d-editor">
+        <div className="toolbar-visible wmd-controls">
+          <div className="d-editor">
             <div className="d-editor-container">
               <div className="d-editor-textarea-column">
                 <div className="composer-fields">
                   <div className="title-and-category with-preview">
-                    <div id="ember451" className="title-input">
+                    <div className="title-input">
                       <input
                         aria-label="Название: суть темы коротким предложением"
                         maxLength="255"
@@ -69,9 +79,19 @@ const BlogForm = (props) => {
                         placeholder="Название: суть темы коротким предложением"
                         name="title"
                         id="reply-title"
-                        className="ember-text-field"
                         value={title}
                         onChange={handleChangeTitle}
+                      ></input>
+
+                      <input
+                        aria-label="Без категории"
+                        maxLength="255"
+                        autoComplete="off"
+                        placeholder="Без категории"
+                        name="title"
+                        id="form-topic-title"
+                        value={topic}
+                        onChange={handleChangeTopic}
                       ></input>
                       <div className="title-form-error">{titleError}</div>
                     </div>
@@ -84,7 +104,6 @@ const BlogForm = (props) => {
                     autoComplete="off"
                     placeholder='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
                     name="description"
-                    id="ember472"
                     className="d-editor-input ember-text-area"
                     value={description}
                     onChange={handleChangeDescription}
@@ -95,7 +114,7 @@ const BlogForm = (props) => {
 
             <div className="d-editor-preview-wrapper ">
               <div className="d-editor-preview"></div>
-              <span id="ember475" className="d-editor-plugin"></span>
+              <span className="d-editor-plugin"></span>
             </div>
           </div>
         </div>
@@ -104,7 +123,6 @@ const BlogForm = (props) => {
           <div className="save-or-cancel">
             <button
               title="Или нажмите Ctrl+Enter"
-              id="ember486"
               className="btn btn-icon-text btn-primary create"
               type="button"
               onClick={onSubmit}

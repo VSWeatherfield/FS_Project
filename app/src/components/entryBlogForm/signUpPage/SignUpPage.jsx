@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { ajaxService } from "../../../services/ajaxservice";
+import { UseRegistration } from "../../../hooks";
 import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
 
 import "./signUpPage.css";
@@ -10,10 +10,12 @@ import wavingHand from "../../../images/wavingHand.png";
 const SignUpPage = () => {
   const dispatch = useDispatch();
 
-  const [userName, setUserName] = useState();
-  const [mailField, setMailField] = useState();
-  const [password, setPassword] = useState();
-  const [titleError, setTitleError] = useState("");
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogInEditClick = (event) => {
     event.stopPropagation();
@@ -23,28 +25,43 @@ const SignUpPage = () => {
     dispatch(openEntryModal({ data: "hzhz", name: "logIn" }));
   };
 
-  const handleChangeUserName = (event) => {
+  const handleChangeLogin = (event) => {
     if (event.target.value.length <= 28) {
-      setUserName(event.target.value);
-      setTitleError("");
+      setError('');
+      setLogin(event.target.value);
     } else {
-      setTitleError("username должен быть меньше 29 символов");
+      setError("username должен быть меньше 29 символов");
     }
   };
 
-  const handleChangeMailField = (event) => {
-    setMailField(event.target.value);
-  };
-
   const handleChangePassword = (event) => {
+    setError('');
     setPassword(event.target.value);
   };
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-
-    dispatch(closeEntryModal());
+  const handleChangeEmail = (event) => {
+    setError('');
+    setEmail(event.target.value);
   };
+
+  const handleChangeFirstName = (event) => {
+    setError('');
+    setFirstName(event.target.value);
+  };
+
+  const handleChangeLastName = (event) => {
+    setError('');
+    setLastName(event.target.value);
+  };
+
+  const { handleRegister } = UseRegistration({
+    login,
+    password,
+    firstName,
+    lastName,
+    email,
+    setError,
+  });
 
   return (
     <div className="create-account">
@@ -68,8 +85,8 @@ const SignUpPage = () => {
                 id="new-account-email"
                 className="ember-text-field"
                 type="email"
-                value={mailField}
-                onChange={handleChangeMailField}
+                value={email}
+                onChange={handleChangeEmail}
               />
               <label className="alt-placeholder" htmlFor="new-account-email">
                 Эл. почта
@@ -87,8 +104,8 @@ const SignUpPage = () => {
                 id="new-account-username"
                 className="ember-text-field"
                 type="text"
-                value={userName}
-                onChange={handleChangeUserName}
+                value={login}
+                onChange={handleChangeLogin}
               />
               <label className="alt-placeholder" htmlFor="new-account-username">
                 Псевдоним
@@ -116,14 +133,50 @@ const SignUpPage = () => {
               </label>
               <span className="more-info">не менее 8 символов</span>
             </div>
+
+            <div className="input-group create-account__username">
+              <input
+                aria-describedby="username-validation"
+                name="username"
+                autoComplete="off"
+                maxLength="20"
+                id="new-account-fistname"
+                className="ember-text-field"
+                type="text"
+                value={firstName}
+                onChange={handleChangeFirstName}
+              />
+              <label className="alt-placeholder" htmlFor="new-account-username">
+                Имя
+              </label>
+            </div>
+
+            <div className="input-group create-account__username">
+              <input
+                aria-describedby="username-validation"
+                name="username"
+                autoComplete="off"
+                maxLength="20"
+                id="new-account-lastname"
+                className="ember-text-field"
+                type="text"
+                value={lastName}
+                onChange={handleChangeLastName}
+              />
+              <label className="alt-placeholder" htmlFor="new-account-username">
+                Фамилия
+              </label>
+            </div>
           </form>
         </div>
+
+        <div className="login--signup-error">{error}</div>
 
         <div className="modal-footer">
           <button
             className="btn-large btn-primary btn btn-text"
             type="button"
-            onClick={onSubmit}
+            onClick={handleRegister}
           >
             <span className="d-button-label">Создать учётную запись</span>
           </button>

@@ -20,6 +20,14 @@
 }
 
 .d-modal .create-account .login-form .input-group label.alt-placeholder {
+  top: -8px;
+  left: calc(3em - 0.25em);
+  background-color: #fff;
+  padding: 0 0.25em 0 0.25em;
+  font-size: 0.8706em;
+}
+
+.d-modal .create-account .input-group label.alt-placeholder {
   color: #919191;
   font-size: 16px;
   font-weight: normal;
@@ -27,26 +35,9 @@
   pointer-events: none;
   left: 1em;
   top: 10px;
-  box-shadow: 0 0 0 0px rgba(0, 136, 204, 0);
+  box-shadow: 0 0 0 0px rgba(var(0, 136, 204), 0);
   border-radius: 0.25em;
   transition: 0.2s ease all;
-}
-
-.d-modal
-  .create-account
-  .has-alt-auth
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder,
-.d-modal
-  .create-account
-  .login-form
-  .input-group
-  input:not(.value-entered):not(:focus)
-  + label.alt-placeholder {
-  top: 12px;
-  left: 3em;
 }
 
 .has-alt-auth .tip {
@@ -62,55 +53,6 @@
 .d-modal .create-account .login-form .input-group span.more-info {
   color: #919191;
   min-height: 1.4em;
-}
-
-.d-modal
-  .create-account
-  .login-form
-  .input-group
-  input:focus
-  + label.alt-placeholder,
-.d-modal
-  .create-account
-  .login-form
-  .input-group
-  input.value-entered
-  + label.alt-placeholder {
-  top: -8px;
-  left: calc(3em - 0.25em);
-  background-color: #fff;
-  padding: 0 0.25em 0 0.25em;
-  font-size: 0.8706em;
-}
-
-.d-modal
-  .create-account
-  .has-alt-auth
-  .login-form
-  .input-group
-  input:focus
-  + label.alt-placeholder,
-.d-modal
-  .create-account
-  .has-alt-auth
-  .login-form
-  .input-group
-  input.value-entered
-  + label.alt-placeholder,
-.d-modal
-  .create-account
-  .login-form
-  .input-group
-  input:focus
-  + label.alt-placeholder,
-.d-modal
-  .create-account
-  .login-form
-  .input-group
-  input.value-entered
-  + label.alt-placeholder {
-  top: -8px;
-  left: calc(3em - 0.25em);
 }
 
 .d-modal .create-account .login-form .input-group span.more-info {
@@ -156,4 +98,18 @@
     "header login-buttons"
     "form login-buttons"
     "footer login-buttons";
+}
+
+.d-modal .create-account .login-form {
+  background: #fff;
+  height: 300px;
+  padding: 1em 0 0 0;
+  grid-area: form;
+  overflow-y: scroll;
+  scrollbar-color: rgba(#222, 0.5) transparent;
+}
+
+.login-error {
+  color: red;
+  font-size: 1;
 }

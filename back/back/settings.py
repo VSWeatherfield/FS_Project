@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'answer',
     'olymp',
     'year',
+    'user',
     'problem',
     'userprofile'
 ]

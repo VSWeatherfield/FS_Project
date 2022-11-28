@@ -16,6 +16,7 @@
 
 .forum-panel {
   width: 1110px;
+  height: 35px;
   margin-right: auto;
   margin-left: auto;
   display: flex;

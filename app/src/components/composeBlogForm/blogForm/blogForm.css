@@ -1,5 +1,5 @@
 #reply-control.open {
-  --min-height: 255px;
+  --min-height: 355px;
   min-height: var(--min-height);
   max-height: calc(100vh - var(--header-offset, 4em));
   padding-bottom: calc(10px + env(keyboard-inset-height));
@@ -212,12 +212,6 @@
   flex: 1 1 50%;
 }
 
-#reply-control #reply-title {
-  margin-bottom: 8px;
-  flex-basis: 50%;
-  width: unset;
-}
-
 .d-editor-textarea-wrapper {
   display: flex;
   flex: 1;
@@ -312,6 +306,13 @@ a.cancel {
 
 #reply-control #reply-title {
   margin-bottom: 8px;
+  margin-right: 10px;
+  flex-basis: 50%;
+  width: unset;
+}
+
+#reply-control #form-topic-title {
+  margin-bottom: 8px;
   flex-basis: 50%;
   width: unset;
 }
@@ -320,7 +321,7 @@ a.cancel {
   flex-grow: 1;
 }
 
-#reply-title {
+#reply-title, #form-topic-title {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
