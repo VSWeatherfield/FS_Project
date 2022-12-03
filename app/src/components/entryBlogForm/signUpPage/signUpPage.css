@@ -109,7 +109,15 @@
   scrollbar-color: rgba(#222, 0.5) transparent;
 }
 
-.login-error {
+.signup-error {
+  color: red;
+  font-size: 1;
+  display: block;
+  margin-top: 0.5em;
+  margin-right: 50px;
+}
+
+.signup-error {
   color: red;
   font-size: 1;
 }

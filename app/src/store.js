@@ -6,6 +6,8 @@ import { entryModalReducer } from "./slices/entryModal";
 import { olympsReducer } from "./slices/olympiads";
 import { answersReducer } from "./slices/answers";
 import { usersReducer } from "./slices/users";
+import { userReducer } from "./slices/user";
+import { profileReducer } from "./slices/profile";
 
 export const store = configureStore({
   reducer: {
@@ -15,5 +17,7 @@ export const store = configureStore({
     users: usersReducer,
     composeModal: composeModalReducer,
     entryModal: entryModalReducer,
+    user: userReducer,
+    profile: profileReducer,
   },
 });

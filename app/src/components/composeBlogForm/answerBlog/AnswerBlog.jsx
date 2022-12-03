@@ -6,17 +6,7 @@ import { AnswerForm } from "../../";
 import "./answerBlog.css";
 
 const AnswerBlog = (props) => {
-  const blog = useSelector((state) => state.blogs.blogObj[props.blogId]);
-  const id = useSelector(
-    (state) => blog.answers.length + 1 + state.answers.answerIds.length
-  );
-
-  const updateAnswers = (blog, id) => {
-    return {
-      ...blog,
-      answers: [...blog.answers, id],
-    };
-  };
+  const blog = useSelector((state) => state.blogs.blogObj[props.blogId].id);
 
   return (
     <AnswerForm
@@ -24,23 +14,9 @@ const AnswerBlog = (props) => {
       answerBlog={blog}
       submitTitle="Ответить"
       onSubmitForm={({ description }) => {
-        const user = 1;
-
-        ajaxService("/answers", {
+        ajaxService("/answers/", {
           method: "POST",
-          body: JSON.stringify({
-            description,
-            user,
-            id,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-
-        ajaxService(`/blogs/${props.blogId}`, {
-          method: "PUT",
-          body: JSON.stringify(updateAnswers(blog, id)),
+          body: JSON.stringify({ description, blog }),
           headers: {
             "Content-Type": "application/json",
           },

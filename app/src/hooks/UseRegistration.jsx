@@ -1,22 +1,46 @@
 import { ajaxAuthService } from "../services/ajaxservice";
 
-export function UseRegistration ({
-  login, password, firstName, lastName,
-  setError, email }) {
-
+export function UseRegistration({
+  login,
+  password,
+  firstName,
+  lastName,
+  setError,
+  email,
+}) {
   const handleRegister = () => {
+    if (!email) {
+      setError("Введите почту");
+      return;
+    }
+
     if (!login) {
-      setError('Введите логин');
+      setError("Введите псевдоним");
+      return;
+    }
+
+    if (!login) {
+      setError("Введите логин");
       return;
     }
 
     if (!password) {
-      setError('Введите пароль');
+      setError("Введите пароль");
       return;
     }
 
-    ajaxAuthService('/user/', {
-      method: 'POST',
+    if (!firstName) {
+      setError("Введите ваше имя");
+      return;
+    }
+
+    if (!lastName) {
+      setError("Введите вашу фамилию!!");
+      return;
+    }
+
+    ajaxAuthService("/user/", {
+      method: "POST",
       body: JSON.stringify({
         username: login,
         password,
@@ -25,9 +49,15 @@ export function UseRegistration ({
         email,
       }),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-    });
+    })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => {
+        setError("Неверный логин или пароль");
+      });
   };
 
   return { handleRegister };

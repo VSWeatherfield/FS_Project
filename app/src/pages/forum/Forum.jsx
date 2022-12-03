@@ -39,20 +39,20 @@ const Forum = (props) => {
           </Link>
         </li>
         */}
-        {isLogin() ? (
-          <button
-          className="new-post-button btn btn-primary btn-small"
-          onClick={handleNewClick}
-        >
-          <span className="fa d-icon d-icon-plus svg-icon svg-string">
-            <img src={plus_img} alt="plus" />
-          </span>
+            {isLogin() ? (
+              <button
+                className="new-post-button btn btn-primary btn-small"
+                onClick={handleNewClick}
+              >
+                <span className="fa d-icon d-icon-plus svg-icon svg-string">
+                  <img src={plus_img} alt="plus" />
+                </span>
 
-          <span className="d-button-label">Создать тему</span>
-        </button>
-        ) : (
-          <></>
-        )}
+                <span className="d-button-label">Создать тему</span>
+              </button>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
         <div className="contents">

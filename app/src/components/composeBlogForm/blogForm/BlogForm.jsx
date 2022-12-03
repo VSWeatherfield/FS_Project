@@ -9,7 +9,7 @@ const BlogForm = (props) => {
     onSubmitForm,
     defaultTitle,
     defaultDescription,
-    defaultTopic
+    defaultTopic,
   } = props;
 
   const [title, setTitle] = useState(defaultTitle);
@@ -46,10 +46,7 @@ const BlogForm = (props) => {
   };
 
   return (
-    <div
-      id="reply-control"
-      className="open composer-action-createTopic edit-title topic show-preview"
-    >
+    <div id="reply-control" className="open">
       <div className="grippie"></div>
 
       <div
@@ -79,7 +76,7 @@ const BlogForm = (props) => {
                         placeholder="Название: суть темы коротким предложением"
                         name="title"
                         id="reply-title"
-                        value={title}
+                        value={title || ""}
                         onChange={handleChangeTitle}
                       ></input>
 
@@ -90,7 +87,7 @@ const BlogForm = (props) => {
                         placeholder="Без категории"
                         name="title"
                         id="form-topic-title"
-                        value={topic}
+                        value={topic || ""}
                         onChange={handleChangeTopic}
                       ></input>
                       <div className="title-form-error">{titleError}</div>
@@ -105,7 +102,7 @@ const BlogForm = (props) => {
                     placeholder='Введите текст здесь. Поддерживаемые форматы: Markdown, BBCode и HTML. Чтобы вставить картинку, перетащите её сюда или вставьте с помощью Ctrl+V, Command-V, либо нажмите правой кнопкой мыши и выберите из меню пункт "Вставить".'
                     name="description"
                     className="d-editor-input ember-text-area"
-                    value={description}
+                    value={description || ""}
                     onChange={handleChangeDescription}
                   ></textarea>
                 </div>

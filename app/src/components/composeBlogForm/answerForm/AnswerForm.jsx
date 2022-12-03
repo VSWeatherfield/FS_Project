@@ -5,7 +5,6 @@ import "./answerForm.css";
 
 const AnswerForm = (props) => {
   const { onClose, submitTitle, answerBlog, onSubmitForm } = props;
-
   const [description, setDescirption] = useState();
 
   const onSubmit = (event) => {

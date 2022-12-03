@@ -1,11 +1,15 @@
-import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
+import { ajaxService } from "../../../services/ajaxservice";
 import { openEntryModal } from "../../../slices/entryModal";
 import { isLogin } from "../../../utils/isLogin";
+import { setUser } from "../../../slices/user";
+import { setProfile } from "../../../slices/profile";
 
 import VSImage from "../../../images/VSWeatherfield.png";
+import defaultUser from "../../../images/default-user.jpg";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -25,6 +29,16 @@ const Navbar = () => {
     dispatch(openEntryModal({ data: "hzhzhz", name: "signUp" }));
   };
 
+  useEffect(() => {
+    if (isLogin()) {
+      ajaxService("/user/current").then((data) => {
+        dispatch(setUser(data));
+      });
+    }
+  }, []);
+
+  const profile = useSelector((state) => state.profile.profile);
+
   return (
     <div className="panel">
       <ul className="custom-header-links">
@@ -38,13 +52,6 @@ const Navbar = () => {
             Scoreboard
           </Link>
         </li>
-        {/*
-        <li className="headerLink">
-          <Link title="Profile" to="/profile">
-            Profile
-          </Link>
-        </li>
-        */}
         {isLogin() ? (
           <li id="current-user" className="header-dropdown-toggle current-user">
             <Link
@@ -54,14 +61,25 @@ const Navbar = () => {
               data-auto-route="true"
               className="header-icon"
             >
-              <img
-                title="профиль"
-                width="35"
-                height="35"
-                src={VSImage}
-                loading="lazy"
-                className="avatar header-avatar"
-              />
+              {profile ? (
+                <img
+                  title="профиль"
+                  width="35"
+                  height="35"
+                  src={profile.user_image}
+                  loading="lazy"
+                  className="avatar header-avatar"
+                />
+              ) : (
+                <img
+                  title="профиль"
+                  width="35"
+                  height="35"
+                  src={defaultUser}
+                  loading="lazy"
+                  className="avatar header-avatar"
+                />
+              )}
             </Link>
           </li>
         ) : (

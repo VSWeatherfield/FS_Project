@@ -29,7 +29,7 @@ from year.views import YearViewSet
 from problem.views import ProblemViewSet
 from userprofile.views import UserProfileViewSet
 from blog.views import BlogViewSet, MyBlogsViewSet
-from user.views import UserViewSet
+from user.views import UserViewSet, CurrentUser
 
 router = routers.DefaultRouter()
 router.register(r'answers', AnswerViewSet)
@@ -43,9 +43,8 @@ router.register(r'user', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
-    path('user/', include('user.urls')),
+    path('api/', include(router.urls)),
+    path('api/user/current', CurrentUser.as_view()),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/', include(router.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

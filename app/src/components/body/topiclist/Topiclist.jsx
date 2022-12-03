@@ -46,7 +46,7 @@ const Topiclist = (props) => {
                 headers: {
                   "Content-Type": "application/json",
                 },
-              })
+              });
             }}
           >
             <Latex>{title}</Latex>

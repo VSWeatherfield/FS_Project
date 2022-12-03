@@ -5,13 +5,14 @@ import { UseMyBlogs } from "../../../hooks/UseMyBlogs";
 import { UserItem } from "../../";
 
 import "./userMainPage.css";
-import VSImage from "../../../images/VSWeatherfield.png";
+import defaultUser from "../../../images/default-user.jpg";
 
-export function UserMainPage(props) {
+export function UserMainPage() {
+  const dispatch = useDispatch();
   UseMyBlogs();
 
-  const dispatch = useDispatch();
-  const { id, userName, mailField } = props;
+  const user = useSelector((state) => state.user.user);
+  const profile = useSelector((state) => state.profile.profile);
   const myBlogs = useSelector((state) => state.blogs.myBlogIds);
 
   function onLogout() {
@@ -31,13 +32,23 @@ export function UserMainPage(props) {
                   <div className="details">
                     <div className="primary">
                       <div className="user-profile-avatar">
-                        <img
-                          src={VSImage}
-                          loading="lazy"
-                          width="120"
-                          height="120"
-                          className="avatar"
-                        />
+                        {profile ? (
+                          <img
+                            src={profile.user_image}
+                            loading="lazy"
+                            width="120"
+                            height="120"
+                            className="avatar"
+                          />
+                        ) : (
+                          <img
+                            src={defaultUser}
+                            loading="lazy"
+                            width="120"
+                            height="120"
+                            className="avatar"
+                          />
+                        )}
                       </div>
 
                       <section className="controls">
@@ -59,8 +70,13 @@ export function UserMainPage(props) {
 
                       <div className="primary-textual">
                         <div className="user-profile-names">
-                          <h1 className="full-name">Vladimir Smirnov</h1>
-                          <h2 className="username">{userName}</h2>
+                          <h1 className="full-name">
+                            {user ? user.first_name : "John"}{" "}
+                            {user ? user.last_name : "Doe"}
+                          </h1>
+                          <h2 className="username">
+                            {user ? user.username : "YaYMamyPirozhok"}
+                          </h2>
                         </div>
                       </div>
                     </div>
@@ -76,7 +92,9 @@ export function UserMainPage(props) {
                               data-time="1645185954820"
                               data-format="medium"
                             >
-                              18 февр.
+                              {profile
+                                ? profile.date_activity
+                                : "18 февр. 2022"}
                             </span>
                           </dd>
                         </div>
@@ -89,7 +107,7 @@ export function UserMainPage(props) {
                               data-time="1658075040818"
                               data-format="medium"
                             >
-                              17 июля
+                              {profile ? profile.last_answer : "17 июля 2022"}
                             </span>
                           </dd>
                         </div>
@@ -108,7 +126,7 @@ export function UserMainPage(props) {
                         </div>
                         <div>
                           <dt>Просм.</dt>
-                          <dd>88</dd>
+                          <dd>{profile ? (profile.num_views) : (38)}</dd>
                         </div>
                         <div>
                           <dt className="trust-level">Уровень доверия</dt>
@@ -116,7 +134,9 @@ export function UserMainPage(props) {
                         </div>
                         <div>
                           <dt>Эл. почта</dt>
-                          <dd title="voff.smirnoff@gmail.com">{mailField}</dd>
+                          <dd title="voff.smirnoff@gmail.com">
+                            {profile ? user.email : "hzhzhz@gmail.com"}
+                          </dd>
                         </div>
                       </dl>
                     </div>

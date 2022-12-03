@@ -10,12 +10,12 @@ import wavingHand from "../../../images/wavingHand.png";
 const SignUpPage = () => {
   const dispatch = useDispatch();
 
-  const [login, setLogin] = useState('');
-  const [password, setPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [error, setError] = useState('');
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogInEditClick = (event) => {
     event.stopPropagation();
@@ -27,7 +27,7 @@ const SignUpPage = () => {
 
   const handleChangeLogin = (event) => {
     if (event.target.value.length <= 28) {
-      setError('');
+      setError("");
       setLogin(event.target.value);
     } else {
       setError("username должен быть меньше 29 символов");
@@ -35,22 +35,22 @@ const SignUpPage = () => {
   };
 
   const handleChangePassword = (event) => {
-    setError('');
+    setError("");
     setPassword(event.target.value);
   };
 
   const handleChangeEmail = (event) => {
-    setError('');
+    setError("");
     setEmail(event.target.value);
   };
 
   const handleChangeFirstName = (event) => {
-    setError('');
+    setError("");
     setFirstName(event.target.value);
   };
 
   const handleChangeLastName = (event) => {
-    setError('');
+    setError("");
     setLastName(event.target.value);
   };
 
@@ -170,8 +170,6 @@ const SignUpPage = () => {
           </form>
         </div>
 
-        <div className="login--signup-error">{error}</div>
-
         <div className="modal-footer">
           <button
             className="btn-large btn-primary btn btn-text"
@@ -189,6 +187,8 @@ const SignUpPage = () => {
           >
             <span className="d-button-label">Вход</span>
           </button>
+
+          <div className="signup-error">{error}</div>
 
           <div className="disclaimer">
             Регистрируясь, вы соглашаетесь с моей политикой конфиденциальности

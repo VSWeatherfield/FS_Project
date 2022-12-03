@@ -1,5 +1,5 @@
 export function ajaxService(url, params = {}) {
-  let accessToken = window.localStorage.getItem('ACCESS');
+  let accessToken = window.localStorage.getItem("ACCESS");
   let newParams = params;
   if (accessToken) {
     newParams = {
@@ -7,18 +7,18 @@ export function ajaxService(url, params = {}) {
       headers: { ...params.headers, Authorization: `Bearer ${accessToken}` },
     };
   }
-  return fetch('http://localhost:8000/api' + url, newParams).then((data) => {
-    if (data.status === 401 && window.localStorage.getItem('REFRESH')) {
-      ajaxAuthService('/token/refresh/', {
+  return fetch("http://localhost:8000/api" + url, newParams).then((data) => {
+    if (data.status === 401 && window.localStorage.getItem("REFRESH")) {
+      ajaxAuthService("/token/refresh/", {
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
-          refresh: window.localStorage.getItem('REFRESH'),
+          refresh: window.localStorage.getItem("REFRESH"),
         }),
       }).then((data) => {
-        window.localStorage.setItem('ACCESS', data.access);
+        window.localStorage.setItem("ACCESS", data.access);
         newParams = {
           ...params,
           headers: {
@@ -27,7 +27,7 @@ export function ajaxService(url, params = {}) {
           },
         };
 
-        fetch('http://localhost:8000/api' + url, newParams).then((data) => {
+        fetch("http://localhost:8000/api" + url, newParams).then((data) => {
           if (data.ok) {
             return data.json();
           }
@@ -45,7 +45,7 @@ export function ajaxService(url, params = {}) {
 }
 
 export async function ajaxAuthService(url, params = {}) {
-  const data = await fetch('http://localhost:8000/api' + url, params);
+  const data = await fetch("http://localhost:8000/api" + url, params);
   if (data.ok) {
     return data.json();
   }

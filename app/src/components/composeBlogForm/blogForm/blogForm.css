@@ -321,7 +321,8 @@ a.cancel {
   flex-grow: 1;
 }
 
-#reply-title, #form-topic-title {
+#reply-title,
+#form-topic-title {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

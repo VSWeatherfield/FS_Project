@@ -11,7 +11,7 @@ export function UseOlymp(olympId) {
     if (olymp) {
       return;
     }
-    ajaxService(`/olymps/${olympId}`).then((data) => {
+    ajaxService(`/olymps/${olympId}/`).then((data) => {
       dispatch(setOlympsMore([data]));
     });
   }, []);
