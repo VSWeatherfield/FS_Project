@@ -13,9 +13,10 @@ export function Blog() {
     <div>
       {initialBlog ? (
         <BlogItem
-          id={initialBlog.id}
-          title={initialBlog.title}
-          description={initialBlog.description}
+          blog={initialBlog}
+          //id={initialBlog.id}
+          //title={initialBlog.title}
+          //description={initialBlog.description}
           //user={user}
         />
       ) : (

@@ -1,22 +1,33 @@
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { openComposeModal } from "../../../slices/composeModal";
 import { AnswerList } from "../../../containers";
 
 import VSImage from "../../../images/VSWeatherfield.png";
+import pencilArt from "../../../images/pencil-art.png";
+
 import "./blog-item.css";
 
 const BlogItem = (props) => {
   const dispatch = useDispatch();
-  const { id, title, description } = props;
+  const { blog } = props;
+
+  const user = useSelector((state) => state.user.user);
+
+  const handleEditClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    dispatch(openComposeModal({ data: blog.id, name: "edit" }));
+  };
 
   const handleAnswerClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
-    dispatch(openComposeModal({ data: id, name: "answer" }));
+    dispatch(openComposeModal({ data: blog.id, name: "answer" }));
   };
 
   return (
@@ -26,8 +37,8 @@ const BlogItem = (props) => {
           <div className="container">
             <div className="title-wrapper">
               <h1>
-                <Link to={`/blog/${id}`}>
-                  <Latex>{title}</Latex>
+                <Link to={`/blog/${blog.id}`}>
+                  <Latex>{blog.title}</Latex>
                 </Link>
               </h1>
 
@@ -38,7 +49,7 @@ const BlogItem = (props) => {
                     data-drop-close="true"
                     className="badge-category clear-badge"
                   >
-                    <span className="category-name">Математика</span>
+                    <span className="category-name">{blog.topic}</span>
                   </span>
                 </div>
               </div>
@@ -107,12 +118,24 @@ const BlogItem = (props) => {
 
                           <div className="regular contents">
                             <div className="cooked">
-                              <Latex>{description}</Latex>
+                              <Latex>{blog.description}</Latex>
                             </div>
 
                             <section className="post-menu-area clearfix">
                               <nav className="post-controls collapsed replies-button-visible">
                                 <div className="actions">
+                                {user && user.id === blog.user && (
+                                  <button className="widget-button btn-flat bookmark with-reminder no-text btn-icon" title="Редактировать">
+                                    <img
+                                      width="45"
+                                      height="45"
+                                      loading="lazy"
+                                      className="fa d-icon d-icon-bookmark svg-icon svg-node"
+                                      src={pencilArt}
+                                      onClick={handleEditClick}
+                                    />
+                                  </button>)}
+
                                   <button
                                     className="widget-button btn-flat reply create fade-out btn-icon-text"
                                     title="Начать составление ответа на сообщение"
@@ -132,7 +155,7 @@ const BlogItem = (props) => {
                     </article>
                   </div>
 
-                  <AnswerList blogId={id} />
+                  <AnswerList blogId={blog.id} />
                 </div>
               </div>
             </section>

@@ -27,9 +27,21 @@ class BlogViewSet(viewsets.ModelViewSet):
     serializer.validated_data['user'] = self.request.user
     return super().perform_create(serializer)
 '''
+
+class IsOwnerPermission(permissions.BasePermission):
+    message = 'Only owner can edit blog'
+
+    def has_object_permission(self, request, view, obj): 
+      if request.user.id == obj.user.id:
+        return True
+      else:
+        return False
+
+
 class BlogViewSet(viewsets.ModelViewSet):
   queryset = Blog.objects.all()
   serializer_class = BlogSerializer
+  permission_classes = [IsOwnerPermission]
 
   def get_serializer_class(self):
     if 'pk' in self.kwargs:

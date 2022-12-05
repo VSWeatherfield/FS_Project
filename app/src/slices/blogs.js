@@ -36,6 +36,13 @@ const blogsSlice = createSlice({
       state.blogObj = { ...state.blogObj, ...entities.blogs };
       state.answers = { ...state.answers, ...entities.answers };
     },
+
+    updateBlog: (state, action) => {
+      const { entities, result } = normalize(action.payload, blogSchema);
+
+      state.blogObj = { ...state.blogObj, [result]: entities.blogs[result] };
+    },
+
     setBlogsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
 
@@ -65,6 +72,7 @@ export const blogsReducer = blogsSlice.reducer;
 export const {
   setPage,
   setBlogs,
+  updateBlog,
   setBlogsMore,
   setMyBlogs,
   setMyBlogsMore,

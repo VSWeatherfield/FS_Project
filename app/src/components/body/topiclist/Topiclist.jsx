@@ -13,6 +13,8 @@ const Topiclist = (props) => {
   const { id } = props;
 
   const blog = useSelector((state) => state.blogs.blogObj[id]);
+  const user = useSelector((state) => state.user.user);
+
   const { title, topic, num_views, answer_set } = blog;
 
   const handleEditClick = (event) => {
@@ -52,9 +54,12 @@ const Topiclist = (props) => {
             <Latex>{title}</Latex>
           </Link>
 
-          <button className="edit_spec_button" onClick={handleEditClick}>
+          {user && user.id === blog.user && (
+            <button className="edit_spec_button" onClick={handleEditClick}>
             ред.
           </button>
+          )}
+          
         </span>
 
         <div className="link-bottom-line">

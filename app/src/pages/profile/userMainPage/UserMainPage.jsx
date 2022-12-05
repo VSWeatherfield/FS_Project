@@ -126,7 +126,7 @@ export function UserMainPage() {
                         </div>
                         <div>
                           <dt>Просм.</dt>
-                          <dd>{profile ? (profile.num_views) : (38)}</dd>
+                          <dd>{profile ? profile.num_views : 38}</dd>
                         </div>
                         <div>
                           <dt className="trust-level">Уровень доверия</dt>

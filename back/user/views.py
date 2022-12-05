@@ -5,15 +5,6 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializers import UserSerializer
 
-class Login(LoginView):
-  template_name = 'registration/login.html'
-  
-  def get_redirect_url(self):
-    return '../../blog/list'
-
-class Logout(LogoutView):
-  next_page = '../../blog/list'
-
 class UserViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
   serializer_class = UserSerializer
   queryset = User.objects.all()
