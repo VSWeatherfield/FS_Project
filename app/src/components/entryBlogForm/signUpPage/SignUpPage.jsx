@@ -1,21 +1,42 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, connect } from "react-redux";
 
+import CSRFToken from '../../../components';
+import { register } from "../../../actions/auth";
 import { UseRegistration } from "../../../hooks";
 import { openEntryModal, closeEntryModal } from "../../../slices/entryModal";
 
 import "./signUpPage.css";
 import wavingHand from "../../../images/wavingHand.png";
 
-const SignUpPage = () => {
+const SignUpPage = ({ register, isAuthenticated }) => {
   const dispatch = useDispatch();
 
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    email: '',
+    username: '',
+    password: '',
+    re_password: '',
+    first_name: '',
+    last_name: '',
+  });
+
+  const [accountCreated, setAccountCreated] = useState(false);
+  const { username, password, re_password, 
+          email, first_name, last_name } = formData;
+
+  const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = e => {
+    e.preventDefault();
+    console.log("aa;a;");
+    if (password === re_password) {
+        register(username, password, re_password);
+        setAccountCreated(true);
+    }
+  };
+
+  //const { onSubmit } = register(formData.username, formData.password, formData.re_password)
 
   const handleLogInEditClick = (event) => {
     event.stopPropagation();
@@ -24,6 +45,19 @@ const SignUpPage = () => {
     dispatch(closeEntryModal());
     dispatch(openEntryModal({ data: "hzhz", name: "logIn" }));
   };
+  
+  //if (accountCreated) {
+  //  window.location.reload();
+  //} 
+
+
+    {/*
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [error, setError] = useState("");
 
   const handleChangeLogin = (event) => {
     if (event.target.value.length <= 28) {
@@ -63,12 +97,14 @@ const SignUpPage = () => {
     setError,
   });
 
+  */}
+
   return (
     <div className="create-account">
       <div className="create-account-form ">
         <div className="login-welcome-header" id="create-account-title">
           <h1 className="login-title">Добро пожаловать!</h1>
-          <img src={wavingHand} className="waving-hand" />
+          <img src={wavingHand} className="waving-hand" alt="" />
           <p className="login-subheader">
             Давайте создадим вашу учётную запись
           </p>
@@ -77,18 +113,19 @@ const SignUpPage = () => {
         <div className="login-form">
           <form>
             <div className="input-group create-account-email">
-              <input
-                aria-invalid=""
-                aria-describedby="account-email-validation"
+            <input
+                aria-invalid="не более 30 символов"
+                maxLength='30'
                 name="email"
                 autoFocus="autofocus"
                 id="new-account-email"
                 className="ember-text-field"
                 type="email"
+                onChange={e => onChange(e)}
                 value={email}
-                onChange={handleChangeEmail}
+                required
               />
-              <label className="alt-placeholder" htmlFor="new-account-email">
+              <label className="alt-placeholder">
                 Эл. почта
               </label>
               <div id="account-email-validation" className="tip bad"></div>
@@ -97,17 +134,17 @@ const SignUpPage = () => {
 
             <div className="input-group create-account__username">
               <input
-                aria-describedby="username-validation"
-                name="username"
-                autoComplete="off"
                 maxLength="20"
+                name="username"
                 id="new-account-username"
-                className="ember-text-field"
                 type="text"
-                value={login}
-                onChange={handleChangeLogin}
+                //value={login}
+                //onChange={handleChangeLogin}
+                onChange={e => onChange(e)}
+                value={username}
+                required
               />
-              <label className="alt-placeholder" htmlFor="new-account-username">
+              <label className="alt-placeholder">
                 Псевдоним
               </label>
 
@@ -119,49 +156,67 @@ const SignUpPage = () => {
 
             <div className="input-group create-account__password">
               <input
-                aria-describedby="password-validation"
-                autoComplete="current-password"
                 placeholder=""
                 id="new-account-password"
-                className="ember-text-field"
+                name="password"
                 type="password"
+                //value={password}
+                //onChange={handleChangePassword}
+                onChange={e => onChange(e)}
                 value={password}
-                onChange={handleChangePassword}
+                minLength='6'
+                required
               />
-              <label className="alt-placeholder" htmlFor="new-account-password">
+              <label className="alt-placeholder">
                 Пароль
               </label>
               <span className="more-info">не менее 8 символов</span>
             </div>
 
+            <div className="input-group create-account__password">
+              <input
+                id="new-account-re_password"
+                name="re_password"
+                type="password"
+                //value={password}
+                //onChange={handleChangePassword}
+                onChange={e => onChange(e)}
+                value={re_password}
+                minLength='6'
+                required
+              />
+              <label className="alt-placeholder">
+                Пароль x2
+              </label>
+              <span className="more-info">Подтвердите пароль</span>
+            </div>
+
             <div className="input-group create-account__username">
               <input
-                aria-describedby="username-validation"
-                name="username"
-                autoComplete="off"
                 maxLength="20"
+                name="first_name"
                 id="new-account-fistname"
-                className="ember-text-field"
                 type="text"
-                value={firstName}
-                onChange={handleChangeFirstName}
+                //value={firstName}
+                //onChange={handleChangeFirstName}
+                onChange={e => onChange(e)}
+                value={first_name}
               />
-              <label className="alt-placeholder" htmlFor="new-account-username">
+              <label className="alt-placeholder">
                 Имя
               </label>
             </div>
 
             <div className="input-group create-account__username">
               <input
-                aria-describedby="username-validation"
-                name="username"
-                autoComplete="off"
                 maxLength="20"
+                name="last_name"
                 id="new-account-lastname"
-                className="ember-text-field"
                 type="text"
-                value={lastName}
-                onChange={handleChangeLastName}
+                //value={lastName}
+                //onChange={handleChangeLastName}
+                onChange={e => onChange(e)}
+                value={last_name}
               />
               <label className="alt-placeholder" htmlFor="new-account-username">
                 Фамилия
@@ -174,7 +229,8 @@ const SignUpPage = () => {
           <button
             className="btn-large btn-primary btn btn-text"
             type="button"
-            onClick={handleRegister}
+            //onClick={handleRegister}
+            onClick={onSubmit}
           >
             <span className="d-button-label">Создать учётную запись</span>
           </button>
@@ -188,7 +244,9 @@ const SignUpPage = () => {
             <span className="d-button-label">Вход</span>
           </button>
 
+          {/*
           <div className="signup-error">{error}</div>
+          */}
 
           <div className="disclaimer">
             Регистрируясь, вы соглашаетесь с моей политикой конфиденциальности
@@ -201,4 +259,10 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { register })(SignUpPage);
+
+//export default SignUpPage;

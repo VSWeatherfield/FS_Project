@@ -31,6 +31,9 @@ from userprofile.views import UserProfileViewSet
 from blog.views import BlogViewSet, MyBlogsViewSet
 from user.views import UserViewSet, CurrentUser
 
+from django.urls import path, include, re_path
+from django.views.generic import TemplateView
+
 router = routers.DefaultRouter()
 router.register(r'answers', AnswerViewSet)
 router.register(r'olymps', OlympViewSet)
@@ -41,10 +44,23 @@ router.register(r'myblogs', MyBlogsViewSet)
 router.register(r'blogs', BlogViewSet)
 router.register(r'user', UserViewSet)
 
+#urlpatterns = [
+#    path('admin/', admin.site.urls),
+#    path('api/', include(router.urls)),
+#    path('api/user/current', CurrentUser.as_view()),
+#    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+#    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+#] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/user/current', CurrentUser.as_view()),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    #path('api/user/current', CurrentUser.as_view()),
+    #path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    #path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+    path('api-auth/', include('rest_framework.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('profile/', include('userprofile.urls')),
+] + [re_path(r'^.*', TemplateView.as_view(template_name='index.html'))]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

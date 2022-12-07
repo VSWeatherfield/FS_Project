@@ -8,13 +8,15 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     user_image = models.ImageField(upload_to='usericons', null=True)
 
+    #first_name = models.CharField(max_length=255, default='')
+    #last_name = models.CharField(max_length=255, default='')
+
     location = models.CharField(max_length=30, blank=True)
     num_views = models.IntegerField(default=0)
 
     date_activity = models.DateTimeField(default=timezone.now)
     last_answer = models.DateTimeField(default=timezone.now)
     
-
     def __str__(self) -> str:
         return self.user.username
 

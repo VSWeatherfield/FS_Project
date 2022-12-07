@@ -10,4 +10,4 @@ class UserSerializer(serializers.ModelSerializer):
 class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ['id', 'user', 'user_image', 'location', 'num_views', 'date_activity', 'last_answer']
+        fields = '__all__'

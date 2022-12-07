@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'year',
     'user',
     'problem',
-    'userprofile'
+    'userprofile',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -148,13 +149,22 @@ MEDIA_ROOT = BASE_DIR / ''
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
-    'DEFAULT_AUTHENTICATION_CLASSES': [
+#REST_FRAMEWORK = {
+#    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+#    'PAGE_SIZE': 10,
+#    'DEFAULT_AUTHENTICATION_CLASSES': [
         #'rest_framework.authentication.BasicAuthentication',
         #'rest_framework.authentication.SessionAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+#        'rest_framework_simplejwt.authentication.JWTAuthentication',
+#    ]
+#}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
     ]
 }
 
@@ -162,3 +172,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = ['https://localhost:3000',]
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']

@@ -1,3 +1,8 @@
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers';
+
 import { configureStore } from "@reduxjs/toolkit";
 
 import { blogsReducer } from "./slices/blogs";
@@ -8,6 +13,7 @@ import { answersReducer } from "./slices/answers";
 import { usersReducer } from "./slices/users";
 import { userReducer } from "./slices/user";
 import { profileReducer } from "./slices/profile";
+import auth from "./reducers/auth"
 
 export const store = configureStore({
   reducer: {
@@ -19,5 +25,8 @@ export const store = configureStore({
     entryModal: entryModalReducer,
     user: userReducer,
     profile: profileReducer,
+    auth: auth,
   },
 });
+
+export default store;
