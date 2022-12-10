@@ -7,13 +7,14 @@ import { openEntryModal } from "../../../slices/entryModal";
 import { isLogin } from "../../../utils/isLogin";
 import { setUser } from "../../../slices/user";
 import { setProfile } from "../../../slices/profile";
+import UseProfiles from "../../../hooks/UseProfiles";
 
-import VSImage from "../../../images/VSWeatherfield.png";
 import defaultUser from "../../../images/default-user.jpg";
 import "./navbar.css";
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  UseProfiles();
 
   const handleLogInEditClick = (event) => {
     event.stopPropagation();
@@ -37,7 +38,8 @@ const Navbar = () => {
     }
   }, []);
 
-  const profile = useSelector((state) => state.profile.profile);
+  const user = useSelector((state) => state.user);
+  const profile = useSelector((state) => state.profiles.profileObj[user?.id]);
 
   return (
     <div className="panel">
@@ -53,33 +55,9 @@ const Navbar = () => {
           </Link>
         </li>
         {isLogin() ? (
-          <li id="current-user" className="header-dropdown-toggle current-user">
-            <Link
-              to="/profile"
-              aria-haspopup="true"
-              aria-expanded="false"
-              data-auto-route="true"
-              className="header-icon"
-            >
-              {profile ? (
-                <img
-                  title="профиль"
-                  width="35"
-                  height="35"
-                  src={profile.user_image}
-                  loading="lazy"
-                  className="avatar header-avatar"
-                />
-              ) : (
-                <img
-                  title="профиль"
-                  width="35"
-                  height="35"
-                  src={defaultUser}
-                  loading="lazy"
-                  className="avatar header-avatar"
-                />
-              )}
+          <li className="headerLink">
+            <Link title="Profile" to="/profile">
+              Profile
             </Link>
           </li>
         ) : (
@@ -105,3 +83,41 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+  /*
+          <li id="current-user" className="header-dropdown-toggle current-user">
+            <Link
+              to="/profile"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-auto-route="true"
+              className="header-icon"
+            >
+            <Link title="Profile" to="/profile">
+              Profile
+            </Link>
+              
+              {user && profile ? (
+                <img
+                  title="профиль"
+                  width="35"
+                  height="35"
+                  src={profile.user_image}
+                  loading="lazy"
+                  className="avatar header-avatar"
+                />
+              ) : (
+                <img
+                  title="профиль"
+                  width="35"
+                  height="35"
+                  src={defaultUser}
+                  loading="lazy"
+                  className="avatar header-avatar"
+                />
+              )}
+            </Link>
+          </li>
+              */
+}

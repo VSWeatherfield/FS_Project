@@ -8,6 +8,4 @@ export { default as UseOlymp } from "./UseOlymp";
 export { default as UseProblemYear } from "../hooks/UseProblemYear";
 
 export { default as UseAnswers } from "./UseAnswers";
-
-export { default as UseUser } from "./UseUser";
 export { default as UseRegistration } from "./UseRegistration";

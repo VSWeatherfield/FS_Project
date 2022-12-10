@@ -22,6 +22,16 @@ const answersSlice = createSlice({
       state.answerObj = { ...state.answerObj, ...entities.answers };
       state.users = { ...state.users, ...entities.users };
     },
+
+    updateAnswer: (state, action) => {
+      const { entities, result } = normalize(action.payload, ansSchema);
+
+      state.answerObj = {
+        ...state.answerObj,
+        [result]: entities.answers[result],
+      };
+    },
+
     setAswersMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [ansSchema]);
 
@@ -33,4 +43,5 @@ const answersSlice = createSlice({
 });
 
 export const answersReducer = answersSlice.reducer;
-export const { setAnswers, setAnswersMore } = answersSlice.actions;
+export const { setAnswers, updateAnswer, setAnswersMore } =
+  answersSlice.actions;

@@ -152,7 +152,7 @@ export function UserMainPage() {
                     <section className="user-content">
                       <ul className="user-stream">
                         {myBlogs.map((blog) => (
-                          <UserItem key={blog} id={blog} />
+                          <UserItem key={blog} id={blog} profile={profile} />
                         ))}
                       </ul>
                     </section>

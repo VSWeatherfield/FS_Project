@@ -1,7 +1,6 @@
 import Latex from "react-latex";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { ajaxService } from "../../../services/ajaxservice";
 import { openComposeModal } from "../../../slices/composeModal";
@@ -13,8 +12,8 @@ const Topiclist = (props) => {
   const { id } = props;
 
   const blog = useSelector((state) => state.blogs.blogObj[id]);
-  const user = useSelector((state) => state.user.user);
-
+  const current_user = useSelector((state) => state.user.user);
+  
   const { title, topic, num_views, answer_set } = blog;
 
   const handleEditClick = (event) => {
@@ -54,12 +53,11 @@ const Topiclist = (props) => {
             <Latex>{title}</Latex>
           </Link>
 
-          {user && user.id === blog.user && (
+          {current_user && current_user.id === blog.user.id && (
             <button className="edit_spec_button" onClick={handleEditClick}>
-            ред.
-          </button>
+              ред.
+            </button>
           )}
-          
         </span>
 
         <div className="link-bottom-line">

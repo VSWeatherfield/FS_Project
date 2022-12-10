@@ -11,3 +11,4 @@ class AnswerSerializer(serializers.ModelSerializer):
     model = Answer
     fields = ['id', 'description', 'num_likes', 'date_creation', 'blog', 'user']
     read_only_fields = ['date_creation', 'num_likes']
+    ordering = ['-id']

@@ -5,7 +5,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { openComposeModal } from "../../../slices/composeModal";
 import { AnswerList } from "../../../containers";
 
+<<<<<<< HEAD
 import VSImage from "../../../images/VSWeatherfield.png";
+=======
+import defaultUser from "../../../images/default-user.jpg";
+>>>>>>> uni-version
 import pencilArt from "../../../images/pencil-art.png";
 
 import "./blog-item.css";
@@ -14,7 +18,16 @@ const BlogItem = (props) => {
   const dispatch = useDispatch();
   const { blog } = props;
 
+<<<<<<< HEAD
   const user = useSelector((state) => state.user.user);
+=======
+  const current_user = useSelector((state) => state.user.user);
+
+  const author = blog?.user;
+  const author_profile = useSelector(
+    (state) => state.profiles.profileObj[author?.id]
+  );
+>>>>>>> uni-version
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -81,13 +94,23 @@ const BlogItem = (props) => {
                               aria-hidden="true"
                               tabIndex="-1"
                             >
-                              <img
-                                width="45"
-                                height="45"
-                                loading="lazy"
-                                className="avatar"
-                                src={VSImage}
-                              />
+                              {author && author_profile ? (
+                                <img
+                                  width="45"
+                                  height="45"
+                                  loading="lazy"
+                                  className="avatar"
+                                  src={author_profile.user_image}
+                                />
+                              ) : (
+                                <img
+                                  width="45"
+                                  height="45"
+                                  loading="lazy"
+                                  className="avatar"
+                                  src={defaultUser}
+                                />
+                              )}
                             </a>
                           </div>
                         </div>
@@ -96,22 +119,10 @@ const BlogItem = (props) => {
                           <div role="heading" className="topic-meta-data">
                             <div className="names trigger-user-card">
                               <span className="first full-name">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  John Doe
-                                  {/*  {user.nameAndSurname} */}
-                                </Link>
+                                {blog.user.first_name} {blog.user.last_name}
                               </span>
                               <span className="second username">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  johndoe
-                                  {/* {user.userName} */}
-                                </Link>
+                                {blog.user.username}
                               </span>
                             </div>
                           </div>
@@ -124,6 +135,7 @@ const BlogItem = (props) => {
                             <section className="post-menu-area clearfix">
                               <nav className="post-controls collapsed replies-button-visible">
                                 <div className="actions">
+<<<<<<< HEAD
                                 {user && user.id === blog.user && (
                                   <button className="widget-button btn-flat bookmark with-reminder no-text btn-icon" title="Редактировать">
                                     <img
@@ -135,6 +147,24 @@ const BlogItem = (props) => {
                                       onClick={handleEditClick}
                                     />
                                   </button>)}
+=======
+                                  {current_user &&
+                                    current_user.id === blog.user.id && (
+                                      <button
+                                        className="widget-button btn-flat bookmark with-reminder no-text btn-icon"
+                                        title="Редактировать"
+                                      >
+                                        <img
+                                          width="45"
+                                          height="45"
+                                          loading="lazy"
+                                          className="fa d-icon d-icon-bookmark svg-icon svg-node"
+                                          src={pencilArt}
+                                          onClick={handleEditClick}
+                                        />
+                                      </button>
+                                    )}
+>>>>>>> uni-version
 
                                   <button
                                     className="widget-button btn-flat reply create fade-out btn-icon-text"

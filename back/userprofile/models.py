@@ -8,6 +8,9 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     user_image = models.ImageField(upload_to='usericons', null=True)
 
+    #first_name = user.objects.get(first_name)
+    #last_name = user.last_name
+
     location = models.CharField(max_length=30, blank=True)
     num_views = models.IntegerField(default=0)
 

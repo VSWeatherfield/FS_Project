@@ -13,6 +13,7 @@ const EditBlog = (props) => {
   const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, description, topic } = blog;
 
+<<<<<<< HEAD
   //const updateBlog = (blog, title, description, topic) => {
   //  return {
   //    ...blog,
@@ -23,6 +24,8 @@ const EditBlog = (props) => {
   //  };
   //};
 
+=======
+>>>>>>> uni-version
   return (
     <BlogForm
       onClose={props.onClose}
