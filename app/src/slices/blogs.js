@@ -4,6 +4,7 @@ import { schema, normalize } from "normalizr";
 const initialState = {
   blogIds: [],
   myBlogIds: [],
+
   blogObj: {},
   answers: {},
   users: {},
@@ -16,7 +17,7 @@ const answerSchema = new schema.Entity("answers", {
 });
 const blogSchema = new schema.Entity("blogs", {
   answer_set: [answerSchema],
-  user: userSchema,
+  users: [userSchema],
 });
 
 const blogsSlice = createSlice({
@@ -36,6 +37,13 @@ const blogsSlice = createSlice({
       state.blogObj = { ...state.blogObj, ...entities.blogs };
       state.answers = { ...state.answers, ...entities.answers };
     },
+
+    updateBlog: (state, action) => {
+      const { entities, result } = normalize(action.payload, blogSchema);
+
+      state.blogObj = { ...state.blogObj, [result]: entities.blogs[result] };
+    },
+
     setBlogsMore: (state, action) => {
       const { entities, result } = normalize(action.payload, [blogSchema]);
 
@@ -65,6 +73,7 @@ export const blogsReducer = blogsSlice.reducer;
 export const {
   setPage,
   setBlogs,
+  updateBlog,
   setBlogsMore,
   setMyBlogs,
   setMyBlogsMore,

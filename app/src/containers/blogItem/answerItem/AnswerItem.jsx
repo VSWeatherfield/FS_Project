@@ -1,13 +1,17 @@
 import Latex from "react-latex";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { Loader } from "../../../components";
 
-import VSImage from "../../../images/VSWeatherfield.png";
+import defaultUser from "../../../images/default-user.jpg";
 
 const AnswerItem = ({ answerId }) => {
   const ansl = useSelector((state) => state.answers.answerObj[answerId]);
+
+  const author = ansl?.user;
+  const author_profile = useSelector(
+    (state) => state.profiles.profileObj[author?.id]
+  );
 
   return ansl ? (
     <div className="topic-post clearfix group-up-quarks regular">
@@ -29,30 +33,36 @@ const AnswerItem = ({ answerId }) => {
                 aria-hidden="true"
                 tabIndex="-1"
               >
-                <img
-                  width="45"
-                  height="45"
-                  loading="lazy"
-                  className="avatar"
-                  src={VSImage}
-                />
+                {author && author_profile ? (
+                  <img
+                    alt=""
+                    width="45"
+                    height="45"
+                    loading="lazy"
+                    className="avatar"
+                    src={author_profile.user_image}
+                  />
+                ) : (
+                  <img
+                    alt=""
+                    width="45"
+                    height="45"
+                    loading="lazy"
+                    className="avatar"
+                    src={defaultUser}
+                  />
+                )}
               </a>
             </div>
           </div>
 
           <div className="topic-body clearfix">
-            <div role="heading" className="topic-meta-data">
+            <div className="topic-meta-data">
               <div className="names trigger-user-card">
                 <span className="first full-name">
-                  <Link to="/profile" data-user-card="CappuccinosBurritos">
-                    Vladimir Smirnov
-                  </Link>
+                  {ansl.user.first_name} {ansl.user.last_name}
                 </span>
-                <span className="second username">
-                  <Link to="/profile" data-user-card="CappuccinosBurritos">
-                    CappuccinosBurritos
-                  </Link>
-                </span>
+                <span className="second username">{ansl.user.username}</span>
               </div>
             </div>
 

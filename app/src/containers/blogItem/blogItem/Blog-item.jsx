@@ -1,22 +1,38 @@
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { openComposeModal } from "../../../slices/composeModal";
 import { AnswerList } from "../../../containers";
 
-import VSImage from "../../../images/VSWeatherfield.png";
+import defaultUser from "../../../images/default-user.jpg";
+import pencilArt from "../../../images/pencil-art.png";
+
 import "./blog-item.css";
 
 const BlogItem = (props) => {
   const dispatch = useDispatch();
-  const { id, title, description } = props;
+  const { blog } = props;
+
+  const current_user = useSelector((state) => state.user.user);
+
+  const author = blog?.user;
+  const author_profile = useSelector(
+    (state) => state.profiles.profileObj[author?.id]
+  );
+
+  const handleEditClick = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
+
+    dispatch(openComposeModal({ data: blog.id, name: "edit" }));
+  };
 
   const handleAnswerClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
-    dispatch(openComposeModal({ data: id, name: "answer" }));
+    dispatch(openComposeModal({ data: blog.id, name: "answer" }));
   };
 
   return (
@@ -26,8 +42,8 @@ const BlogItem = (props) => {
           <div className="container">
             <div className="title-wrapper">
               <h1>
-                <Link to={`/blog/${id}`}>
-                  <Latex>{title}</Latex>
+                <Link to={`/blog/${blog.id}`}>
+                  <Latex>{blog.title}</Latex>
                 </Link>
               </h1>
 
@@ -38,7 +54,7 @@ const BlogItem = (props) => {
                     data-drop-close="true"
                     className="badge-category clear-badge"
                   >
-                    <span className="category-name">Математика</span>
+                    <span className="category-name">{blog.topic}</span>
                   </span>
                 </div>
               </div>
@@ -70,13 +86,23 @@ const BlogItem = (props) => {
                               aria-hidden="true"
                               tabIndex="-1"
                             >
-                              <img
-                                width="45"
-                                height="45"
-                                loading="lazy"
-                                className="avatar"
-                                src={VSImage}
-                              />
+                              {author && author_profile ? (
+                                <img
+                                  width="45"
+                                  height="45"
+                                  loading="lazy"
+                                  className="avatar"
+                                  src={author_profile.user_image}
+                                />
+                              ) : (
+                                <img
+                                  width="45"
+                                  height="45"
+                                  loading="lazy"
+                                  className="avatar"
+                                  src={defaultUser}
+                                />
+                              )}
                             </a>
                           </div>
                         </div>
@@ -85,34 +111,39 @@ const BlogItem = (props) => {
                           <div role="heading" className="topic-meta-data">
                             <div className="names trigger-user-card">
                               <span className="first full-name">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  John Doe
-                                  {/*  {user.nameAndSurname} */}
-                                </Link>
+                                {blog.user.first_name} {blog.user.last_name}
                               </span>
                               <span className="second username">
-                                <Link
-                                  to="/profile"
-                                  data-user-card="CappuccinosBurritos"
-                                >
-                                  johndoe
-                                  {/* {user.userName} */}
-                                </Link>
+                                {blog.user.username}
                               </span>
                             </div>
                           </div>
 
                           <div className="regular contents">
                             <div className="cooked">
-                              <Latex>{description}</Latex>
+                              <Latex>{blog.description}</Latex>
                             </div>
 
                             <section className="post-menu-area clearfix">
                               <nav className="post-controls collapsed replies-button-visible">
                                 <div className="actions">
+                                  {current_user &&
+                                    current_user.id === blog.user.id && (
+                                      <button
+                                        className="widget-button btn-flat bookmark with-reminder no-text btn-icon"
+                                        title="Редактировать"
+                                      >
+                                        <img
+                                          width="45"
+                                          height="45"
+                                          loading="lazy"
+                                          className="fa d-icon d-icon-bookmark svg-icon svg-node"
+                                          src={pencilArt}
+                                          onClick={handleEditClick}
+                                        />
+                                      </button>
+                                    )}
+
                                   <button
                                     className="widget-button btn-flat reply create fade-out btn-icon-text"
                                     title="Начать составление ответа на сообщение"
@@ -132,7 +163,7 @@ const BlogItem = (props) => {
                     </article>
                   </div>
 
-                  <AnswerList blogId={id} />
+                  <AnswerList blogId={blog.id} />
                 </div>
               </div>
             </section>

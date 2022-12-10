@@ -1,12 +1,13 @@
+import Latex from "react-latex";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Link } from "react-router-dom";
-import VSImage from "../../../images/VSWeatherfield.png";
+import defaultUser from "../../../images/default-user.jpg";
 
 import "./userItem.css";
 
 const UserItem = (props) => {
-  const { id } = props;
+  const { id, profile } = props;
 
   const blog = useSelector((state) => state.blogs.blogObj[id]);
   const { title, topic, description } = blog;
@@ -16,13 +17,23 @@ const UserItem = (props) => {
       <div className="user-stream-item__header info">
         <div className="avatar-link">
           <div className="avatar-wrapper">
-            <img
-              src={VSImage}
-              loading="lazy"
-              width="45"
-              height="45"
-              className="avatar actor"
-            />
+            {profile ? (
+              <img
+                src={profile.user_image}
+                loading="lazy"
+                width="45"
+                height="45"
+                className="avatar actor"
+              />
+            ) : (
+              <img
+                src={defaultUser}
+                loading="lazy"
+                width="45"
+                height="45"
+                className="avatar actor"
+              />
+            )}
           </div>
         </div>
 
@@ -49,7 +60,7 @@ const UserItem = (props) => {
       </div>
 
       <p data-topic-id="4125" data-user-id="643" className="excerpt">
-        {description}
+        <Latex>{description}</Latex>
       </p>
     </li>
   );

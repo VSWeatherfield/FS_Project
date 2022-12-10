@@ -71,6 +71,7 @@
 .posts-wrapper {
   position: relative;
   -webkit-font-smoothing: subpixel-antialiased;
+  margin-bottom: 100px;
 }
 
 .topic-list-item td:first-child,
