@@ -13,10 +13,10 @@ const AnswerBlog = (props) => {
       onClose={props.onClose}
       answerBlog={blog}
       submitTitle="Ответить"
-      onSubmitForm={({ description }) => {
+      onSubmitForm={({ description, date_activity }) => {
         ajaxService("/answers/", {
           method: "POST",
-          body: JSON.stringify({ description, blog }),
+          body: JSON.stringify({ description, date_activity, blog }),
           headers: {
             "Content-Type": "application/json",
           },

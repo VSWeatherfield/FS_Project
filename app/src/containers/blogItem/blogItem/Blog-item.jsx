@@ -79,13 +79,7 @@ const BlogItem = (props) => {
                       <div className="row">
                         <div className="topic-avatar user-online">
                           <div className="post-avatar">
-                            <a
-                              className="trigger-user-card main-avatar "
-                              href="/u/CappuccinosBurritos"
-                              data-user-card="CappuccinosBurritos"
-                              aria-hidden="true"
-                              tabIndex="-1"
-                            >
+                            
                               {author && author_profile ? (
                                 <img
                                   width="45"
@@ -103,7 +97,7 @@ const BlogItem = (props) => {
                                   src={defaultUser}
                                 />
                               )}
-                            </a>
+                          
                           </div>
                         </div>
 
@@ -129,6 +123,7 @@ const BlogItem = (props) => {
                                 <div className="actions">
                                   {current_user &&
                                     current_user.id === blog.user.id && (
+                                      
                                       <button
                                         className="widget-button btn-flat bookmark with-reminder no-text btn-icon"
                                         title="Редактировать"
@@ -142,8 +137,8 @@ const BlogItem = (props) => {
                                           onClick={handleEditClick}
                                         />
                                       </button>
-                                    )}
-
+                                      )}
+                                  {current_user && (
                                   <button
                                     className="widget-button btn-flat reply create fade-out btn-icon-text"
                                     title="Начать составление ответа на сообщение"
@@ -154,6 +149,8 @@ const BlogItem = (props) => {
                                       Ответить
                                     </span>
                                   </button>
+                                  
+                                  )}
                                 </div>
                               </nav>
                             </section>

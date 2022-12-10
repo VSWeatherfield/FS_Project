@@ -10,7 +10,9 @@ const AnswerForm = (props) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    onSubmitForm({ description });
+    var date_activity = new Date();
+
+    onSubmitForm({ description, date_activity});
     onClose();
   };
 

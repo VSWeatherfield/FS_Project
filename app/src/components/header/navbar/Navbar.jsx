@@ -1,18 +1,15 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ajaxService } from "../../../services/ajaxservice";
+import { UseUser } from "../../../hooks";
 import { openEntryModal } from "../../../slices/entryModal";
 import { isLogin } from "../../../utils/isLogin";
-import { setUser } from "../../../slices/user";
-import { setProfile } from "../../../slices/profile";
 import UseProfiles from "../../../hooks/UseProfiles";
 
-import defaultUser from "../../../images/default-user.jpg";
 import "./navbar.css";
 
 const Navbar = () => {
+  UseUser();
   const dispatch = useDispatch();
   UseProfiles();
 
@@ -29,17 +26,6 @@ const Navbar = () => {
 
     dispatch(openEntryModal({ data: "hzhzhz", name: "signUp" }));
   };
-
-  useEffect(() => {
-    if (isLogin()) {
-      ajaxService("/user/current").then((data) => {
-        dispatch(setUser(data));
-      });
-    }
-  }, []);
-
-  const user = useSelector((state) => state.user);
-  const profile = useSelector((state) => state.profiles.profileObj[user?.id]);
 
   return (
     <div className="panel">

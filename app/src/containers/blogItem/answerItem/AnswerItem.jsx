@@ -26,13 +26,7 @@ const AnswerItem = ({ answerId }) => {
         <div className="row">
           <div className="topic-avatar user-online">
             <div className="post-avatar">
-              <a
-                className="trigger-user-card main-avatar "
-                href="/u/CappuccinosBurritos"
-                data-user-card="CappuccinosBurritos"
-                aria-hidden="true"
-                tabIndex="-1"
-              >
+              
                 {author && author_profile ? (
                   <img
                     alt=""
@@ -52,7 +46,7 @@ const AnswerItem = ({ answerId }) => {
                     src={defaultUser}
                   />
                 )}
-              </a>
+              
             </div>
           </div>
 

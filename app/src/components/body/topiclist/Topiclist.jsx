@@ -1,3 +1,4 @@
+import moment from "moment";
 import Latex from "react-latex";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +15,30 @@ const Topiclist = (props) => {
   const blog = useSelector((state) => state.blogs.blogObj[id]);
   const current_user = useSelector((state) => state.user.user);
 
-  const { title, topic, num_views, answer_set } = blog;
+  const { title, topic, num_views, answer_set, date_activity} = blog;
+
+  var activity = new Date(date_activity);
+
+  moment.locale('en', {
+    relativeTime: {
+      future: 'in %s',
+      past: '%s ago',
+      s:  'seconds',
+      ss: '%ss',
+      m:  'a minute',
+      mm: '%dm',
+      h:  'an hour',
+      hh: '%dh',
+      D:  'a day',
+      dd: '%dd',
+      M:  'a month',
+      MM: '%dM',
+      y:  'a year',
+      yy: '%dY'
+    }
+  });
+
+  console.log();
 
   const handleEditClick = (event) => {
     event.stopPropagation();
@@ -90,7 +114,7 @@ const Topiclist = (props) => {
             data-time="1666457689608"
             data-format="tiny"
           >
-            3ч
+            {moment(activity, "YYYYMMDD").fromNow(true)}
           </span>
         </a>
       </td>

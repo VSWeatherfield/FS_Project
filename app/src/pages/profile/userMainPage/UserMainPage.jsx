@@ -1,10 +1,12 @@
+import moment from "moment";
 import { useSelector, useDispatch } from "react-redux";
+
+import { UserItem } from "../../";
 import { increasePage } from "../../../slices/blogs";
 import { UseMyBlogs } from "../../../hooks/UseMyBlogs";
 
-import { UserItem } from "../../";
-
 import "./userMainPage.css";
+
 import defaultUser from "../../../images/default-user.jpg";
 
 export function UserMainPage() {
@@ -93,7 +95,7 @@ export function UserMainPage() {
                               data-format="medium"
                             >
                               {profile
-                                ? profile.date_activity
+                                ? moment(profile.date_activity).format('MMMM Do YYYY')
                                 : "18 февр. 2022"}
                             </span>
                           </dd>
@@ -107,7 +109,8 @@ export function UserMainPage() {
                               data-time="1658075040818"
                               data-format="medium"
                             >
-                              {profile ? profile.last_answer : "17 июля 2022"}
+                              {profile ? moment(profile.last_answer).format('MMMM Do YYYY')
+                                       : "17 июля 2022"}
                             </span>
                           </dd>
                         </div>
