@@ -75,7 +75,7 @@ const LogInPage = () => {
         <div className="login-left-side">
           <div className="login-welcome-header">
             <h1 className="login-title">С возвращением!</h1>
-            <img src={wavingHand} className="waving-hand" />
+            <img alt="" src={wavingHand} className="waving-hand" />
             <p className="login-subheader">Войдите в свою учётную запись</p>
           </div>
 
@@ -95,7 +95,7 @@ const LogInPage = () => {
                   onChange={handleChangeLogin}
                 />
                 <label className="alt-placeholder" htmlFor="login-account-name">
-                  Эл. почта / Псевдоним
+                  Псевдоним
                 </label>
               </div>
 

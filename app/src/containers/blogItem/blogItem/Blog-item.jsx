@@ -82,6 +82,7 @@ const BlogItem = (props) => {
                             
                               {author && author_profile ? (
                                 <img
+                                  alt=""
                                   width="45"
                                   height="45"
                                   loading="lazy"
@@ -90,6 +91,7 @@ const BlogItem = (props) => {
                                 />
                               ) : (
                                 <img
+                                  alt=""
                                   width="45"
                                   height="45"
                                   loading="lazy"
@@ -102,7 +104,7 @@ const BlogItem = (props) => {
                         </div>
 
                         <div className="topic-body clearfix">
-                          <div role="heading" className="topic-meta-data">
+                          <div className="topic-meta-data">
                             <div className="names trigger-user-card">
                               <span className="first full-name">
                                 {blog.user.first_name} {blog.user.last_name}
@@ -129,6 +131,7 @@ const BlogItem = (props) => {
                                         title="Редактировать"
                                       >
                                         <img
+                                          alt=""
                                           width="45"
                                           height="45"
                                           loading="lazy"

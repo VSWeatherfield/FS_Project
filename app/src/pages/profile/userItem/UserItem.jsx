@@ -19,6 +19,7 @@ const UserItem = (props) => {
           <div className="avatar-wrapper">
             {profile ? (
               <img
+                alt=""
                 src={profile.user_image}
                 loading="lazy"
                 width="45"
@@ -27,6 +28,7 @@ const UserItem = (props) => {
               />
             ) : (
               <img
+                alt=""
                 src={defaultUser}
                 loading="lazy"
                 width="45"
@@ -40,7 +42,7 @@ const UserItem = (props) => {
         <div className="user-stream-item__details">
           <div className="stream-topic-title">
             <span className="title">
-              <Link to="/blog/29">{title}</Link>
+              <Link to={`/blog/${id}`}>{title}</Link>
             </span>
           </div>
 
